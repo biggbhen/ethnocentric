@@ -1,64 +1,90 @@
 'use client';
-import Image from 'next/image';
+import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import React from 'react';
-import logo from '../../../assets/DECHSTUDIO.png';
-import logo2 from '../../../assets/Group 8.png';
+import Button from '../ui/Button';
 
-type Props = {};
+const Header = () => {
+	const pathname = usePathname();
+	const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-const Header = (props: Props) => {
-	const [isScrolled, setIsScrolled] = React.useState(false);
-	const [prevScrollPos, setPrevScrollPos] = React.useState(0);
-
-	React.useEffect(() => {
-		const handleScroll = () => {
-			const currentScrollPos = window.scrollY;
-			setIsScrolled(currentScrollPos > 100);
-			setPrevScrollPos(currentScrollPos);
-		};
-
-		window.addEventListener('scroll', handleScroll);
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, [prevScrollPos]);
 	return (
-		<header
-			className={`
-		font-anton px-[60px] flex gap-x-[30px] justify-between fixed top-0 left-0 right-0 z-30 text-white py-[20px]
-		${isScrolled && 'backdrop-blur-md'}
-		${isScrolled && 'bg-black/50'}
+		<>
+			<div className='bg-white text-black'>
+				<div className='flex justify-between items-center px-5 py-4'>
+					<div className='text-lg font-bold'>LOGO</div>
 
-	
-		`}>
-			<div className=''>
-				<Link href={'/'}>
-					{isScrolled ? (
-						<Image src={logo2} alt='logo' width={200} height={200} />
-					) : (
-						<Image src={logo} alt='logo' width={500} height={300} />
-					)}
-				</Link>
+					{/* Desktop Navigation */}
+					<div className='hidden sm:flex gap-x-7'>
+						{['/', '/about', '/programs', '/Cluster', '/blog'].map(
+							(route, idx) => (
+								<div
+									key={idx}
+									className={`cursor-pointer font-medium ${
+										pathname === route
+											? 'text-[#E86025]'
+											: 'hover:text-[#E86025]'
+									}`}>
+									<Link href={route}>
+										{route === '/'
+											? 'Home'
+											: route
+													.substring(1)
+													.replace(/^\w/, (c) => c.toUpperCase())}
+									</Link>
+								</div>
+							)
+						)}
+					</div>
+
+					{/* Desktop Buttons */}
+					<div className='hidden sm:flex gap-x-5'>
+						<Button variant='secondary'>Support Our Mission</Button>
+						<Button variant='primary'>Join the Program</Button>
+					</div>
+
+					{/* Hamburger Icon for Mobile */}
+					<div
+						className='sm:hidden cursor-pointer'
+						onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
+						<div className='space-y-1'>
+							<span className='block h-1 w-6 bg-black'></span>
+							<span className='block h-1 w-6 bg-black'></span>
+							<span className='block h-1 w-6 bg-black'></span>
+						</div>
+					</div>
+				</div>
+
+				{/* Mobile Navigation */}
+				{isMobileMenuOpen && (
+					<div className='sm:hidden flex flex-col px-5 space-y-4'>
+						{['/', '/about', '/programs', '/Cluster', '/blog'].map(
+							(route, idx) => (
+								<div
+									key={idx}
+									className={`cursor-pointer font-medium ${
+										pathname === route
+											? 'text-[#E86025]'
+											: 'hover:text-[#E86025]'
+									}`}>
+									<Link href={route}>
+										{route === '/'
+											? 'Home'
+											: route
+													.substring(1)
+													.replace(/^\w/, (c) => c.toUpperCase())}
+									</Link>
+								</div>
+							)
+						)}
+						<div className='flex flex-col space-y-3'>
+							<Button variant='secondary'>Support Our Mission</Button>
+							<Button variant='primary'>Join the Program</Button>
+						</div>
+					</div>
+				)}
 			</div>
-			<ul className='flex gap-x-[30px]'>
-				<li className='hover:underline'>
-					<Link href='/about'>ABOUT</Link>
-				</li>
-				<li className='hover:underline'>
-					<Link href='/about'>WHY DECH?</Link>
-				</li>
-				<li className='hover:underline'>
-					<Link href='/about'>PARTNERS</Link>
-				</li>
-				<li className='hover:underline'>
-					<Link href='/about'>OUR PROCESS</Link>
-				</li>
-				<li className='hover:underline'>
-					<Link href='/about'>CONTACT</Link>
-				</li>
-			</ul>
-		</header>
+		</>
 	);
 };
 
