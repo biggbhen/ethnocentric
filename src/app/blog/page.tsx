@@ -1,0 +1,42 @@
+'use client';
+import React from 'react';
+import Image from 'next/image';
+import Button from '../components/ui/Button';
+import Divider from '../../assets/divider.svg';
+import heroImage from '../../assets/heroImage.svg';
+import ImageBackground from '../components/ImageBackground';
+
+const index = () => {
+	return (
+		<>
+			<div className='m-5'>
+				<ImageBackground
+					imageSrc={heroImage}
+					alt='A beautiful landscape background'
+					className='md:h-screen h-[70vh]'>
+					<div className='text-white text-center px-4 py-8'>
+						<h1 className='text-4xl font-medium md:max-w-[55rem] text-bright-orange mb-6 md:text-6xl lg:text-7xl'>
+							Stories of Transformation and Innovation in Fashion
+						</h1>
+						<p className='text-lg text-dark-gray mb-8 md:text-xl md:max-w-[40rem] md:mx-auto'>
+							Explore inspiring updates, success stories, and industry insights
+							from the Fashion Future Program. Stay informed about how we’re
+							shaping the future of fashion in Nigeria and beyond.
+						</p>
+						<div className='flex justify-center'>
+							<Button
+								className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
+								variant='primary'>
+								Join the Program
+							</Button>
+						</div>
+					</div>
+				</ImageBackground>
+			</div>
+
+			<Image src={Divider} alt='divider' />
+		</>
+	);
+};
+
+export default index;

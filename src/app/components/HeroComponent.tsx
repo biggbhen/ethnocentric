@@ -1,37 +1,93 @@
-import Image from 'next/image';
+'use client';
 import React from 'react';
-import HeroBg from '../../assets/Group 7.png';
-import Link from 'next/link';
-import { FaLongArrowAltRight } from 'react-icons/fa';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
+import Image from 'next/image';
+import heroImage from '../../assets/heroImage.svg';
 
-type Props = {};
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import Button from './ui/Button';
 
-const HeroComponent = (props: Props) => {
+
+const HeroSwiper = () => {
+	// Array of slide data (images and texts)
+	const slides = [
+		{ image: heroImage, text: 'Welcome to Slide 1' },
+		{ image: heroImage, text: 'Explore Slide 2' },
+		{ image: heroImage, text: 'Discover Slide 3' },
+		{ image: heroImage, text: 'Learn on Slide 4' },
+	];
+
 	return (
-		<div className='h-screen w-full relative bg-black text-white flex items-end pb-[30px]'>
-			<Image src={HeroBg} fill alt='hero background' />
+		<Swiper
+			modules={[Navigation, Autoplay]}
+			spaceBetween={50}
+			slidesPerView={1}
+			autoplay={{
+				delay: 3000,
+				disableOnInteraction: false,
+			}}
+			navigation
+			style={{ height: '100vh' }} 
+		>
+			{slides.map((slide, index) => (
+				<SwiperSlide key={index}>
+					<div
+						style={{
+							position: 'relative',
+							width: '100%',
+							height: '100%',
+							display: 'flex',
+							flexDirection: 'column',
+							alignItems: 'center',
+							justifyContent: 'center',
+						}}>
+						<Image
+							src={slide.image}
+							alt={`Slide ${index + 1}`}
+							fill
+							style={{ objectFit: 'cover', zIndex: -1 }}
+						/>
+						<div
+							style={{
+								zIndex: 1,
+								color: '#fff',
 
-			<div className='min-h-[100px] relative z-10 px-[60px] flex gap-x-[100px] w-full justify-between'>
-				<div className='w-[50%]'>
-					<p className='text-[4rem] font-aggrandirGrandHeavy'>Your Website</p>
-					<p className='text-[4rem] font-aggrandirGrandHeavy'>Your Way</p>
-				</div>
-				<div className='w-[50%] flex flex-col justify-end'>
-					{' '}
-					<p className='font-aggrandirGrandHeavy mb-[1rem] text-lg'>
-						Build a digital space that fully expresses your creative vision to
-						the world.
-					</p>
-					<p className=' font-aggrandirGrandHeavy'>
-						<Link href={'#'} className='flex items-center gap-x-[10px]'>
-							<FaLongArrowAltRight className='text-[#E37A00]' />
-							Get Started
-						</Link>
-					</p>
-				</div>
-			</div>
-		</div>
+								textAlign: 'center',
+							}}>
+							<h1>
+								<div className='text-white text-center px-4 py-8'>
+									<h1 className='text-4xl font-medium text-bright-orange mb-6 md:text-5xl lg:text-6xl md:max-w-[50rem]'>
+										Shaping the Future of Fashion, One Skill at a Time
+									</h1>
+									<p className='text-lg text-dark-gray mb-8 md:text-xl md:max-w-[40rem] md:mx-auto'>
+										Join a free program empowering young creatives with
+										mentorship, training, and resources to thrive in the fashion
+										industry. Together, we’re building a future where creativity
+										leads to prosperity.
+									</p>
+									<div className='md:flex justify-center gap-x-3 mx-auto w-full'>
+										<Button
+											className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
+											variant='secondary'>
+											Explore Our Impact
+										</Button>
+										<Button
+											className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
+											variant='primary'>
+											Join the Program
+										</Button>
+									</div>
+								</div>
+							</h1>
+						</div>
+					</div>
+				</SwiperSlide>
+			))}
+		</Swiper>
 	);
 };
 
-export default HeroComponent;
+export default HeroSwiper;

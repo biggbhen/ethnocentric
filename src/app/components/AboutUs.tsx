@@ -1,25 +1,54 @@
+'use client';
 import React from 'react';
+import First from '../../assets/first.svg';
+import Divider from '../../assets/divider.svg';
+import Second from '../../assets/second.svg';
+import DividerEnd from '../../assets/dividerend.svg';
+import Image from 'next/image';
+import Youtube from './Youtube';
+import FashionSection from './FashionSectionFashionSection';
 
 type Props = {};
 
 const AboutUs = (props: Props) => {
 	return (
-		<div className=' bg-white text-black px-[60px] py-[80px]'>
-			<p className='text-xl'>ABOUT US</p>
-			<div>
-				<p className='text-[4rem] font-aggrandirGrandHeavy w-[60%] leading-none'>
-					Unleash Your Creativity, Stress-Free
-				</p>
-			</div>
-			<div className='flex justify-end mt-[2rem]'>
-				<p className='font-aggrandirGrandHeavy w-[65%] text-lg'>
-					At DECH STUDIO, we understand the challenges creative professionals
-					face when it comes to showcasing their work online. Slow loading
-					times, technical hiccups, and the constant struggle to maintain an
-					up-to-date portfolio are now things of the past.
-				</p>
-			</div>
-		</div>
+		<>
+			<Image src={Divider} alt='divider' />
+			<FashionSection
+				header='Empowering the Future of Fashion'
+				description='We are building a thriving community of young fashion entrepreneurs and artisans by providing hands-on training, mentorship, and access to resources that spark innovation. Together, we’re shaping a fashion industry where creativity meets opportunity and every talent finds its place.'
+				image={First}
+				altText='Fashion'
+				imageLeft={false}
+				primaryButtonText='Join the Program'
+				primaryButtonAction={() => alert('Joining Program')}
+				secondaryButtonText='Discover More'
+				secondaryButtonAction={() => alert('Discovering More')}
+			/>
+
+			<Image src={Divider} alt='divider' />
+
+			<FashionSection
+				header='	Your Future Awaits — At No Cost to You'
+				description='At the Fashion Future Program, we believe creativity should never
+				be constrained by financial barriers. That’s why our training,
+			  mentorship, and resources are entirely free. We’re here to help
+				you turn your passion into a profession, empowering you to thrive
+				in the fashion industry.'
+				image={Second}
+				altText='Fashion'
+				imageLeft={true}
+				primaryButtonText='Join the Program'
+				primaryButtonAction={() => alert('Joining Program')}
+				secondaryButtonText='Discover More'
+				secondaryButtonAction={() => alert('Discovering More')}
+			/>
+
+			<Image src={Divider} alt='divider' />
+			<Youtube url='https://youtu.be/paQtFhUky4k?si=yyyebBh148yed8yn' />
+
+			<Image src={DividerEnd} alt='divider' />
+		</>
 	);
 };
 
