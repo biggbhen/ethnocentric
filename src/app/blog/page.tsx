@@ -52,7 +52,7 @@ const index = () => {
 
 			<Image src={Divider} alt='divider' />
 
-			<div className='m-10 my-[7rem]'>
+			<div className='mx-[5rem] my-[7rem]'>
 				<div className='flex justify-between'>
 					<div>
 						<Sidebar />
