@@ -20,11 +20,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-ubuntu);
 }
 
-@layer utilities {
-	.text-balance {
-		text-wrap: balance;
-	}
-}
+
 
 /* Styling the navigation buttons */
 .swiper-button-next,
