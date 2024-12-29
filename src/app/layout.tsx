@@ -19,25 +19,7 @@ const manrope = Manrope({
 });
 
 const inter = Inter({ subsets: ['latin'] });
-const anton_init = Anton({
-	subsets: ['latin'],
-	weight: '400',
-	variable: '--font-anton',
-});
-const antonio_init = Antonio({
-	subsets: ['latin'],
-	weight: ['100', '200', '300', '400', '500', '600', '700'],
-	variable: '--font-antonio',
-});
-const aggrandir_grandheavy = localFont({
-	src: [
-		{
-			path: '../../public/fonts/PPAgrandir-GrandHeavy.otf',
-			// weight: '800',
-		},
-	],
-	variable: '--font-aggrandir_grandheavy',
-});
+
 
 export const metadata: Metadata = {
 	title: 'Fashion Future Program',
