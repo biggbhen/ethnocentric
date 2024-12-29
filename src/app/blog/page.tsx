@@ -54,6 +54,7 @@ const index = () => {
 			<div className='mx-[5rem] my-[7rem]'>
 				<div className='flex justify-between'>
 					<div>
+						
 						<Sidebar />
 
 
