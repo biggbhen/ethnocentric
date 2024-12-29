@@ -1,11 +1,11 @@
 "use client"
 import React from 'react'
-import Ourvision from '../../assets/ourvision.svg'
-import Domore from '../../assets/domore.svg';
-import Whoarewe from '../../assets/whoarewe.svg';
-import approach from '../../assets/ourapproach.svg';
-import contact from '../../assets/contactImage.jpeg';
-import about from '../../assets/about.svg';
+import Ourvision from '../../assets/ourvision.png'
+import Domore from '../../assets/Domore.png';
+import Whoarewe from '../../assets/whoarewe.png';
+import approach from '../../assets/ourapproach.png';
+import contact from '../../assets/contactImage.jpg';
+import about from '../../assets/about.png';
 import Image from 'next/image';
 import Button from '../components/ui/Button';
 import Divider from '../../assets/divider.svg'
@@ -35,9 +35,9 @@ return (
 					<Image
 						src={Domore}
 						alt='Our vision'
-						className='rounded-tl-lg rounded-br-lg hover:scale-105 transition-transform duration-300'
-						width={500}
-						height={500}
+						className='rounded-tl-lg rounded-br-2xl'
+						width={600}
+						height={600}
 					/>
 					<div className='flex justify-end md:my-20 my-10 flex-row gap-y-3 md:gap-y-0 gap-x-5'>
 						<span>

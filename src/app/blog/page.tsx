@@ -4,8 +4,7 @@ import Image from 'next/image';
 import Button from '../components/ui/Button';
 import Divider from '../../assets/divider.svg';
 import heroImage from '../../assets/heroImage.svg';
-import Blog1 from '../../assets/blog1.jpg';
-import Pagi from '../../assets/pagi.svg';
+import Blog1 from '../../assets/blog1.png';
 import ImageBackground from '../components/ImageBackground';
 import BlogCard from '../components/BlogCard';
 import Sidebar from '../components/Sidebar';
@@ -20,7 +19,7 @@ const index = () => {
 			linkText: 'Read more',
 			onLinkClick: () => console.log('Read more clicked'),
 			mainImageSrc: Blog1,
-			secondaryImageSrc: Pagi,
+		
 		},
 	];
 	return (
@@ -55,6 +54,7 @@ const index = () => {
 			<div className='mx-[5rem] my-[7rem]'>
 				<div className='flex justify-between'>
 					<div>
+						
 						<Sidebar />
 
 

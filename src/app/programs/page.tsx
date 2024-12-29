@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import contactImage from '../../assets/contact.jpeg';
-import support from '../../assets/support.svg';
-import model from '../../assets/model.svg';
+import contactImage from '../../assets/contact.jpg';
+import support from '../../assets/support.png';
+import model from '../../assets/model.png';
 import Image from 'next/image';
 import Button from '../components/ui/Button';
 import Divider from '../../assets/divider.svg';

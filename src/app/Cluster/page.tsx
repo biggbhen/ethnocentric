@@ -2,8 +2,8 @@
 import React from 'react';
 import Cluster2 from '../../assets/cluster2.png';
 import Cluster3 from '../../assets/cluster3.png';
-import Cluster4 from '../../assets/cluster4.jpeg';
-import Cluster1 from '../../assets/cluster1.jpeg';
+import Cluster4 from '../../assets/cluster4.jpg';
+import Cluster1 from '../../assets/cluster1.jpg';
 import Image from 'next/image';
 import Button from '../components/ui/Button';
 import Divider from '../../assets/divider.svg';
@@ -21,7 +21,7 @@ const index = () => {
 					alt='A beautiful landscape background'
 					className='md:h-screen h-[70vh]'>
 					<div className='text-white text-center px-4 py-8 md:max-w-[50rem]'>
-						<h1 className='text-3xl font-medium mb-4 md:text-4xl lg:text-6xl '>
+						<h1 className='text-3xl font-medium mb-4 md:text-4xl lg:text-5xl '>
 							Transforming Aba into Africa’s Creative Powerhouse
 						</h1>
 						<p className='text-lg mb-8 md:text-xl  md:mx-auto'>
