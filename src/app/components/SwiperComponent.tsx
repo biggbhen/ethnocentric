@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import Image, { StaticImageData } from 'next/image';
 import { useRef } from 'react';
 import { HiArrowUpLeft, HiArrowUpRight } from 'react-icons/hi2';
@@ -32,7 +32,11 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
                     spaceBetween={30}
                     slidesPerView={3}
                     pagination={{ clickable: true }}
-                    modules={[Navigation]}
+                    modules={[Navigation,Autoplay]}
+                    autoplay={{
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    }}
                     className="h-[450px]"
                 >
                     {slides.map((slide, index) => (
