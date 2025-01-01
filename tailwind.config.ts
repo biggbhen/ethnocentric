@@ -11,6 +11,7 @@ const config: Config = {
 			colors: {
 				'dark-gray': '#1A1A1A',
 				'bright-orange': '#E86025',
+				'swiper-gray': '#9CA2AA',
 			},
 		},
 	},

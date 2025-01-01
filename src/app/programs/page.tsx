@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import contactImage from '../../assets/contact.jpg';
-import support from '../../assets/support.png';
-import model from '../../assets/model.png';
+import Business from '../../assets/business.jpg';
 import Image from 'next/image';
 import Button from '../components/ui/Button';
 import Divider from '../../assets/divider.svg';
@@ -10,8 +9,41 @@ import Divider2 from '../../assets/divider2.svg';
 import heroImage from '../../assets/heroImage.svg';
 import FashionSectionList from '../components/FashionSectionList';
 import ImageBackground from '../components/ImageBackground';
+import SwiperComponent from '../components/SwiperComponent';
+import image1 from '@/assets/homeImage1.png'
+import image2 from '@/assets/homeImage2.png'
+import image3 from '@/assets/homeImage3.png'
+import Cluster3 from '../../assets/cluster3.png';
 
 const index = () => {
+	const slides = [
+		{
+			image: image1,
+			altText: 'Image 1 description',
+			title: 'Garment Making',
+			description: 'Learn the art of designing, cutting, and constructing high-quality garments from industry experts whilst using quality materials.',
+			 extraText: 'Register'
+		},
+		{
+			image: image2,
+			altText: 'Image 1 description',
+		
+			title: 'Footwear Crafting',
+			description: 'Master the process of creating stylish and durable footwear, blending traditional techniques with modern trends.',
+ extraText: 'Register'
+		},
+		{
+			image: image3,
+			altText: 'Image 1 description',
+		
+			title: 'Leatherworks',
+			description: 'Hone your skills in  crafting leather goods with precision and attention to detail. Learn how to put a unique spin on your designs.',
+    extraText: 'Register'
+              
+		},
+		
+
+	];
 	return (
 		<>
 			<ImageBackground
@@ -38,6 +70,20 @@ const index = () => {
 			</ImageBackground>
 
 			<Image src={Divider} alt='divider' />
+
+			<div className='my-[5rem]'>
+    <h1 className="text-5xl font-medium text-dark-gray text-center my-8">
+	Training Programs
+    </h1>
+    <p className="text-center text-dark-gray text-2xl max-w-[40rem] my-6 mx-auto">
+	Heads-on learning that bridges creativity and craftsmanship while transforming lives and driving growth. Addressing industry shortages with comprehensive training.
+    </p>
+    
+		 <SwiperComponent slides={slides} />
+	 
+   
+</div>
+
 			<FashionSectionList
 				header='Apprentice Model'
 				subHeader='Learning from Masters of the Craft.'
@@ -46,7 +92,7 @@ const index = () => {
 					'This apprenticeship approach ensures real-world readiness by combining traditional skills with entrepreneurial training.',
 					'Certification is provided under the National Skills Qualification Framework (NSQF) to enhance credibility and career prospects.',
 				]}
-				image={model}
+				image={Cluster3}
 				altText='Winter Collection'
 				imageLeft={true}
 				primaryButtonText='Learn About Us'
@@ -64,7 +110,7 @@ const index = () => {
 					'Services include access to market trends, infrastructure, and financial management training.',
 					'Special focus on empowering women-led businesses',
 				]}
-				image={support}
+				image={Business}
 				altText='Winter Collection'
 				imageLeft={false}
 				primaryButtonText='Discover More'

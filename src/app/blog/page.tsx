@@ -49,7 +49,7 @@ const index = () => {
 				</ImageBackground>
 			</div>
 
-			<Image src={Divider} alt='divider' />
+			<Image className='w-screen' src={Divider} alt='divider' />
 
 			<div className='mx-[5rem] my-[7rem]'>
 				<div className='flex justify-between'>

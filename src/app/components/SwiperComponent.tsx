@@ -1,0 +1,99 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
+import Image, { StaticImageData } from 'next/image';
+import { useRef } from 'react';
+import { MdOutlineArrowOutward } from 'react-icons/md';
+import { HiArrowUpLeft, HiArrowUpRight } from 'react-icons/hi2';
+import Button from './ui/Button';
+
+interface Slide {
+    image: StaticImageData;
+    altText: string;
+    smallTextBelowImage?: string;
+    title?: string;
+    description: string;
+    extraText?: string;
+}
+
+interface SwiperComponentProps {
+    slides: Slide[];
+}
+
+const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
+    const swiperRef = useRef<any>(null);
+
+    return (
+        <div className="relative py-8"> {/* Padding added for overall spacing */}
+            <div className="w-full max-w-5xl mx-auto overflow-visible space-y-6"> {/* Space between Swiper and the button */}
+                <Swiper
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    spaceBetween={30}
+                    slidesPerView={3}
+                    pagination={{ clickable: true }}
+                    modules={[Navigation]}
+                    className="h-[450px]"
+                >
+                    {slides.map((slide, index) => (
+                        <SwiperSlide key={index}>
+                            <div className="flex flex-col justify-between bg-white rounded-b-xl shadow-md h-[400px] space-y-4"> {/* Space inside each slide */}
+                                <Image
+                                    src={slide.image}
+                                    alt={slide.altText}
+                                    width={300}
+                                    height={200}
+                                    className="w-full rounded-t-xl"
+                                />
+                                <div className="border-t-0 border border-[#E0E0E0] w-full p-5 flex-grow rounded-b-xl space-y-2"> {/* Space inside card */}
+                                    {slide.smallTextBelowImage && (
+                                        <p className="text-xs font-bold text-bright-orange">
+                                            {slide.smallTextBelowImage}
+                                        </p>
+                                    )}
+                                    {slide.title && (
+                                        <p className="text-dark-gray text-lg font-bold">
+                                            {slide.title}
+                                        </p>
+                                    )}
+                                    <p className="text-swiper-gray text-sm">{slide.description}</p>
+                                    {slide.extraText && (
+                                        <p className="text-sm text-bright-orange font-medium">{slide.extraText}</p>
+                                    )}
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+
+                <div className="flex justify-center mt-4"> {/* Centered button */}
+                    <Button
+                        className="text-sm px-6 py-2 md:text-base md:px-8 md:py-3"
+                        variant="primary"
+                    >
+                        Discover Our Programs
+                    </Button>
+                </div>
+            </div>
+
+            <div className="absolute top-1/2 w-full -translate-y-1/2 flex justify-between px-[7rem]"> {/* Navigation buttons */}
+                <button
+                    onClick={() => swiperRef.current?.slidePrev()}
+                    className="bg-bright-orange text-white p-3 rounded-full hover:bg-orange-500"
+                >
+                    <HiArrowUpLeft />
+                </button>
+                <button
+                    onClick={() => swiperRef.current?.slideNext()}
+                    className="bg-bright-orange text-white p-3 rounded-full hover:bg-orange-500"
+                >
+                    <HiArrowUpRight />
+                </button>
+            </div>
+        </div>
+    );
+};
+
+export default SwiperComponent;
+

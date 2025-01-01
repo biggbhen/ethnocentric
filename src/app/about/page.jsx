@@ -20,7 +20,7 @@ import { SlSocialLinkedin } from 'react-icons/sl';
 const index = () => {
 return (
 	<>
-		<div className='px-3 md:px-7'>
+		<div className='px-3 md:px-7 container mx-auto'>
 			<div className='text-[#FFA929] font-bold text-[6rem] md:text-[13rem]'>
 				About
 			</div>
@@ -70,7 +70,7 @@ return (
 			</div>
 		</div>
 
-		<Image src={Divider} alt='divider' />
+		<Image className='w-screen' src={Divider} alt='divider' />
 
 		<div className='py-10'>
 			<div className='text-[#1A1A1A] font-bold text-center text-3xl mt-8'>
@@ -99,10 +99,10 @@ return (
 			</div>
 		</div>
 
-		<Image src={Divider} alt='divider' />
+		<Image src={Divider} className='w-screen' alt='divider' />
 
 		{/* our approach */}
-		<div>
+		<div className='container mx-auto '>
 			<div className='grid md:grid-cols-2 md:px-10 md:gap-x-[2rem] text-[#1A1A1A] '>
 				{/* First column */}
 				<div className='md:flex md:flex-col  gap-y-[2rem] md:px-10 px-5 my-[5rem] max-w-[38rem]'>
@@ -166,7 +166,7 @@ return (
 				</div>
 			</div>
 		</div>
-		<Image src={Divider} alt='divider' />
+		<Image className='w-screen' src={Divider} alt='divider' />
 		<FashionSection
 			header='	About Ethnocentrique'
 			description='The driving force behind FFP, Ethnocentrique Ltd., is a pioneer in
@@ -183,7 +183,7 @@ return (
 			secondaryButtonAction={() => alert('Discovering More')}
 		/>
 
-		<Image src={Divider} alt='divider' />
+		<Image className='w-screen' src={Divider} alt='divider' />
 
 		<div>
 			<div>
