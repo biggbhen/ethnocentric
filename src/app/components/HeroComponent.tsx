@@ -43,7 +43,7 @@ const HeroSwiper = () => {
 							src={slide.image}
 							alt={`Slide ${index + 1}`}
 							fill
-							style={{ objectFit: 'cover', objectPosition: 'center 45%', zIndex: -1 }}
+							style={{ objectFit: 'cover', objectPosition: 'center 35%', zIndex: -1 }}
 						/>
 						<div className='absolute inset-0 bg-black/70 z-10'></div>
 						<div className='text-white text-center relative z-20'>
@@ -52,7 +52,7 @@ const HeroSwiper = () => {
 									<h1 className='text-4xl font-medium text-bright-orange mb-6 md:text-5xl lg:text-6xl md:max-w-[50rem]'>
 										Shaping the Future of Fashion, One Skill at a Time
 									</h1>
-									<p className='text-lg text-dark-gray mb-8 md:text-xl md:max-w-[40rem] md:mx-auto text-white'>
+									<p className='text-lg  mb-8 md:text-xl md:max-w-[40rem] md:mx-auto text-white'>
 										Join a free program empowering young creatives with
 										mentorship, training, and resources to thrive in the fashion
 										industry. Together, we’re building a future where creativity
