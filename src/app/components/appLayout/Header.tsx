@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Button from '../ui/Button';
+import Image from 'next/image';
+import Logo from '@/assets/Logo.png'
 
 const Header = () => {
 	const pathname = usePathname();
@@ -12,10 +14,16 @@ const Header = () => {
 		<>
 			<div className='bg-white text-black shadow-md fixed top-0 left-0 right-0 z-50'>
 				<div className='flex justify-between items-center px-5 py-4'>
-					<div className='text-lg font-bold'>LOGO</div>
+					<div>
+						<Image
+							className='lg:w-[12rem] w-[7rem] md:w-[10rem]'
+							src={Logo}
+							alt='logo'
+						/>
+					</div>
 
 					{/* Desktop Navigation */}
-					<div className='hidden sm:flex gap-x-7'>
+					<div className='hidden sm:flex gap-x-4 lg:gap-x-7'>
 						{['/', '/about', '/programs', '/Cluster', '/blog'].map(
 							(route, idx) => (
 								<div

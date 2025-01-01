@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import First from '../../assets/first.svg';
+import First from '../../assets/first.png';
 import Divider from '../../assets/divider.svg';
-import Second from '../../assets/second.svg';
+import Second from '../../assets/second.png';
 import DividerEnd from '../../assets/dividerend.svg';
 import Image from 'next/image';
 import Youtube from './Youtube';
@@ -13,7 +13,7 @@ type Props = {};
 const AboutUs = (props: Props) => {
 	return (
 		<>
-			<Image src={Divider} alt='divider' />
+			<Image src={Divider} className='w-screen' alt='divider' />
 			<FashionSection
 				header='Empowering the Future of Fashion'
 				description='We are building a thriving community of young fashion entrepreneurs and artisans by providing hands-on training, mentorship, and access to resources that spark innovation. Together, we’re shaping a fashion industry where creativity meets opportunity and every talent finds its place.'
@@ -26,7 +26,7 @@ const AboutUs = (props: Props) => {
 				secondaryButtonAction={() => alert('Discovering More')}
 			/>
 
-			<Image src={Divider} alt='divider' />
+			<Image src={Divider} className='w-screen' alt='divider' />
 
 			<FashionSection
 				header='	Your Future Awaits — At No Cost to You'
@@ -44,10 +44,10 @@ const AboutUs = (props: Props) => {
 				secondaryButtonAction={() => alert('Discovering More')}
 			/>
 
-			<Image src={Divider} alt='divider' />
-			<Youtube url='https://youtu.be/paQtFhUky4k?si=yyyebBh148yed8yn' />
+			<Image className='w-screen' src={Divider} alt='divider' />
+			<Youtube url='https://youtu.be/41kQc083s6c?si=xd1wJPpFlrMvL14i' />
 
-			<Image src={DividerEnd} alt='divider' />
+			<Image className='w-screen' src={DividerEnd} alt='divider' />
 		</>
 	);
 };

@@ -4,12 +4,27 @@ import Image from 'next/image';
 import Button from '../components/ui/Button';
 import Divider from '../../assets/divider.svg';
 import heroImage from '../../assets/heroImage.svg';
+import Blog1 from '../../assets/blog1.png';
 import ImageBackground from '../components/ImageBackground';
+import BlogCard from '../components/BlogCard';
+import Sidebar from '../components/Sidebar';
 
 const index = () => {
+	const blogData = [
+		{
+			title:
+				'Empowering Tomorrow’s Fashion Leaders: Highlights from our second cohort orientation.',
+			description:
+				'Discover how our recent cohort of young talents began their journey into the fashion industry. From hands-on training to mentorship, see how the program is transforming lives, one skill at a time.',
+			linkText: 'Read more',
+			onLinkClick: () => console.log('Read more clicked'),
+			mainImageSrc: Blog1,
+		
+		},
+	];
 	return (
 		<>
-			<div className='m-5'>
+			<div className=''>
 				<ImageBackground
 					imageSrc={heroImage}
 					alt='A beautiful landscape background'
@@ -35,6 +50,32 @@ const index = () => {
 			</div>
 
 			<Image src={Divider} alt='divider' />
+
+			<div className='mx-[5rem] my-[7rem]'>
+				<div className='flex justify-between'>
+					<div>
+						
+						<Sidebar />
+
+
+
+
+					</div>
+					<div>
+						{blogData.map((blog, index) => (
+							<BlogCard
+								key={index}
+								title={blog.title}
+								description={blog.description}
+								linkText={blog.linkText}
+								onLinkClick={blog.onLinkClick}
+								mainImageSrc={blog.mainImageSrc}
+								
+							/>
+						))}
+					</div>
+				</div>
+			</div>
 		</>
 	);
 };
