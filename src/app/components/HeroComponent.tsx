@@ -18,11 +18,11 @@ import Button from './ui/Button';
 const HeroSwiper = () => {
 	// Array of slide data (images and texts)
 	const slides = [
-		{ image: hero4, text: 'Welcome to Slide 1' },
+		{ image: hero4, text: 'The Future Belongs to those who do' },
 		{ image: hero1, text: 'Explore Slide 2' },
-		{ image: hero2, text: 'Discover Slide 3' },
+		{ image: hero2, text: 'Inspiring Creativity, Driving Economic Growth.' },
 		{ image: hero3, text: 'Learn on Slide 4' },
-		{ image: hero5, text: 'Learn on Slide 4' },
+		{ image: hero5, text: 'Empowering the Future of Fashion.' },
 	];
 
 	return (
@@ -50,13 +50,11 @@ const HeroSwiper = () => {
 							<h1>
 								<div className='text-white text-center px-4 py-8'>
 									<h1 className='text-4xl font-medium text-bright-orange mb-6 md:text-5xl lg:text-6xl md:max-w-[50rem]'>
-										Shaping the Future of Fashion, One Skill at a Time
+										{slide.text}
 									</h1>
 									<p className='text-lg  mb-8 md:text-xl md:max-w-[40rem] md:mx-auto text-white'>
-										Join a free program empowering young creatives with
-										mentorship, training, and resources to thrive in the fashion
-										industry. Together, we’re building a future where creativity
-										leads to prosperity.
+									Through innovation, skill development, and community engagement, the <strong>Fashion Future Program</strong> is transforming  
+									lives, fostering creativity, and building sustainable fashion businesses across Nigeria.
 									</p>
 									<div className='md:flex justify-center gap-x-3 mx-auto w-full'>
 										<Button

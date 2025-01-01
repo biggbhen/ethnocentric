@@ -55,7 +55,7 @@ const index = () => {
 				secondaryButtonText='Learn About Us'
 				secondaryButtonAction={() => console.log('Learn More clicked')}
 			/>
-			<Image src={Divider2} alt='divider' />
+			<Image className=' w-screen' src={Divider2} alt='divider' />
 
 			<FashionSectionList
 				header='The Future of Aba’s
@@ -75,7 +75,7 @@ Clusters'
 				secondaryButtonAction={() => console.log('Learn More clicked')}
 			/>
 
-			<Image src={Divider} alt='divider' />
+			<Image className=' w-screen' src={Divider} alt='divider' />
 
 			<div>
 				<ImageBackground
@@ -107,7 +107,7 @@ Clusters'
 					</div>
 				</ImageBackground>
 			</div>
-			<Image src={Divider} alt='divider' />
+			<Image className=' w-screen' src={Divider} alt='divider' />
 		</>
 	);
 };

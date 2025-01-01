@@ -2,10 +2,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import Image, { StaticImageData } from 'next/image';
 import { useRef } from 'react';
-import { MdOutlineArrowOutward } from 'react-icons/md';
 import { HiArrowUpLeft, HiArrowUpRight } from 'react-icons/hi2';
 import Button from './ui/Button';
 
@@ -26,8 +25,8 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
     const swiperRef = useRef<any>(null);
 
     return (
-        <div className="relative py-8"> {/* Padding added for overall spacing */}
-            <div className="w-full max-w-5xl mx-auto overflow-visible space-y-6"> {/* Space between Swiper and the button */}
+        <div className="relative py-8 container mx-auto"> 
+            <div className="w-full max-w-5xl mx-auto overflow-visible space-y-6"> 
                 <Swiper
                     onSwiper={(swiper) => (swiperRef.current = swiper)}
                     spaceBetween={30}
@@ -38,7 +37,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
                 >
                     {slides.map((slide, index) => (
                         <SwiperSlide key={index}>
-                            <div className="flex flex-col justify-between bg-white rounded-b-xl shadow-md h-[400px] space-y-4"> {/* Space inside each slide */}
+                            <div className="flex flex-col justify-between bg-white rounded-b-xl shadow-md h-[400px] space-y-4"> 
                                 <Image
                                     src={slide.image}
                                     alt={slide.altText}
@@ -46,7 +45,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
                                     height={200}
                                     className="w-full rounded-t-xl"
                                 />
-                                <div className="border-t-0 border border-[#E0E0E0] w-full p-5 flex-grow rounded-b-xl space-y-2"> {/* Space inside card */}
+                                <div className="border-t-0 border border-[#E0E0E0] w-full p-5 flex-grow rounded-b-xl space-y-2"> 
                                     {slide.smallTextBelowImage && (
                                         <p className="text-xs font-bold text-bright-orange">
                                             {slide.smallTextBelowImage}
@@ -67,7 +66,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
                     ))}
                 </Swiper>
 
-                <div className="flex justify-center mt-4"> {/* Centered button */}
+                <div className="flex justify-center mt-4"> 
                     <Button
                         className="text-sm px-6 py-2 md:text-base md:px-8 md:py-3"
                         variant="primary"
@@ -77,7 +76,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
                 </div>
             </div>
 
-            <div className="absolute top-1/2 w-full -translate-y-1/2 flex justify-between px-[7rem]"> {/* Navigation buttons */}
+            <div className="absolute top-1/2 w-full -translate-y-1/2 flex justify-between px-[7rem]"> 
                 <button
                     onClick={() => swiperRef.current?.slidePrev()}
                     className="bg-bright-orange text-white p-3 rounded-full hover:bg-orange-500"

@@ -51,7 +51,7 @@ const index = () => {
 
 			<Image className='w-screen' src={Divider} alt='divider' />
 
-			<div className='mx-[5rem] my-[7rem]'>
+			<div className='px-[5rem] my-[7rem] 2xl:container 2xl:mx-auto'>
 				<div className='flex justify-between'>
 					<div>
 						
