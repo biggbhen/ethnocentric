@@ -3,7 +3,12 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
-import heroImage from '../../assets/heroImage.svg';
+import hero1 from '../../assets/hero1.jpg';
+import hero2 from '../../assets/hero2.jpg';
+import hero3 from '../../assets/hero3.jpg';
+import hero4 from '../../assets/hero4.jpg';
+import hero5 from '../../assets/hero5.jpg';
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -14,10 +19,11 @@ import Button from './ui/Button';
 const HeroSwiper = () => {
 	// Array of slide data (images and texts)
 	const slides = [
-		{ image: heroImage, text: 'Welcome to Slide 1' },
-		{ image: heroImage, text: 'Explore Slide 2' },
-		{ image: heroImage, text: 'Discover Slide 3' },
-		{ image: heroImage, text: 'Learn on Slide 4' },
+		{ image: hero4, text: 'Welcome to Slide 1' },
+		{ image: hero1, text: 'Explore Slide 2' },
+		{ image: hero2, text: 'Discover Slide 3' },
+		{ image: hero3, text: 'Learn on Slide 4' },
+		{ image: hero5, text: 'Learn on Slide 4' },
 	];
 
 	return (
@@ -48,7 +54,7 @@ const HeroSwiper = () => {
 							src={slide.image}
 							alt={`Slide ${index + 1}`}
 							fill
-							style={{ objectFit: 'cover', zIndex: -1 }}
+							style={{ objectFit: 'cover', objectPosition: 'center 45%', zIndex: -1 }}
 						/>
 						<div
 							style={{
