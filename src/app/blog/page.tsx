@@ -5,38 +5,32 @@ import Button from '../components/ui/Button';
 import Divider from '../../assets/divider.svg';
 import heroImage from '../../assets/heroImage.svg';
 import BlogCard from '../components/BlogCard';
-import ReactPaginate from 'react-paginate'; 
+import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/navigation';
 import ImageBackground from '../components/ImageBackground';
 import Sidebar from '../components/Sidebar';
-import BlogPage2 from '@/assets/blogpage2.png'
-import BlogPage6 from '@/assets/blogpage6.png'
-import BlogPage5 from '@/assets/blogpage5.png'
-import BlogPage4 from '@/assets/blogpage4.png'
-import BlogPage3 from '@/assets/blogpage3.png'
+import BlogPage2 from '@/assets/blogpage2.png';
+import BlogPage6 from '@/assets/blogpage6.png';
+import BlogPage5 from '@/assets/blogpage5.png';
+import BlogPage4 from '@/assets/blogpage4.png';
+import BlogPage3 from '@/assets/blogpage3.png';
 
 interface Blog {
-  id: number;
-  title: string;
-  description: string;
-  linkText: string;
-  mainImageSrc: StaticImageData;
+	id: number;
+	title: string;
+	description: string;
+	linkText: string;
+	mainImageSrc: StaticImageData;
 }
 
-const index = () => {
-  const router = useRouter();
+const Index = () => {
+	const router = useRouter();
 
-  const blogData: Blog[] = [
-   
-   
-    
-
-    {
-      id: 0,
-      title:
-        'Behind the Scenes: A Day in the Life of a Fashion Designer.',
-      description:
-        `The recent Partner Convening hosted by Mastercard Foundation was a moment of tremendous insight. This year's theme, "Collective Action for Accelerated Impact," underscored the power of joint efforts in amplifying youth programming.
+	const blogData: Blog[] = [
+		{
+			id: 0,
+			title: 'Behind the Scenes: A Day in the Life of a Fashion Designer.',
+			description: `The recent Partner Convening hosted by Mastercard Foundation was a moment of tremendous insight. This year's theme, "Collective Action for Accelerated Impact," underscored the power of joint efforts in amplifying youth programming.
 
 Here are our key takeaways:
 
@@ -52,28 +46,24 @@ Here are our key takeaways:
 
 
 This convening reinforced our dedication to amplifying young African voices, empowering youths, and driving meaningful change. Together, we are committed to a more inclusive and prosperous Africa.`,
-linkText:"  Read more",
-      mainImageSrc: BlogPage2,
-    },
-    {
-      id: 1,
-      title:
-        `𝗘𝘁𝗵𝗻𝗼𝗰𝗲𝗻𝘁𝗿𝗶𝗾𝘂𝗲'𝘀 𝗩𝗶𝘀𝗶𝗼𝗻 𝗳𝗼𝗿 𝗮 𝗦𝗸𝗶𝗹𝗹𝗲𝗱 𝗡𝗶𝗴𝗲𝗿𝗶𝗮𝗻 𝗪𝗼𝗿𝗸𝗳𝗼𝗿𝗰𝗲`,
-      description:
-        `In Nigeria's thriving but often overlooked informal sector, skills are passed down through years of hands-on experience, making artisans’ essential contributors to local production. Yet, a gap persists in standardization, recognition, and access to larger markets. At Ethnocentrique, we are committed to bridging that gap, especially for skilled local creatives who drive Nigeria’s economic growth.
+			linkText: '  Read more',
+			mainImageSrc: BlogPage2,
+		},
+		{
+			id: 1,
+			title: `𝗘𝘁𝗵𝗻𝗼𝗰𝗲𝗻𝘁𝗿𝗶𝗾𝘂𝗲'𝘀 𝗩𝗶𝘀𝗶𝗼𝗻 𝗳𝗼𝗿 𝗮 𝗦𝗸𝗶𝗹𝗹𝗲𝗱 𝗡𝗶𝗴𝗲𝗿𝗶𝗮𝗻 𝗪𝗼𝗿𝗸𝗳𝗼𝗿𝗰𝗲`,
+			description: `In Nigeria's thriving but often overlooked informal sector, skills are passed down through years of hands-on experience, making artisans’ essential contributors to local production. Yet, a gap persists in standardization, recognition, and access to larger markets. At Ethnocentrique, we are committed to bridging that gap, especially for skilled local creatives who drive Nigeria’s economic growth.
  
 Through the Fashion Future Program (FFP), a skills and economic development initiative, being implemented in the fashion clusters of Aba, Ethnocentrique is upskilling experienced young fashion entrepreneurs – called Mastercraft Persons (MCPs) - under the National Skills Qualification Framework (NSQF). This framework, developed by the National Board for Technical Education (NBTE), introduces artisans to a structured, and standard learning approach that enhances their skills, elevates their credibility, and the quality of training they deliver.
 
 With our second cohort underway, 300 MCPs have completed their training through the NSQF, and are now prepared to train and mentor young apprentices in garment-making, shoemaking, and leatherwork through a free, 5-month apprenticeship program within the fashion clusters. This hands-on mentorship aims to equip apprentices with both technical expertise and market knowledge, building a local skilled workforce capable of driving growth.`,
-linkText:"  Read more",
-      mainImageSrc: BlogPage3,
-    },
-    {
-      id: 2,
-      title:
-        `𝗘𝘁𝗵𝗻𝗼𝗰𝗲𝗻𝘁𝗿𝗶𝗾𝘂𝗲 𝗰𝗼𝗹𝗹𝗮𝗯𝗼𝗿𝗮𝘁𝗲𝘀 𝘄𝗶𝘁𝗵 𝗔𝗯𝗶𝗮 𝗦𝘁𝗮𝘁𝗲 𝗚𝗼𝘃𝗲𝗿𝗻𝗺𝗲𝗻𝘁 𝘁𝗼 𝗣𝗿𝗼𝗺𝗼𝘁𝗲 𝗖𝗼𝗺𝗺𝗼𝗻 𝗙𝗮𝗰𝗶𝗹𝗶𝘁𝘆 𝗖𝗲𝗻𝘁𝗲𝗿𝘀 (𝗖𝗙𝗖𝘀) 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁 𝗳𝗼𝗿 𝗠𝗦𝗠𝗘𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗙𝗮𝘀𝗵𝗶𝗼𝗻 𝗙𝘂𝘁𝘂𝗿𝗲 𝗣𝗿𝗼𝗴𝗿𝗮𝗺`,
-      description:
-        `Imagine a future where creative MSMEs in Abia State have access to specialized shared spaces designed to improve their competitiveness and transform them into successful businesses. 
+			linkText: '  Read more',
+			mainImageSrc: BlogPage3,
+		},
+		{
+			id: 2,
+			title: `𝗘𝘁𝗵𝗻𝗼𝗰𝗲𝗻𝘁𝗿𝗶𝗾𝘂𝗲 𝗰𝗼𝗹𝗹𝗮𝗯𝗼𝗿𝗮𝘁𝗲𝘀 𝘄𝗶𝘁𝗵 𝗔𝗯𝗶𝗮 𝗦𝘁𝗮𝘁𝗲 𝗚𝗼𝘃𝗲𝗿𝗻𝗺𝗲𝗻𝘁 𝘁𝗼 𝗣𝗿𝗼𝗺𝗼𝘁𝗲 𝗖𝗼𝗺𝗺𝗼𝗻 𝗙𝗮𝗰𝗶𝗹𝗶𝘁𝘆 𝗖𝗲𝗻𝘁𝗲𝗿𝘀 (𝗖𝗙𝗖𝘀) 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁 𝗳𝗼𝗿 𝗠𝗦𝗠𝗘𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗙𝗮𝘀𝗵𝗶𝗼𝗻 𝗙𝘂𝘁𝘂𝗿𝗲 𝗣𝗿𝗼𝗴𝗿𝗮𝗺`,
+			description: `Imagine a future where creative MSMEs in Abia State have access to specialized shared spaces designed to improve their competitiveness and transform them into successful businesses. 
 
 Through the Fashion Future Program (FFP), Ethnocentrique is working toward this vision by championing the development of Common Facility Centers (CFCs) for MSMEs. These centers are shared spaces where Micro, Small, and Medium Enterprises (MSMEs) can find the advanced equipment, resources, tools, and collaborative space needed for standardized and efficient local production.
 
@@ -87,15 +77,13 @@ Aba is a hub of creativity, yet artisans often face obstacles like limited acces
 This initiative isn’t solely about infrastructure; it’s about creating a supportive ecosystem for artisans in Aba’s clusters, increasing their productivity and competitiveness. The Abia State government’s commitment highlights a shared belief in the potential of Aba’s fashion sector to drive lasting economic impact.
 
 Together, Ethnocentrique and the Abia State government are laying the foundation for a prosperous future for Aba’s MSMEs and artisans.`,
-linkText:"  Read more",
-      mainImageSrc: BlogPage4,
-    },
-    {
-      id: 3,
-      title:
-        `𝗘𝗺𝗽𝗼𝘄𝗲𝗿𝗶𝗻𝗴 𝗖𝗵𝗮𝗻𝗴𝗲 𝗧𝗵𝗿𝗼𝘂𝗴𝗵 𝗟𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗮𝗻𝗱 𝗔𝘄𝗮𝗿𝗲𝗻𝗲𝘀𝘀: 𝗛𝗶𝗴𝗵𝗹𝗶𝗴𝗵𝘁𝘀 𝗳𝗿𝗼𝗺 𝘁𝗵𝗲 𝟮𝗻𝗱 𝗖𝗼𝗵𝗼𝗿𝘁 𝗢𝗿𝗶𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻 𝗼𝗳 𝘁𝗵𝗲 𝗙𝗮𝘀𝗵𝗶𝗼𝗻 𝗙𝘂𝘁𝘂𝗿𝗲 𝗣𝗿𝗼𝗴𝗿𝗮𝗺 `,
-      description:
-        `At Ethnocentrique, we believe that transformation begins with preparation, and the 5 day orientation event for the Fashion Future Program’s second cohort was a testament to this philosophy. 
+			linkText: '  Read more',
+			mainImageSrc: BlogPage4,
+		},
+		{
+			id: 3,
+			title: `𝗘𝗺𝗽𝗼𝘄𝗲𝗿𝗶𝗻𝗴 𝗖𝗵𝗮𝗻𝗴𝗲 𝗧𝗵𝗿𝗼𝘂𝗴𝗵 𝗟𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗮𝗻𝗱 𝗔𝘄𝗮𝗿𝗲𝗻𝗲𝘀𝘀: 𝗛𝗶𝗴𝗵𝗹𝗶𝗴𝗵𝘁𝘀 𝗳𝗿𝗼𝗺 𝘁𝗵𝗲 𝟮𝗻𝗱 𝗖𝗼𝗵𝗼𝗿𝘁 𝗢𝗿𝗶𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻 𝗼𝗳 𝘁𝗵𝗲 𝗙𝗮𝘀𝗵𝗶𝗼𝗻 𝗙𝘂𝘁𝘂𝗿𝗲 𝗣𝗿𝗼𝗴𝗿𝗮𝗺 `,
+			description: `At Ethnocentrique, we believe that transformation begins with preparation, and the 5 day orientation event for the Fashion Future Program’s second cohort was a testament to this philosophy. 
 
 The orientation brought together diverse voices, including state actors from Abia state who shared words of encouragement and underscored the importance of the initiative, reinforcing the program's significance as a catalyst for personal and community growth.
 
@@ -115,15 +103,13 @@ The energy, enthusiasm, and commitment displayed by the participants have set a 
 
 At Ethnocentrique, we are grateful to all who made this orientation a success—our partners, the Mastercard Foundation, the state actors, facilitators, and team members who brought their expertise and passion to the table. Together, we are building not just the future of fashion but a future of inclusion, empowerment, and impact. 
 hashtag#FashionFutureProgram hashtag#Ethnocentrique hashtag#Impact hashtag#communitydevelopment hashtag#growth`,
-linkText:"  Read more",
-      mainImageSrc: BlogPage5,
-    },
-    {
-      id: 4,
-      title:
-        `𝗘𝘁𝗵𝗻𝗼𝗰𝗲𝗻𝘁𝗿𝗶𝗾𝘂𝗲 𝗰𝗼𝗹𝗹𝗮𝗯𝗼𝗿𝗮𝘁𝗲𝘀 𝘄𝗶𝘁𝗵 𝗔𝗯𝗶𝗮 𝗦𝘁𝗮𝘁𝗲 𝗚𝗼𝘃𝗲𝗿𝗻𝗺𝗲𝗻𝘁 𝘁𝗼 𝗣𝗿𝗼𝗺𝗼𝘁𝗲 𝗖𝗼𝗺𝗺𝗼𝗻 𝗙𝗮𝗰𝗶𝗹𝗶𝘁𝘆 𝗖𝗲𝗻𝘁𝗲𝗿𝘀 (𝗖𝗙𝗖𝘀) 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁 𝗳𝗼𝗿 𝗠𝗦𝗠𝗘𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗙𝗮𝘀𝗵𝗶𝗼𝗻 𝗙𝘂𝘁𝘂𝗿𝗲 𝗣𝗿𝗼𝗴𝗿𝗮𝗺 `,
-      description:
-        `Imagine a future where creative MSMEs in Abia State have access to specialized shared spaces designed to improve their competitiveness and transform them into successful businesses. 
+			linkText: '  Read more',
+			mainImageSrc: BlogPage5,
+		},
+		{
+			id: 4,
+			title: `𝗘𝘁𝗵𝗻𝗼𝗰𝗲𝗻𝘁𝗿𝗶𝗾𝘂𝗲 𝗰𝗼𝗹𝗹𝗮𝗯𝗼𝗿𝗮𝘁𝗲𝘀 𝘄𝗶𝘁𝗵 𝗔𝗯𝗶𝗮 𝗦𝘁𝗮𝘁𝗲 𝗚𝗼𝘃𝗲𝗿𝗻𝗺𝗲𝗻𝘁 𝘁𝗼 𝗣𝗿𝗼𝗺𝗼𝘁𝗲 𝗖𝗼𝗺𝗺𝗼𝗻 𝗙𝗮𝗰𝗶𝗹𝗶𝘁𝘆 𝗖𝗲𝗻𝘁𝗲𝗿𝘀 (𝗖𝗙𝗖𝘀) 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁 𝗳𝗼𝗿 𝗠𝗦𝗠𝗘𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗙𝗮𝘀𝗵𝗶𝗼𝗻 𝗙𝘂𝘁𝘂𝗿𝗲 𝗣𝗿𝗼𝗴𝗿𝗮𝗺 `,
+			description: `Imagine a future where creative MSMEs in Abia State have access to specialized shared spaces designed to improve their competitiveness and transform them into successful businesses. 
 
 Through the Fashion Future Program (FFP), Ethnocentrique is working toward this vision by championing the development of Common Facility Centers (CFCs) for MSMEs. These centers are shared spaces where Micro, Small, and Medium Enterprises (MSMEs) can find the advanced equipment, resources, tools, and collaborative space needed for standardized and efficient local production.
 
@@ -137,32 +123,32 @@ Aba is a hub of creativity, yet artisans often face obstacles like limited acces
 This initiative isn’t solely about infrastructure; it’s about creating a supportive ecosystem for artisans in Aba’s clusters, increasing their productivity and competitiveness. The Abia State government’s commitment highlights a shared belief in the potential of Aba’s fashion sector to drive lasting economic impact.
 
 Together, Ethnocentrique and the Abia State government are laying the foundation for a prosperous future for Aba’s MSMEs and artisans.`,
-linkText:"  Read more",
-      mainImageSrc: BlogPage6,
-    },
-  ];
+			linkText: '  Read more',
+			mainImageSrc: BlogPage6,
+		},
+	];
 
-  const itemsPerPage = 1;
-  const [currentPage, setCurrentPage] = useState(0);
+	const itemsPerPage = 1;
+	const [currentPage, setCurrentPage] = useState(0);
 
-  const paginatedBlogs = blogData.slice(
-    currentPage * itemsPerPage,
-    (currentPage + 1) * itemsPerPage
-  );
+	const paginatedBlogs = blogData.slice(
+		currentPage * itemsPerPage,
+		(currentPage + 1) * itemsPerPage
+	);
 
-  const handleReadMoreClick = (id: number) => {
-    router.push(`/blog/${id}`);
-  };
+	const handleReadMoreClick = (id: number) => {
+		router.push(`/blog/${id}`);
+	};
 
-  const handlePageChange = (selectedItem: { selected: number }) => {
-    setCurrentPage(selectedItem.selected);
-  };
+	const handlePageChange = (selectedItem: { selected: number }) => {
+		setCurrentPage(selectedItem.selected);
+	};
 
-  const totalPages = Math.ceil(blogData.length / itemsPerPage);
+	const totalPages = Math.ceil(blogData.length / itemsPerPage);
 
-  return (
-    <>
-      	<div className=''>
+	return (
+		<>
+			<div className=''>
 				<ImageBackground
 					imageSrc={heroImage}
 					alt='A beautiful landscape background'
@@ -187,43 +173,43 @@ linkText:"  Read more",
 				</ImageBackground>
 			</div>
 
-      <Image className="w-screen" src={Divider} alt="divider" />
+			<Image className='w-screen' src={Divider} alt='divider' />
 
-      <div className=' container mx-auto py-[5rem]'>
-        <div className="flex justify-around">
-		<Sidebar />
-          <div>
-            {paginatedBlogs.map((blog) => (
-              <BlogCard
-                key={blog.id}
-                title={blog.title}
-                description={blog.description}
-                linkText={blog.linkText}
-                onLinkClick={() => handleReadMoreClick(blog.id)}
-                mainImageSrc={blog.mainImageSrc}
-              />
-            ))}
-          </div>
-        </div>
+			<div className=' container mx-auto py-[5rem]'>
+				<div className='flex justify-around'>
+					<Sidebar />
+					<div>
+						{paginatedBlogs.map((blog) => (
+							<BlogCard
+								key={blog.id}
+								title={blog.title}
+								description={blog.description}
+								linkText={blog.linkText}
+								onLinkClick={() => handleReadMoreClick(blog.id)}
+								mainImageSrc={blog.mainImageSrc}
+							/>
+						))}
+					</div>
+				</div>
 
-        {/* Pagination */}
-        <div className="flex justify-center">
-          <ReactPaginate
-            previousLabel={'Previous'}
-            nextLabel={'Next'}
-            pageCount={totalPages}
-            onPageChange={handlePageChange}
-            containerClassName={'pagination'}
-            activeClassName={'active'}
-            pageLinkClassName={'page-link'}
-            previousLinkClassName={'page-link'}
-            nextLinkClassName={'page-link'}
-            disabledClassName={'disabled'}
-          />
-        </div>
-      </div>
-    </>
-  );
+				{/* Pagination */}
+				<div className='flex justify-center'>
+					<ReactPaginate
+						previousLabel={'Previous'}
+						nextLabel={'Next'}
+						pageCount={totalPages}
+						onPageChange={handlePageChange}
+						containerClassName={'pagination'}
+						activeClassName={'active'}
+						pageLinkClassName={'page-link'}
+						previousLinkClassName={'page-link'}
+						nextLinkClassName={'page-link'}
+						disabledClassName={'disabled'}
+					/>
+				</div>
+			</div>
+		</>
+	);
 };
 
-export default index;
+export default Index;
