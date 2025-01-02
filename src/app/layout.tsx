@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter, Anton, Antonio, Manrope, Ubuntu } from 'next/font/google';
+import { Inter, Manrope, Ubuntu } from 'next/font/google';
 import './globals.css';
 import Header from '@/app/components/appLayout/Header';
 import Footer from '@/app/components/appLayout/Footer';
-import localFont from 'next/font/local';
+
 
 
 const ubuntu = Ubuntu({

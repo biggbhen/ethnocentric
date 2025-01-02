@@ -20,7 +20,7 @@ const AboutUs = (props: Props) => {
 			image: image1,
 			altText: 'Image 1 description',
 			smallTextBelowImage: 'Skills Training',
-			title: '5000+ Youth Trained',
+			title: '5,000+ Youth Trained',
 			description: 'Empowering aspiring fashion professionals in garment making, footwear, and leatherworks through hands-on apprenticeship and mentorship. Learn from seasoned artisans and master the craft that sets trends.',
 
 		},
@@ -28,7 +28,7 @@ const AboutUs = (props: Props) => {
 			image: image2,
 			altText: 'Image 1 description',
 			smallTextBelowImage: 'Supporting Businesses',
-			title: '4000 MSMEs Supported',
+			title: '4,000 MSMEs Supported',
 			description: 'Providing tailored business development services to help fashion entrepreneurs unlock their full potential. From market knowledge to infrastructure, we create thriving businesses that encourage and sustain growth.',
 
 		},
@@ -44,7 +44,7 @@ const AboutUs = (props: Props) => {
 			image: image2,
 			altText: 'Image 1 description',
 			smallTextBelowImage: 'Supporting Businesses',
-			title: '4000 MSMEs Supported',
+			title: '30% Growth in Market Linkages',
 			description: 'Providing tailored business development services to help fashion entrepreneurs unlock their full potential. From market knowledge to infrastructure, we create thriving businesses that encourage and sustain growth.',
 
 		},
@@ -52,7 +52,7 @@ const AboutUs = (props: Props) => {
 			image: image3,
 			altText: 'Image 1 description',
 			smallTextBelowImage: 'Inclusive Empowerment',
-			title: 'Focused on Inclusion',
+			title: '1,000+ Mastercraft Persons',
 			description: 'Championing diversity by empowering young women, supporting women-led MSMEs, and creating opportunities for people with disabilities. Together, we make the fashion industry accessible to all.',
 
 		},
@@ -60,7 +60,7 @@ const AboutUs = (props: Props) => {
 			image: image2,
 			altText: 'Image 1 description',
 			smallTextBelowImage: 'Supporting Businesses',
-			title: '4000 MSMEs Supported',
+			title: '4,000 MSMEs Supported',
 			description: 'Providing tailored business development services to help fashion entrepreneurs unlock their full potential. From market knowledge to infrastructure, we create thriving businesses that encourage and sustain growth.',
 
 		},
@@ -92,17 +92,19 @@ const AboutUs = (props: Props) => {
 
 			<Image src={Divider} className='w-screen' alt='divider' />
 			<div className='my-[5rem]'>
-    <h1 className="text-5xl font-medium text-dark-gray text-center my-8">
-        Our Impact, Your Future
-    </h1>
-    <p className="text-center text-dark-gray text-2xl max-w-[40rem] my-6 mx-auto">
-        Driving skills, innovation, and empowerment to transform the fashion industry into a hub of creativity and opportunity.
-    </p>
-    
-		 <SwiperComponent slides={slides} />
-	 
-   
-</div>
+				<h1 className="text-5xl font-medium text-dark-gray text-center my-8">
+					Our Impact, Your Future
+				</h1>
+				<p className="text-center text-dark-gray text-2xl max-w-[40rem] my-6 mx-auto">
+					Driving skills, innovation, and empowerment to transform the fashion industry into a hub of creativity and opportunity.
+				</p>
+
+
+
+				<SwiperComponent slides={slides} />
+
+
+			</div>
 
 
 			<Image src={Divider} className='w-screen' alt='divider' />

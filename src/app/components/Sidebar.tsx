@@ -6,22 +6,23 @@ import Side2 from '../../assets/side2.png';
 const Sidebar: React.FC = () => {
 	return (
 		<>
+		
+			<div className='h-screen w-80 mt-7 bg-[white] text-dark-gray  flex flex-col'>
 			<div className=''>
 				<input
 					type='text'
 					name=''
 					placeholder='Search'
-					className='w-full bg-[white] border border-[#E0E0E0] p-3'
+					className='w-full mb-2 bg-[white] border border-[#E0E0E0] p-3'
 					id=''
 				/>
 			</div>
 
-			<div className='h-screen w-80 mt-7 bg-[white] text-dark-gray  flex flex-col'>
 				{/* Menu */}
 				<nav className='flex-grow'>
 					<ul className='flex flex-col  space-y-2'>
 						<li className='border bg-[#FAFAFA] border-[#E0E0E0] w-full flex items-stretch'>
-							<div className='bg-[#FFA929] w-1'></div> {/* Red vertical bar */}
+							<div className='bg-[#FFA929] w-1'></div>
 							<a href='#' className='flex items-center p-6 rounded-md w-full'>
 								<span className='material-icons-outlined font-normal'>
 									CATEGORIES
@@ -68,7 +69,7 @@ const Sidebar: React.FC = () => {
 
 					<ul className='flex flex-col mt-4 space-y-2'>
 						<li className='border bg-[#FAFAFA] border-[#E0E0E0] w-full flex items-stretch'>
-							<div className='bg-[#FFA929] w-1'></div> {/* Red vertical bar */}
+							<div className='bg-[#FFA929] w-1'></div> 
 							<a href='#' className='flex items-center p-6 rounded-md w-full'>
 								<span className='material-icons-outlined font-normal'>
 									LATEST POSTS

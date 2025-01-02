@@ -69,7 +69,7 @@ const index = () => {
 				</div>
 			</ImageBackground>
 
-			<Image src={Divider} alt='divider' />
+			<Image className='w-screen' src={Divider} alt='divider' />
 
 			<div className='my-[5rem]'>
     <h1 className="text-5xl font-medium text-dark-gray text-center my-8">
@@ -83,7 +83,7 @@ const index = () => {
 	 
    
 </div>
-
+<Image className='w-screen' src={Divider} alt='divider' />
 			<FashionSectionList
 				header='Apprentice Model'
 				subHeader='Learning from Masters of the Craft.'
@@ -100,7 +100,7 @@ const index = () => {
 				secondaryButtonText='Join the Program'
 				secondaryButtonAction={() => console.log('Learn More clicked')}
 			/>
-			<Image src={Divider2} alt='divider' />
+			<Image className='w-screen' src={Divider2} alt='divider' />
 
 			<FashionSectionList
 				header='Business Development Support'
@@ -119,7 +119,7 @@ const index = () => {
 				secondaryButtonAction={() => console.log('Learn More clicked')}
 			/>
 
-			<Image src={Divider} alt='divider' />
+			<Image className='w-screen' src={Divider} alt='divider' />
 
 			<div>
 				<ImageBackground
@@ -149,7 +149,7 @@ const index = () => {
 					</div>
 				</ImageBackground>
 			</div>
-			<Image src={Divider} alt='divider' />
+			<Image className='w-screen' src={Divider} alt='divider' />
 		</>
 	);
 };

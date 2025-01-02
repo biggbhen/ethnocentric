@@ -1,7 +1,7 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { GoArrowUpRight } from 'react-icons/go';
-import Pagi from '../../assets/pagi.svg';
+
 
 interface BlogCardProps {
 	title: string;
@@ -23,10 +23,10 @@ const BlogCard: React.FC<BlogCardProps> = ({
 	return (
 		<div>
 			<div className='md:max-w-[50rem] text-end'>
-				<h2 className='flex justify-end font-medium text-dark-gray text-xl md:text-5xl'>
+				<h2 className='flex  justify-end font-medium text-dark-gray text-xl md:text-5xl'>
 					{title}
 				</h2>
-				<div className='font-normal text-2xl text-dark-gray my-[1.5rem]'>
+				<div className='font-normal text-2xl line-clamp-3 text-dark-gray my-[1.5rem]'>
 					{description}
 				</div>
 				<div
@@ -38,11 +38,9 @@ const BlogCard: React.FC<BlogCardProps> = ({
 				<div className='relative'>
 					{/* Image container with negative margins */}
 					<div className='lg:-ms-[4rem]'>
-						<Image src={mainImageSrc} alt='Main image' className='w-full' />
+						<Image src={mainImageSrc} alt='Main image' className='w-full rounded-3xl' />
 					</div>
-					<div className='mt-8'>
-						<Image src={Pagi} alt='Secondary image' />
-					</div>
+					
 				</div>
 			</div>
 		</div>
