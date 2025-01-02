@@ -92,19 +92,19 @@ const AboutUs = (props: Props) => {
 
 			<Image src={Divider} className='w-screen' alt='divider' />
 			<div className='my-[5rem]'>
-    <h1 className="text-5xl font-medium text-dark-gray text-center my-8">
-        Our Impact, Your Future
-    </h1>
-    <p className="text-center text-dark-gray text-2xl max-w-[40rem] my-6 mx-auto">
-        Driving skills, innovation, and empowerment to transform the fashion industry into a hub of creativity and opportunity.
-    </p>
+				<h1 className="text-5xl font-medium text-dark-gray text-center my-8">
+					Our Impact, Your Future
+				</h1>
+				<p className="text-center text-dark-gray text-2xl max-w-[40rem] my-6 mx-auto">
+					Driving skills, innovation, and empowerment to transform the fashion industry into a hub of creativity and opportunity.
+				</p>
 
-	
-    
-		 <SwiperComponent slides={slides} />
-	 
-   
-</div>
+
+
+				<SwiperComponent slides={slides} />
+
+
+			</div>
 
 
 			<Image src={Divider} className='w-screen' alt='divider' />

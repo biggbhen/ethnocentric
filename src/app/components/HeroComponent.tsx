@@ -8,15 +8,11 @@ import hero2 from '../../assets/hero2.jpg';
 import hero3 from '../../assets/hero3.jpg';
 import hero4 from '../../assets/hero4.jpg';
 import hero5 from '../../assets/hero5.jpg';
-
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Button from './ui/Button';
 
 const HeroSwiper = () => {
-	// Array of slide data (images and texts)
 	const slides = [
 		{ image: hero4, text: 'The Future Belongs to those who do' },
 		{ image: hero1, text: 'Explore Slide 2' },
@@ -53,8 +49,8 @@ const HeroSwiper = () => {
 										{slide.text}
 									</h1>
 									<p className='text-lg  mb-8 md:text-xl md:max-w-[40rem] md:mx-auto text-white'>
-									Through innovation, skill development, and community engagement, the <strong>Fashion Future Program</strong> is transforming  
-									lives, fostering creativity, and building sustainable fashion businesses across Nigeria.
+										Through innovation, skill development, and community engagement, the <strong>Fashion Future Program</strong> is transforming
+										lives, fostering creativity, and building sustainable fashion businesses across Nigeria.
 									</p>
 									<div className='md:flex justify-center gap-x-3 mx-auto w-full'>
 										<Button
