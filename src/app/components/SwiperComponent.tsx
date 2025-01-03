@@ -16,6 +16,7 @@ interface Slide {
     title?: string;
     description: string;
     extraText?: string;
+    extraTextEnd?: string;
 }
 
 interface SwiperComponentProps {
@@ -60,9 +61,8 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
                                 <Image
                                     src={slide.image}
                                     alt={slide.altText}
-                                    width={300}
-                                    height={200}
-                                    className="w-full rounded-t-xl"
+                                   
+                                    className="w-full max-h-[150px] rounded-t-xl"
                                 />
                                 <div className="border-t-0 border border-[#E0E0E0] w-full p-5 flex-grow rounded-b-xl space-y-2"> 
                                     {slide.smallTextBelowImage && (
@@ -77,6 +77,9 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
                                     )}
                                     <p className="text-swiper-gray text-sm">{slide.description}</p>
                                     {slide.extraText && (
+                                        <p className="text-sm text-[#FFA929] font-medium flex items-center cursor-pointer hover:underline w-fit">{slide.extraText}    <GoArrowUpRight /></p>
+                                    )}
+                                    {slide.extraTextEnd && (
                                         <p className="text-sm text-[#FFA929] font-medium flex items-center cursor-pointer hover:underline w-fit">{slide.extraText}    <GoArrowUpRight /></p>
                                     )}
                                 </div>

@@ -10,8 +10,41 @@ import Divider from '../../assets/divider.svg';
 import Divider2 from '../../assets/divider2.svg';
 import FashionSectionList from '../components/FashionSectionList';
 import ImageBackground from '../components/ImageBackground';
+// import SwiperComponent from '../components/SwiperComponent';
 
 const index = () => {
+// 	const slides = [
+// 		{
+// 			image: image1,
+// 			altText: 'Image 1 description',
+// 			description: `‘Thanks to Fashion Future Program, I’ve expanded my business and now mentor other young women in leather works.’`,
+// 			extraTextEnd:` — Ada, MSME Owner`
+			
+// 		},
+// 		{
+// 			image: image2,
+// 			altText: 'Image 1 description',
+
+			
+// 			description: `‘The apprenticeship program helped me master
+// garment making. I am now running my own shop.
+// I’m grateful to Fashion Future Program.’`,
+// 		extraTextEnd:` — Ada, MSME Owner`
+// 		},
+// 		{
+// 			image: image3,
+// 			altText: 'Image 1 description',
+
+// 			title: 'Leatherworks',
+// 			description: `Hone your skills in  crafting leather goods with
+// precision and attention to detail. Learn how to
+// put a unique spin on your designs.`,
+// 			extraTextEnd: 'Register'
+
+// 		},
+
+
+// 	];
 	return (
 		<>
 			<div className='md:m-5'>
@@ -56,7 +89,22 @@ const index = () => {
 				secondaryButtonAction={() => console.log('Learn More clicked')}
 			/>
 			<Image className=' w-screen' src={Divider2} alt='divider' />
+			{/* <Image className='w-screen' src={Divider} alt='divider' />
 
+<div className='my-[5rem]'>
+	<h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-dark-gray text-center my-4 md:my-6 lg:my-8">
+		Training Programs
+	</h1>
+	<p className="text-center text-dark-gray text-base md:text-lg lg:text-2xl max-w-[90%] md:max-w-[40rem] my-4 md:my-5 lg:my-6 mx-auto">
+		Hands-on learning that bridges creativity and craftsmanship while transforming lives and driving growth. Addressing industry shortages with comprehensive training.
+	</p>
+
+
+	<SwiperComponent slides={slides} />
+
+
+</div> */}
+<Image className='w-screen' src={Divider} alt='divider' />
 			<FashionSectionList
 				header='The Future of Aba’s
 Clusters'

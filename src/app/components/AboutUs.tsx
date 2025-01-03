@@ -11,6 +11,9 @@ import SwiperComponent from './SwiperComponent';
 import image1 from '@/assets/homeImage1.png'
 import image2 from '@/assets/homeImage2.png'
 import image3 from '@/assets/homeImage3.png'
+import image4 from '@/assets/impact4.jpg'
+import image5 from '@/assets/impact6.jpg'
+import image6 from '@/assets/impactlast.jpg'
 
 type Props = {};
 
@@ -41,21 +44,21 @@ const AboutUs = (props: Props) => {
 
 		},
 		{
-			image: image3,
+			image: image4,
 			altText: 'Image 1 description',
 			smallTextBelowImage: 'Regional Economic Hubs',
 			title: '•3 Major Clusters',
 			description: 'Driving economic growth through innovation and collaboration in Abia State. These clusters foster skill development, mastercraft persons, and sustainable regional development.',
 		  },
 		  {
-			image: image2,
+			image: image6,
 			altText: 'Image 1 description',
 			smallTextBelowImage: 'Expanding Opportunities',
 			title: '30% Growth in Market Linkages',
 			description: 'Enhancing connections between mastercraft persons and buyers, boosting the market reach of local fashion businesses, and creating a ripple effect of economic empowerment.',
 		  },
 		  {
-			image: image3,
+			image: image5,
 			altText: 'Image 1 description',
 			smallTextBelowImage: 'Expert Craftsmanship',
 			title: '1,000+ Mastercraft Persons',

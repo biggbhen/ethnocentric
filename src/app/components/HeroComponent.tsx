@@ -28,7 +28,7 @@ const HeroSwiper = () => {
 		{
 			image: hero2,
 			text: 'Inspiring Creativity, Driving Economic Growth.',
-			description: "Combining tradition with innovation to foster a thriving, inclusive, and sustainable fashion ecosystem that strengthens communities and creates dignified work opportunities."
+			description: "Blending heritage with modern ideas to cultivate a vibrant, diverse, and sustainable fashion industry that uplifts communities and promotes meaningful work opportunities."
 		},
 		{
 			image: hero3,
