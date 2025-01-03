@@ -12,14 +12,40 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import Button from './ui/Button';
 
+
 const HeroSwiper = () => {
 	const slides = [
-		{ image: hero4, text: 'The Future Belongs to those who do' },
-		{ image: hero1, text: 'Explore Slide 2' },
-		{ image: hero2, text: 'Inspiring Creativity, Driving Economic Growth.' },
-		{ image: hero3, text: 'Learn on Slide 4' },
-		{ image: hero5, text: 'Empowering the Future of Fashion.' },
+		{
+			image: hero4,
+			text: 'The Future Belongs to those who do',
+			description: "Empowering action through skill and creativity, we’re driving social change and creating opportunities in fashion."
+		},
+		{
+			image: hero1,
+			text: 'Shaping the Future of Fashion, One Skill at a Time',
+			description: "Join a transformative program equipping young Nigerians with mentorship, training, and resources to revolutionize the fashion industry and uplift communities."
+		},
+		{
+			image: hero2,
+			text: 'Inspiring Creativity, Driving Economic Growth.',
+			description: "Combining tradition with innovation to foster a thriving, inclusive, and sustainable fashion ecosystem that strengthens communities and creates dignified work opportunities."
+		},
+		{
+			image: hero3,
+			text: `Oge adighi eche mmadu
+			
+
+`,
+			trans: "(because time waits for no man)",
+			description: "Combining tradition with innovation to foster a thriving, inclusive, and sustainable fashion ecosystem that strengthens communities and creates dignified work opportunities."
+		},
+		{
+			image: hero5,
+			text: 'Empowering the Future of Fashion.',
+			description: "Building a new generation of skilled artisans and visionary entrepreneurs to lead Nigeria's fashion industry into a prosperous future."
+		},
 	];
+
 
 	return (
 		<Swiper
@@ -48,11 +74,11 @@ const HeroSwiper = () => {
 									<h1 className='text-4xl font-medium text-bright-orange mb-6 md:text-5xl lg:text-6xl md:max-w-[50rem]'>
 										{slide.text}
 									</h1>
+									<h3 className='text-2xl font-medium text-bright-orange mb-6 md:text-2xl lg:text-2xl md:max-w-[50rem]'>{slide.trans}</h3>
 									<p className='text-lg  mb-8 md:text-xl md:max-w-[40rem] md:mx-auto text-white'>
-										Through innovation, skill development, and community engagement, the <strong>Fashion Future Program</strong> is transforming
-										lives, fostering creativity, and building sustainable fashion businesses across Nigeria.
+										{slide.description}
 									</p>
-									<div className='md:flex justify-center gap-x-3 mx-auto w-full'>
+									<div className='flex justify-center gap-x-3 mx-auto w-full'>
 										<Button
 											className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
 											variant='secondary'>

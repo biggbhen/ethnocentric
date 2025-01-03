@@ -7,6 +7,7 @@ import Image, { StaticImageData } from 'next/image';
 import { useRef } from 'react';
 import { HiArrowUpLeft, HiArrowUpRight } from 'react-icons/hi2';
 import Button from './ui/Button';
+import { GoArrowUpRight } from 'react-icons/go';
 
 interface Slide {
     image: StaticImageData;
@@ -30,9 +31,23 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
                 <Swiper
                     onSwiper={(swiper) => (swiperRef.current = swiper)}
                     spaceBetween={30}
-                    slidesPerView={3}
+                    slidesPerView={1.4}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 30,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                    }}
                     pagination={{ clickable: true }}
-                    modules={[Navigation,Autoplay]}
+                    modules={[Navigation, Autoplay]}
                     autoplay={{
                         delay: 2000,
                         disableOnInteraction: false,
@@ -62,7 +77,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
                                     )}
                                     <p className="text-swiper-gray text-sm">{slide.description}</p>
                                     {slide.extraText && (
-                                        <p className="text-sm text-bright-orange font-medium">{slide.extraText}</p>
+                                        <p className="text-sm text-[#FFA929] font-medium flex items-center cursor-pointer hover:underline w-fit">{slide.extraText}    <GoArrowUpRight /></p>
                                     )}
                                 </div>
                             </div>
@@ -80,7 +95,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
                 </div>
             </div>
 
-            <div className="absolute top-1/2 w-full -translate-y-1/2 flex justify-between px-[7rem]"> 
+            <div className="absolute hidden  top-1/2 w-full -translate-y-1/2 lg:flex justify-between px-[7rem]"> 
                 <button
                     onClick={() => swiperRef.current?.slidePrev()}
                     className="bg-bright-orange text-white p-3 rounded-full hover:bg-orange-500"
@@ -99,4 +114,3 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
 };
 
 export default SwiperComponent;
-

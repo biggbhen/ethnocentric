@@ -25,11 +25,10 @@ h6 {
 
 
 
-/* Styling the navigation buttons */
+
 .swiper-button-next,
 .swiper-button-prev {
 	border: 2px solid #ffa929;
-	/* background-color: #fff;  */
 	color: #ffa929;
 	border-radius: 50%;
 	width: 50px;
@@ -41,14 +40,21 @@ h6 {
 	padding: 2rem;
 }
 
-/* Style the icons */
+@media (max-width: 768px) {
+	.swiper-button-next,
+	.swiper-button-prev {
+	  display: none !important;
+	}
+  }
+  
+
 .swiper-button-next::after,
 .swiper-button-prev::after {
 	font-size: 1.5rem;
 	color: #ffa929;
 }
 
-/* Add hover effect for buttons and icons */
+
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
 	transform: scale(1.1);

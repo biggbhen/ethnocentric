@@ -7,7 +7,7 @@ const Sidebar: React.FC = () => {
 	return (
 		<>
 		
-			<div className='h-screen w-80 mt-7 bg-[white] text-dark-gray  flex flex-col'>
+			<div className='h-screen w-screen md:w-80 md:mt-7 mt-3 bg-[white] text-dark-gray  flex flex-col'>
 			<div className=''>
 				<input
 					type='text'

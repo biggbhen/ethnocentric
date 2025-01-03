@@ -5,7 +5,7 @@ import Domore from '../../assets/Domore.png';
 import Whoarewe from '../../assets/whoarewe.png';
 import approach from '../../assets/ourapproach.png';
 import contact from '../../assets/contactImage.jpg';
-import about from '../../assets/about.png';
+import about from '../../assets/aboute.png';
 import Image from 'next/image';
 import Button from '../components/ui/Button';
 import Divider from '../../assets/divider.svg'
@@ -249,7 +249,7 @@ return (
 				</ImageBackground>
 			</div>
 		</div>
-		<Image src={Divider} alt='divider' />
+		<Image className='w-screen' src={Divider} alt='divider' />
 	</>
 );
 }

@@ -36,8 +36,7 @@ const FashionSectionList: React.FC<FashionSectionProps> = ({
 						src={image}
 						alt={altText}
 						layout='responsive'
-						width={600}
-						height={400}
+						className='md:min-h-[650px] max-h-[650px]'
 						objectFit='contain'
           
 					/>

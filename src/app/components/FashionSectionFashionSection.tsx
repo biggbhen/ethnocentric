@@ -26,7 +26,7 @@ const FashionSection: React.FC<FashionSectionProps> = ({
 	secondaryButtonAction,
 }) => {
 	return (
-		<div className='grid grid-cols-1 md:grid-cols-2 text-center h-full bg-white'>
+		<div className='grid grid-cols-1 lg:grid-cols-2 text-center h-full bg-white'>
 			{/* Image Section */}
 			{imageLeft && (
 				<div className='flex justify-center items-center p-4 md:p-0'>
@@ -42,14 +42,14 @@ const FashionSection: React.FC<FashionSectionProps> = ({
 			)}
 
 			{/* Content Section */}
-			<div className='flex flex-col text-[#1A1A1A] justify-center items-center bg-white p-6 md:p-10'>
+			<div className='flex flex-col text-[#1A1A1A] gap-y-10 justify-center items-center bg-white p-6 md:p-10'>
 				<div className='font-medium py-4 md:py-7 text-2xl md:text-4xl xl:text-5xl max-w-full md:max-w-[80%] xl:max-w-[75%]'>
 					{header}
 				</div>
 				<div className='font-normal text-start text-base md:text-lg xl:text-2xl max-w-full md:max-w-[80%] xl:max-w-[75%]'>
 					{description}
 					<div className='text-start mt-6'>
-						<div className='flex flex-col md:flex-row gap-y-3 md:gap-y-0 gap-x-5'>
+						<div className='flex flex-col md:flex-row gap-y-3 lg:gap-y-0 gap-x-5'>
 							{/* Secondary Button */}
 							<Button
 								className='text-base'
