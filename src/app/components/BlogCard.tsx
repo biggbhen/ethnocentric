@@ -22,11 +22,11 @@ const BlogCard: React.FC<BlogCardProps> = ({
 }) => {
 	return (
 		<div>
-			<div className='md:max-w-[50rem] text-end'>
+			<div className='md:max-w-[50rem] text-end px-5 md:px-0'>
 				<h2 className='flex  justify-end font-medium text-dark-gray text-xl md:text-5xl'>
 					{title}
 				</h2>
-				<div className='font-normal text-2xl line-clamp-3 text-dark-gray my-[1.5rem]'>
+				<div className='font-normal text-md md:text-2xl line-clamp-3 text-dark-gray my-[1.5rem]'>
 					{description}
 				</div>
 				<div

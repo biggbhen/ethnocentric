@@ -10,9 +10,9 @@ import heroImage from '../../assets/heroImage.svg';
 import FashionSectionList from '../components/FashionSectionList';
 import ImageBackground from '../components/ImageBackground';
 import SwiperComponent from '../components/SwiperComponent';
-import image1 from '@/assets/homeImage1.png'
-import image2 from '@/assets/homeImage2.png'
-import image3 from '@/assets/homeImage3.png'
+import image1 from '@/assets/train1.png'
+import image2 from '@/assets/train2.png'
+import image3 from '@/assets/train3.png'
 import Cluster3 from '../../assets/cluster3.png';
 
 const index = () => {
@@ -21,27 +21,33 @@ const index = () => {
 			image: image1,
 			altText: 'Image 1 description',
 			title: 'Garment Making',
-			description: 'Learn the art of designing, cutting, and constructing high-quality garments from industry experts whilst using quality materials.',
-			 extraText: 'Register'
+			description: `Learn the art of designing, cutting, and constructing
+high-quality garments from industry experts whilst
+using quality materials.`,
+			extraText: 'Register'
 		},
 		{
 			image: image2,
 			altText: 'Image 1 description',
-		
+
 			title: 'Footwear Crafting',
-			description: 'Master the process of creating stylish and durable footwear, blending traditional techniques with modern trends.',
- extraText: 'Register'
+			description: `Master the process of creating stylish and durable
+footwear, blending traditional techniques with
+modern trends.`,
+			extraText: 'Register'
 		},
 		{
 			image: image3,
 			altText: 'Image 1 description',
-		
+
 			title: 'Leatherworks',
-			description: 'Hone your skills in  crafting leather goods with precision and attention to detail. Learn how to put a unique spin on your designs.',
-    extraText: 'Register'
-              
+			description: `Hone your skills in  crafting leather goods with
+precision and attention to detail. Learn how to
+put a unique spin on your designs.`,
+			extraText: 'Register'
+
 		},
-		
+
 
 	];
 	return (
@@ -49,7 +55,7 @@ const index = () => {
 			<ImageBackground
 				imageSrc={heroImage}
 				alt='A beautiful landscape background'
-				className='md:h-screen h-[70vh]'>
+				className='md:h-screen h-[100vh]'>
 				<div className='text-white text-center px-4 py-8'>
 					<h1 className='text-4xl font-medium text-bright-orange mb-6 md:text-6xl lg:text-7xl'>
 						Where Skills Meet Opportunity
@@ -72,18 +78,19 @@ const index = () => {
 			<Image className='w-screen' src={Divider} alt='divider' />
 
 			<div className='my-[5rem]'>
-    <h1 className="text-5xl font-medium text-dark-gray text-center my-8">
-	Training Programs
-    </h1>
-    <p className="text-center text-dark-gray text-2xl max-w-[40rem] my-6 mx-auto">
-	Heads-on learning that bridges creativity and craftsmanship while transforming lives and driving growth. Addressing industry shortages with comprehensive training.
-    </p>
-    
-		 <SwiperComponent slides={slides} />
-	 
-   
-</div>
-<Image className='w-screen' src={Divider} alt='divider' />
+				<h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-dark-gray text-center my-4 md:my-6 lg:my-8">
+					Training Programs
+				</h1>
+				<p className="text-center text-dark-gray text-base md:text-lg lg:text-2xl max-w-[90%] md:max-w-[40rem] my-4 md:my-5 lg:my-6 mx-auto">
+					Hands-on learning that bridges creativity and craftsmanship while transforming lives and driving growth. Addressing industry shortages with comprehensive training.
+				</p>
+
+
+				<SwiperComponent slides={slides} />
+
+
+			</div>
+			<Image className='w-screen' src={Divider} alt='divider' />
 			<FashionSectionList
 				header='Apprentice Model'
 				subHeader='Learning from Masters of the Craft.'
@@ -126,15 +133,15 @@ const index = () => {
 					Imageclass='filter brightness-50 '
 					imageSrc={contactImage}
 					alt='A beautiful landscape background'
-					className='md:h-screen h-[70vh]'>
+					className='md:h-screen h-screen'>
 					<div className='text-white text-center px-4 py-8 '>
-						<h1 className='text-4xl font-medium mb-3 md:text-5xl lg:text-5xl'>
+						<h1 className='text-3xl font-medium mb-3 md:text-5xl lg:text-5xl'>
 							Why It Matters
 						</h1>
 						<p className='mb-10 text-xl font-normal'>
 							Transforming Lives, Driving Growth.
 						</p>
-						<div className='text-2xl font-normal  my-10 md:text-xl md:max-w-[30rem] md:mx-auto'>
+						<div className='text-xl font-normal  my-10 md:text-xl md:max-w-[30rem] md:mx-auto'>
 							Explore our comprehensive programs designed to empower aspiring
 							fashion professionals with the skills, resources, and mentorship
 							needed to thrive in the industry.

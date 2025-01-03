@@ -11,6 +11,9 @@ import SwiperComponent from './SwiperComponent';
 import image1 from '@/assets/homeImage1.png'
 import image2 from '@/assets/homeImage2.png'
 import image3 from '@/assets/homeImage3.png'
+import image4 from '@/assets/impact4.jpg'
+import image5 from '@/assets/impact6.jpg'
+import image6 from '@/assets/impactlast.jpg'
 
 type Props = {};
 
@@ -41,38 +44,29 @@ const AboutUs = (props: Props) => {
 
 		},
 		{
-			image: image2,
+			image: image4,
 			altText: 'Image 1 description',
-			smallTextBelowImage: 'Supporting Businesses',
+			smallTextBelowImage: 'Regional Economic Hubs',
+			title: '•3 Major Clusters',
+			description: 'Driving economic growth through innovation and collaboration in Abia State. These clusters foster skill development, mastercraft persons, and sustainable regional development.',
+		  },
+		  {
+			image: image6,
+			altText: 'Image 1 description',
+			smallTextBelowImage: 'Expanding Opportunities',
 			title: '30% Growth in Market Linkages',
-			description: 'Providing tailored business development services to help fashion entrepreneurs unlock their full potential. From market knowledge to infrastructure, we create thriving businesses that encourage and sustain growth.',
-
-		},
-		{
-			image: image3,
+			description: 'Enhancing connections between mastercraft persons and buyers, boosting the market reach of local fashion businesses, and creating a ripple effect of economic empowerment.',
+		  },
+		  {
+			image: image5,
 			altText: 'Image 1 description',
-			smallTextBelowImage: 'Inclusive Empowerment',
+			smallTextBelowImage: 'Expert Craftsmanship',
 			title: '1,000+ Mastercraft Persons',
-			description: 'Championing diversity by empowering young women, supporting women-led MSMEs, and creating opportunities for people with disabilities. Together, we make the fashion industry accessible to all.',
+			description: 'Building a legacy of excellence by training over a thousand mastercraft persons who preserve tradition while innovating for the future of fashion.',
+		  },
 
-		},
-		{
-			image: image2,
-			altText: 'Image 1 description',
-			smallTextBelowImage: 'Supporting Businesses',
-			title: '4,000 MSMEs Supported',
-			description: 'Providing tailored business development services to help fashion entrepreneurs unlock their full potential. From market knowledge to infrastructure, we create thriving businesses that encourage and sustain growth.',
-
-		},
-		{
-			image: image3,
-			altText: 'Image 1 description',
-			smallTextBelowImage: 'Inclusive Empowerment',
-			title: 'Focused on Inclusion',
-			description: 'Championing diversity by empowering young women, supporting women-led MSMEs, and creating opportunities for people with disabilities. Together, we make the fashion industry accessible to all.',
-
-		},
-
+		
+		
 	];
 	return (
 
@@ -92,12 +86,13 @@ const AboutUs = (props: Props) => {
 
 			<Image src={Divider} className='w-screen' alt='divider' />
 			<div className='my-[5rem]'>
-				<h1 className="text-5xl font-medium text-dark-gray text-center my-8">
-					Our Impact, Your Future
-				</h1>
-				<p className="text-center text-dark-gray text-2xl max-w-[40rem] my-6 mx-auto">
-					Driving skills, innovation, and empowerment to transform the fashion industry into a hub of creativity and opportunity.
-				</p>
+			<h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-dark-gray text-center my-4 md:my-6 lg:my-8">
+    Our Impact, Your Future
+</h1>
+<p className="text-center text-dark-gray text-base md:text-lg lg:text-2xl max-w-[90%] md:max-w-[40rem] my-4 md:my-5 lg:my-6 mx-auto">
+    Driving skills, innovation, and empowerment to transform the fashion industry into a hub of creativity and opportunity.
+</p>
+
 
 
 
