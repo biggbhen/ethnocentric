@@ -1,14 +1,16 @@
 import React from 'react';
+import Image from 'next/image';
+import Logo from '@/assets/logoFooter.png'
 
 
 const Footer: React.FC = () => {
 	return (
 		<footer className='bg-[#E86025] text-white font-semibold py-8'>
 			{/* Main Footer Content */}
-			<div className='grid grid-cols-1 container mx-auto md:grid-cols-3  lg:grid-cols-5 text-start gap-6 px-4 md:px-[3rem] pt-9'>
+			<div className='grid grid-cols-1 container mx-auto md:grid-cols-3  lg:grid-cols-5 md:text-start text-center gap-6 px-4 md:px-[3rem] pt-9'>
 				{/* Logo Section */}
 				<div className='flex flex-col items-center md:items-start'>
-					<div className='text-xl font-bold mb-4'>Logo</div>
+					<div><Image src={Logo} width={150} height={150} alt='logo' /></div>
 				</div>
 
 				{/* Navigation Links */}

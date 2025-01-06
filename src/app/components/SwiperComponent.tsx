@@ -98,7 +98,7 @@ const SwiperComponent: React.FC<SwiperComponentProps> = ({ slides }) => {
                 </div>
             </div>
 
-            <div className="absolute hidden  top-1/2 w-full -translate-y-1/2 lg:flex justify-between px-[7rem]"> 
+            <div className="absolute hidden z-10  top-1/2 w-full -translate-y-1/2 lg:flex justify-between  xl:px-[4rem]"> 
                 <button
                     onClick={() => swiperRef.current?.slidePrev()}
                     className="bg-bright-orange text-white p-3 rounded-full hover:bg-orange-500"
