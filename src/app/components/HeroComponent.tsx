@@ -67,7 +67,7 @@ const HeroSwiper = () => {
 							fill
 							style={{ objectFit: 'cover', objectPosition: 'center 35%', zIndex: -1 }}
 						/>
-						<div className='absolute inset-0 bg-black/70 z-10'></div>
+						<div className='absolute inset-0 bg-black/60 z-10'></div>
 						<div className='text-white text-center relative z-20'>
 							<h1>
 								<div className='text-white text-center px-4 py-8'>

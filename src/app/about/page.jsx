@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import Ourvision from '../../assets/ourvision.png'
-import Domore from '../../assets/Domore.png';
+import Domore from '../../assets/domore.png';
 import Whoarewe from '../../assets/whoarewe.png';
 import approach from '../../assets/ourapproach.png';
 import contact from '../../assets/contactImage.jpg';

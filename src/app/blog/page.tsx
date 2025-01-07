@@ -9,22 +9,22 @@ import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/navigation';
 import ImageBackground from '../components/ImageBackground';
 import Sidebar from '../components/Sidebar';
-import BlogPage2 from '@/assets/blogpage2.png'
-import BlogPage6 from '@/assets/blogpage6.png'
-import BlogPage5 from '@/assets/blogpage5.png'
-import BlogPage4 from '@/assets/blogpage4.png'
-import BlogPage3 from '@/assets/blogpage3.png'
+import BlogPage2 from '@/assets/blogpage2.png';
+import BlogPage6 from '@/assets/blogpage6.png';
+import BlogPage5 from '@/assets/blogpage5.png';
+import BlogPage4 from '@/assets/blogpage4.png';
+import BlogPage3 from '@/assets/blogpage3.png';
 
 interface Blog {
-  id: number;
-  title: string;
-  description: string;
-  linkText: string;
-  mainImageSrc: StaticImageData;
+	id: number;
+	title: string;
+	description: string;
+	linkText: string;
+	mainImageSrc: StaticImageData;
 }
 
-const index = () => {
-  const router = useRouter();
+const Index = () => {
+	const router = useRouter();
 
   const blogData: Blog[] = [
     {
@@ -138,23 +138,23 @@ Together, Ethnocentrique and the Abia State government are laying the foundation
     },
   ];
 
-  const itemsPerPage = 1;
-  const [currentPage, setCurrentPage] = useState(0);
+	const itemsPerPage = 1;
+	const [currentPage, setCurrentPage] = useState(0);
 
-  const paginatedBlogs = blogData.slice(
-    currentPage * itemsPerPage,
-    (currentPage + 1) * itemsPerPage
-  );
+	const paginatedBlogs = blogData.slice(
+		currentPage * itemsPerPage,
+		(currentPage + 1) * itemsPerPage
+	);
 
-  const handleReadMoreClick = (id: number) => {
-    router.push(`/blog/${id}`);
-  };
+	const handleReadMoreClick = (id: number) => {
+		router.push(`/blog/${id}`);
+	};
 
-  const handlePageChange = (selectedItem: { selected: number }) => {
-    setCurrentPage(selectedItem.selected);
-  };
+	const handlePageChange = (selectedItem: { selected: number }) => {
+		setCurrentPage(selectedItem.selected);
+	};
 
-  const totalPages = Math.ceil(blogData.length / itemsPerPage);
+	const totalPages = Math.ceil(blogData.length / itemsPerPage);
 
   return (
     <>
@@ -183,7 +183,7 @@ Together, Ethnocentrique and the Abia State government are laying the foundation
         </ImageBackground>
       </div>
 
-      <Image className="w-screen" src={Divider} alt="divider" />
+			<Image className='w-screen' src={Divider} alt='divider' />
 
       <div className=' container mx-auto py-[5rem]'>
       <div className="flex  flex-col-reverse lg:flex-row lg:justify-around">
@@ -223,4 +223,4 @@ Together, Ethnocentrique and the Abia State government are laying the foundation
   );
 };
 
-export default index;
+export default Index;
