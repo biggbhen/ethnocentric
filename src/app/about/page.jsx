@@ -190,7 +190,7 @@ return (
 					className='md:h-screen h-[70vh]'>
 					<div className='text-white text-center px-4 py-8'>
 						<h1 className='text-4xl font-medium mb-3 md:text-5xl lg:text-5xl'>
-							Why It Matters
+						Contact Us
 						</h1>
 
 						<p className='text-2xl font-normal  my-10 md:text-xl md:max-w-[30rem] md:mx-auto'>

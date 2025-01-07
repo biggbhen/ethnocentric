@@ -23,7 +23,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: 'Fashion Future Program',
-	description: 'Developed by Ugochukwu Benjamin',
+	
 };
 
 export default function RootLayout({
