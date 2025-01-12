@@ -14,6 +14,9 @@ import image3 from '@/assets/homeImage3.png'
 import image4 from '@/assets/impact4.jpg'
 import image5 from '@/assets/impact6.jpg'
 import image6 from '@/assets/impactlast.jpg'
+import speak from '@/assets/speak.png'
+import Last from './Last';
+import WhatWeDo from './WhatWeDo';
 
 type Props = {};
 
@@ -85,6 +88,24 @@ const AboutUs = (props: Props) => {
 			/>
 
 			<Image src={Divider} className='w-screen' alt='divider' />
+
+			<WhatWeDo />
+			<Image src={Divider} className='w-screen' alt='divider' />
+			<Last
+			 header='Who We Speak To'
+			 description1=' Vibrant individuals including women, men, and people with disabilities, who are passionate about fashion and eager to turn their skills into a sustainable career.'
+			 description2='Fashion entrepreneurs in the fashion industry, aspiring designers or artisans, eager to grow and stay market competitive.'
+			 image={speak}
+			 altText='Fashion'
+			 imageLeft={true}
+			 subHeader2='MSMEs (Micro, Small, and Medium Enterprises): '
+			 primaryButtonText='Join the Program'
+			 primaryButtonAction={() => alert('Joining Program')}
+			 secondaryButtonText='Discover More'
+			 secondaryButtonAction={() => alert('Discovering More')}
+			 subHeader1='Young Creatives (Ages 18-35):'
+			/>
+				<Image src={Divider} className='w-screen' alt='divider' />
 			<div className='my-[5rem]'>
 			<h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-dark-gray text-center my-4 md:my-6 lg:my-8">
     Our Impact, Your Future

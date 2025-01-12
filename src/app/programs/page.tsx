@@ -14,6 +14,7 @@ import image1 from '@/assets/train1.png'
 import image2 from '@/assets/train2.png'
 import image3 from '@/assets/train3.png'
 import Cluster3 from '../../assets/cluster3.png';
+import WhatWeDo from '../components/WhatWeDo';
 
 const index = () => {
 	const slides = [
@@ -77,6 +78,10 @@ put a unique spin on your designs.`,
 
 			<Image className='w-screen' src={Divider} alt='divider' />
 
+			<WhatWeDo />
+
+			<Image className='w-screen' src={Divider} alt='divider' />
+
 			<div className='my-[5rem]'>
 				<h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-dark-gray text-center my-4 md:my-6 lg:my-8">
 					Training Programs
@@ -110,7 +115,7 @@ put a unique spin on your designs.`,
 			<Image className='w-screen' src={Divider2} alt='divider' />
 
 			<FashionSectionList
-				header='Business Development Support'
+				header='MSME Cluster and Business Development'
 				subHeader='Empowering MSMEs to Thrive.'
 				description={[
 					'Tailored support for 4,000 MSMEs to improve productivity and sustainability.',
