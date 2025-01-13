@@ -3,6 +3,8 @@ import React from 'react';
 type Props = {};
 
 const OurProcess = (props: Props) => {
+
+	// adding this line just to build
 	return (
 		<div className='bg-[#D04300] px-[60px] py-[80px]'>
 			<h2 className='text-xl'>OUR PROCESS</h2>
