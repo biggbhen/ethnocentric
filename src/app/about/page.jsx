@@ -138,7 +138,7 @@ return (
 
 			<Image className='w-screen' src={Divider} alt='divider' />
 		<FashionSection
-			header='	About Ethnocentrique'
+			header='About Ethnocentrique'
 			description = "Ethnocentrique is a pioneering company dedicated to showcasing African excellence in fashion, art, and culture. We promote local talents and creatives, fostering sustainable growth opportunities. Our work celebrates Africa's rich cultural heritage and supports local production, empowering individuals and communities."
 			image={about}
 			altText='Fashion'

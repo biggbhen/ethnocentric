@@ -52,32 +52,32 @@ const AboutUs = (props: Props) => {
 			smallTextBelowImage: 'Regional Economic Hubs',
 			title: '•3 Major Clusters',
 			description: 'Driving economic growth through innovation and collaboration in Abia State. These clusters foster skill development, mastercraft persons, and sustainable regional development.',
-		  },
-		  {
+		},
+		{
 			image: image6,
 			altText: 'Image 1 description',
 			smallTextBelowImage: 'Expanding Opportunities',
 			title: '30% Growth in Market Linkages',
 			description: 'Enhancing connections between mastercraft persons and buyers, boosting the market reach of local fashion businesses, and creating a ripple effect of economic empowerment.',
-		  },
-		  {
+		},
+		{
 			image: image5,
 			altText: 'Image 1 description',
 			smallTextBelowImage: 'Expert Craftsmanship',
 			title: '1,000+ Mastercraft Persons',
 			description: 'Building a legacy of excellence by training over a thousand mastercraft persons who preserve tradition while innovating for the future of fashion.',
-		  },
+		},
 
-		
-		
+
+
 	];
 	return (
-
 		<>
 			<Image src={Divider} className='w-screen' alt='divider' />
 			<FashionSection
 				header='Empowering the Future of Fashion'
-				description='We are building a thriving community of young fashion entrepreneurs and artisans by providing hands-on training, mentorship, and access to resources that spark innovation. Together, we’re shaping a fashion industry where creativity meets opportunity and every talent finds its place.'
+				description='The Fashion Future Program is a is an initiative by Ethnocentrique Limited in Partnership with the Mastercard Foundation, equipping aspiring artisans and entrepreneurs with the skills, tools, and resources they need to thrive in the ever-evolving fashion industry.
+				From hands-on training to business development support, we’re shaping a new generation of fashion leaders andMSMEs equipped to succeed in today’s market placethereby strengthening Local communities.'
 				image={First}
 				altText='Fashion'
 				imageLeft={false}
@@ -92,36 +92,31 @@ const AboutUs = (props: Props) => {
 			<WhatWeDo />
 			<Image src={Divider} className='w-screen' alt='divider' />
 			<Last
-			 header='Who We Speak To'
-			 description1=' Vibrant individuals including women, men, and people with disabilities, who are passionate about fashion and eager to turn their skills into a sustainable career.'
-			 description2='Fashion entrepreneurs in the fashion industry, aspiring designers or artisans, eager to grow and stay market competitive.'
-			 image={speak}
-			 altText='Fashion'
-			 imageLeft={true}
-			 subHeader2='MSMEs (Micro, Small, and Medium Enterprises): '
-			 primaryButtonText='Join the Program'
-			 primaryButtonAction={() => alert('Joining Program')}
-			 secondaryButtonText='Discover More'
-			 secondaryButtonAction={() => alert('Discovering More')}
-			 subHeader1='Young Creatives (Ages 18-35):'
+				header='Who We Speak To'
+				description1=' Vibrant individuals including women, men, and people with disabilities, who are passionate about fashion and eager to turn their skills into a sustainable career.'
+				description2='Fashion entrepreneurs in the fashion industry, aspiring designers or artisans, eager to grow and stay market competitive.'
+				image={speak}
+				altText='Fashion'
+				imageLeft={true}
+				subHeader2='MSMEs (Micro, Small, and Medium Enterprises): '
+				primaryButtonText='Join the Program'
+				primaryButtonAction={() => alert('Joining Program')}
+				secondaryButtonText='Discover More'
+				secondaryButtonAction={() => alert('Discovering More')}
+				subHeader1='Young Creatives (Ages 18-35):'
 			/>
-				<Image src={Divider} className='w-screen' alt='divider' />
+			<Image src={Divider} className='w-screen' alt='divider' />
 			<div className='my-[5rem]'>
-			<h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-dark-gray text-center my-4 md:my-6 lg:my-8">
-    Our Impact, Your Future
-</h1>
-<p className="text-center text-dark-gray text-base md:text-lg lg:text-2xl max-w-[90%] md:max-w-[40rem] my-4 md:my-5 lg:my-6 mx-auto">
-    Driving skills, innovation, and empowerment to transform the fashion industry into a hub of creativity and opportunity.
-</p>
-
-
-
+				<h1 className='text-3xl md:text-4xl lg:text-5xl font-medium text-dark-gray text-center my-4 md:my-6 lg:my-8'>
+					Our Impact, Your Future
+				</h1>
+				<p className='text-center text-dark-gray text-base md:text-lg lg:text-2xl max-w-[90%] md:max-w-[40rem] my-4 md:my-5 lg:my-6 mx-auto'>
+					Driving skills, innovation, and empowerment to transform the fashion
+					industry into a hub of creativity and opportunity.
+				</p>
 
 				<SwiperComponent slides={slides} />
-
-
 			</div>
-
 
 			<Image src={Divider} className='w-screen' alt='divider' />
 
