@@ -7,19 +7,15 @@ import approach from '../../assets/ourapproach.png';
 import contact from '../../assets/contactImage.jpg';
 import masterMain from '../../assets/masterPicture.png';
 import masterIcon from '../../assets/MasterCard.png';
-import about from '../../assets/aboute.png';
 import Image from 'next/image';
 import Button from '../components/ui/Button';
 import Divider from '../../assets/divider.svg'
-import FashionSection from '../components/FashionSectionFashionSection';
 import ImageBackground from '../components/ImageBackground';
 import { IoMailOutline } from 'react-icons/io5';
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { PiTwitterLogo } from 'react-icons/pi';
 import { RiFacebookBoxLine } from 'react-icons/ri';
 import { SlSocialLinkedin } from 'react-icons/sl';
-import Last from '../components/Last';
-import FashionSectionList from '../components/FashionSectionList';
 import SharedSection from '../components/shared/SharedSection';
 
 const index = () => {
@@ -294,26 +290,25 @@ return (
 		</div> */}
 
 		<Image className='w-screen' src={Divider} alt='divider' />
+
 		<div>
 			<ImageBackground
 				Imageclass='filter brightness-50 '
 				imageSrc={contact}
-				alt='A beautiful landscape background'>
-				<div className='text-white text-center px-4 py-8'>
-					<h1 className='text-3xl font-medium mb-3 md:text-5xl lg:text-5xl'>
+				alt='A beautiful landscape background'
+				className='md:h-[85vh]'>
+				<div className='text-white text-center px-4 py-8 max-w-full md:max-w-[35rem]'>
+					<h2 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full md:max-w-[90%]'>
 						Contact Us
-					</h1>
-
-					<p className='text-xl font-normal  my-10 md:text-xl md:max-w-[30rem] md:mx-auto'>
+					</h2>
+					<p className='mb-10 text-base md:text-lg font-normal'>
 						Address: 4, Prince Akingbade Close, Off Muri Okunola Close, Victoria
 						Island, Lagos State.
 					</p>
-
-					<p className='text-xl  my-10 md:text-xl md:max-w-[30rem] md:mx-auto'>
+					<p className='mb-10 text-base md:text-lg font-normal'>
 						Phone Number: +234 803 050 7007
 					</p>
-
-					<p className='text-xl  my-10 md:text-xl md:max-w-[30rem] md:mx-auto'>
+					<p className='mb-10 text-base md:text-lg font-normal'>
 						Email:{' '}
 						<a
 							href='mailto:info@ethnocentrique.com'
