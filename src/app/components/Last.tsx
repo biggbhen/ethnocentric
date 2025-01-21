@@ -24,10 +24,6 @@ const Last: React.FC<FashionSectionProps> = ({
 	image,
 	altText,
 	imageLeft = false,
-	primaryButtonText,
-	primaryButtonAction,
-	secondaryButtonText,
-	secondaryButtonAction,
     subHeader1,
     subHeader2
 
@@ -49,44 +45,29 @@ const Last: React.FC<FashionSectionProps> = ({
 			)}
 
 			{/* Content Section */}
-			<div className='flex flex-col text-[#1A1A1A] gap-y-10 justify-center items-center bg-white p-6 md:p-10'>
-				<div className='font-normal flex justify-start w-full text-start text-2xl md:text-4xl xl:text-5xl max-w-full md:max-w-[80%] xl:max-w-[75%]'>
+			<div className='flex flex-col gap-y-1 justify-center items-center bg-white p-6 md:p-10'>
+				<h2 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full md:max-w-[90%]'>
 					{header}
-				</div>
-				<div className='font-normal text-start text-base md:text-lg xl:text-2xl max-w-full md:max-w-[80%] xl:max-w-[75%]'>
-                {subHeader1 && (
-					<div className='font-semibold text-start text-base md:text-lg xl:text-2xl max-w-full md:max-w-[80%] xl:max-w-[75%] text-[#FFA929]'>
-						{subHeader1}
-					</div>
-				)}
-					{description1}
+				</h2>
+				<div className='font-normal text-start text-base md:text-lg xl:text-2xl max-w-full md:max-w-[80%]'>
+					{subHeader1 && (
+						<h4 className='font-medium text-start text-base md:text-lg xl:text-xl text-[#FFA929]'>
+							{subHeader1}
+						</h4>
+					)}
+					<p className='text-start font-normal text-base'>
+						{description1}
+					</p>
 
-                    <div className='font-normal mt-5 text-start text-base md:text-lg xl:text-2xl max-w-full md:max-w-[80%] xl:max-w-[75%]'>
-                    {subHeader2 && (
-					<div className='font-semibold text-start text-base md:text-lg xl:text-2xl max-w-full xl:max-w-[100%] text-[#FFA929]'>
-						{subHeader2}
-					</div>
-				)}
-                        {description2}
-                    </div>
-					<div className='text-start mt-6'>
-						<div className='flex flex-col md:flex-row gap-y-3 lg:gap-y-0 gap-x-5'>
-							{/* Secondary Button */}
-							<Button
-								className='text-base'
-								variant='secondary'
-								onClick={secondaryButtonAction}>
-								{secondaryButtonText}
-							</Button>
-
-							{/* Primary Button */}
-							<Button
-								className='text-base'
-								variant='primary'
-								onClick={primaryButtonAction}>
-								{primaryButtonText}
-							</Button>
-						</div>
+					<div className='font-normal mt-5 text-start text-base md:text-lg xl:text-2xl max-w-full md:max-w-[80%]'>
+						{subHeader2 && (
+							<h4 className='font-medium text-start text-base md:text-lg xl:text-xl text-[#FFA929]'>
+								{subHeader2}
+							</h4>
+						)}
+						<p className='text-start font-normal text-base'>
+							{description2}
+						</p>
 					</div>
 				</div>
 			</div>

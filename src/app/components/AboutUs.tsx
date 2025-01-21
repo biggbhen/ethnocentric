@@ -6,7 +6,6 @@ import Second from '../../assets/second.png';
 import DividerEnd from '../../assets/dividerend.svg';
 import Image from 'next/image';
 import Youtube from './Youtube';
-import FashionSection from './FashionSectionFashionSection';
 import SwiperComponent from './SwiperComponent';
 import image1 from '@/assets/homeImage1.png'
 import image2 from '@/assets/homeImage2.png'
@@ -17,6 +16,8 @@ import image6 from '@/assets/impactlast.jpg'
 import speak from '@/assets/speak.png'
 import Last from './Last';
 import WhatWeDo from './WhatWeDo';
+import SharedSection from './shared/SharedSection';
+import Button from './ui/Button';
 
 type Props = {};
 
@@ -74,20 +75,31 @@ const AboutUs = (props: Props) => {
 	return (
 		<>
 			<Image src={Divider} className='w-screen' alt='divider' />
-			<FashionSection
+			<SharedSection
 				header='Empowering the Future of Fashion'
-				description='The Fashion Future Program is a is an initiative by Ethnocentrique Limited in Partnership with the Mastercard Foundation, equipping aspiring artisans and entrepreneurs with the skills, tools, and resources they need to thrive in the ever-evolving fashion industry.
-				From hands-on training to business development support, we’re shaping a new generation of fashion leaders andMSMEs equipped to succeed in today’s market placethereby strengthening Local communities.'
 				image={First}
 				altText='Fashion'
-				imageLeft={false}
-				primaryButtonText='Join the Program'
-				primaryButtonAction={() => alert('Joining Program')}
-				secondaryButtonText='Discover More'
-				secondaryButtonAction={() => alert('Discovering More')}
-			/>
+				imageLeft={false}>
+				<p className='text-start mt-6 font-normal text-base md:text-lg'>
+					The Fashion Future Program is a is an initiative by Ethnocentrique
+					Limited in Partnership with the Mastercard Foundation, equipping
+					aspiring artisans and entrepreneurs with the skills, tools, and
+					resources they need to thrive in the ever-evolving fashion industry.
+					From hands-on training to business development support, we’re shaping
+					a new generation of fashion leaders andMSMEs equipped to succeed in
+					today’s market placethereby strengthening Local communities.
+				</p>
+				<div className='flex flex-col md:flex-row gap-y-3 lg:gap-y-0 gap-x-5 mt-6'>
+					<Button className='text-sm md:text-base' variant='secondary'>
+						Discover More
+					</Button>
+					<Button className='text-sm md:text-base' variant='primary'>
+						Join The Program
+					</Button>
+				</div>
+			</SharedSection>
 
-			<Image src={Divider} className='w-screen' alt='divider' />
+			<Image src={Divider} className='w-screen relative' alt='divider' />
 
 			<WhatWeDo />
 			<Image src={Divider} className='w-screen' alt='divider' />
@@ -107,10 +119,10 @@ const AboutUs = (props: Props) => {
 			/>
 			<Image src={Divider} className='w-screen' alt='divider' />
 			<div className='my-[5rem]'>
-				<h1 className='text-3xl md:text-4xl lg:text-5xl font-medium text-dark-gray text-center my-4 md:my-6 lg:my-8'>
+				<h1 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full md:max-w-[90%] text-[#1A1A1A] text-center mx-auto'>
 					Our Impact, Your Future
 				</h1>
-				<p className='text-center text-dark-gray text-base md:text-lg lg:text-2xl max-w-[90%] md:max-w-[40rem] my-4 md:my-5 lg:my-6 mx-auto'>
+				<p className='text-center font-normal text-base md:text-lg max-w-[90%] md:max-w-[40rem] mx-auto mt-6'>
 					Driving skills, innovation, and empowerment to transform the fashion
 					industry into a hub of creativity and opportunity.
 				</p>
@@ -120,21 +132,27 @@ const AboutUs = (props: Props) => {
 
 			<Image src={Divider} className='w-screen' alt='divider' />
 
-			<FashionSection
-				header='	Your Future Awaits — At No Cost to You'
-				description='At the Fashion Future Program, we believe creativity should never
-				be constrained by financial barriers. That’s why our training,
-			  mentorship, and resources are entirely free. We’re here to help
-				you turn your passion into a profession, empowering you to thrive
-				in the fashion industry.'
+			<SharedSection
+				header='Empowering the Future of Fashion'
 				image={Second}
 				altText='Fashion'
-				imageLeft={true}
-				primaryButtonText='Join the Program'
-				primaryButtonAction={() => alert('Joining Program')}
-				secondaryButtonText='Discover More'
-				secondaryButtonAction={() => alert('Discovering More')}
-			/>
+				imageLeft={true}>
+				<p className='text-start mt-6 font-normal text-base md:text-lg'>
+					At the Fashion Future Program, we believe creativity should never be
+					constrained by financial barriers. That’s why our training,
+					mentorship, and resources are entirely free. We’re here to help you
+					turn your passion into a profession, empowering you to thrive in the
+					fashion industry.
+				</p>
+				<div className='flex flex-col md:flex-row gap-y-3 lg:gap-y-0 gap-x-5 mt-6'>
+					<Button className='text-sm md:text-base' variant='secondary'>
+						Discover More
+					</Button>
+					<Button className='text-sm md:text-base' variant='primary'>
+						Join The Program
+					</Button>
+				</div>
+			</SharedSection>
 
 			<Image className='w-screen' src={Divider} alt='divider' />
 			<Youtube url='https://youtu.be/41kQc083s6c?si=xd1wJPpFlrMvL14i' />

@@ -1,20 +1,22 @@
 'use client';
 import React from 'react';
-import contactImage from '../../assets/contact.jpg';
 import Business from '../../assets/business.jpg';
 import Image from 'next/image';
 import Button from '../components/ui/Button';
 import Divider from '../../assets/divider.svg';
 import Divider2 from '../../assets/divider2.svg';
 import heroImage from '../../assets/heroImage.svg';
-import FashionSectionList from '../components/FashionSectionList';
 import ImageBackground from '../components/ImageBackground';
 import SwiperComponent from '../components/SwiperComponent';
 import image1 from '@/assets/train1.png'
 import image2 from '@/assets/train2.png'
 import image3 from '@/assets/train3.png'
 import Cluster3 from '../../assets/cluster3.png';
-import WhatWeDo from '../components/WhatWeDo';
+import contactImage from '../../assets/contact.jpg';
+import jobImg from '../../assets/whyItmatters.jpg';
+import policyImg from '../../assets/ffpolicy.jpg';
+
+import SharedSection from '../components/shared/SharedSection';
 
 const index = () => {
 	const slides = [
@@ -78,79 +80,133 @@ put a unique spin on your designs.`,
 
 			<Image className='w-screen' src={Divider} alt='divider' />
 
-			<WhatWeDo />
-
-			<Image className='w-screen' src={Divider} alt='divider' />
-
-			<div className='my-[5rem]'>
-				<h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-dark-gray text-center my-4 md:my-6 lg:my-8">
+			<div className=''>
+				<h2 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full mx-auto md:max-w-[90%] text-center text-[#1A1A1A]'>
 					Training Programs
-				</h1>
-				<p className="text-center text-dark-gray text-base md:text-lg lg:text-2xl max-w-[90%] md:max-w-[40rem] my-4 md:my-5 lg:my-6 mx-auto">
-					Hands-on learning that bridges creativity and craftsmanship while transforming lives and driving growth. Addressing industry shortages with comprehensive training.
+				</h2>
+				<p className='font-medium text-center text-base md:text-lg w-[]90% max-w-[40rem] mx-auto'>
+					Hands-on learning that bridges creativity and craftsmanship while
+					transforming lives and driving growth. Addressing industry shortages
+					with comprehensive training.
 				</p>
-
-
 				<SwiperComponent slides={slides} />
-
-
 			</div>
 			<Image className='w-screen' src={Divider} alt='divider' />
-			<FashionSectionList
-				header='Apprentice Model'
-				subHeader='Learning from Masters of the Craft.'
-				description={[
-					'Participants gain practical experience under the guidance of skilled artisans in specialized clusters.',
-					'This apprenticeship approach ensures real-world readiness by combining traditional skills with entrepreneurial training.',
-					'Certification is provided under the National Skills Qualification Framework (NSQF) to enhance credibility and career prospects.',
-				]}
+			<SharedSection
+				header='Apprenticeship training & Non-technical'
 				image={Cluster3}
 				altText='Winter Collection'
-				imageLeft={true}
-				primaryButtonText='Learn About Us'
-				primaryButtonAction={() => console.log('Shop Now clicked')}
-				secondaryButtonText='Join the Program'
-				secondaryButtonAction={() => console.log('Learn More clicked')}
-			/>
+				imageLeft={true}>
+				<h3 className='text-start mt-6 font-normal text-base md:text-lg'>
+					Learning from Masters of the Craft.
+				</h3>
+				<div className='max-w-full md:max-w-[90%]'>
+					<ul className='list-disc pl-5 my-7 text-start mt-6 font-normal text-base md:text-lg'>
+						{[
+							'Participants gain practical experience under the guidance of skilled artisans in specialized clusters.',
+							'This apprenticeship approach ensures real-world readiness by combining traditional skills with entrepreneurial training.',
+							'Certification is provided under the National Skills Qualification Framework (NSQF) to enhance credibility and career prospects.',
+						].map((item, index) => (
+							<li key={index} className='mb-2'>
+								{item}
+							</li>
+						))}
+					</ul>
+				</div>
+			</SharedSection>
 			<Image className='w-screen' src={Divider2} alt='divider' />
 
-			<FashionSectionList
+			<SharedSection
 				header='MSME Cluster and Business Development'
-				subHeader='Empowering MSMEs to Thrive.'
-				description={[
-					'Tailored support for 4,000 MSMEs to improve productivity and sustainability.',
-					'Services include access to market trends, infrastructure, and financial management training.',
-					'Special focus on empowering women-led businesses',
-				]}
 				image={Business}
 				altText='Winter Collection'
 				imageLeft={false}
-				primaryButtonText='Discover More'
-				primaryButtonAction={() => console.log('Shop Now clicked')}
-				secondaryButtonText='Join the Program'
-				secondaryButtonAction={() => console.log('Learn More clicked')}
-			/>
+				imgHide={true}
+			>
+				<h3 className='text-start mt-6 font-normal text-base md:text-lg'>
+					Empowering MSMEs to Thrive.
+				</h3>
+				<div className='max-w-full md:max-w-[90%]'>
+					<ul className='list-disc pl-5 my-7 text-start mt-6 font-normal text-base md:text-lg'>
+						{[
+							'Tailored support for 4,000 MSMEs to improve productivity and sustainability.',
+							'Services include access to market trends, infrastructure, and financial management training.',
+							'Special focus on empowering women-led businesses',
+						].map((item, index) => (
+							<li key={index} className='mb-2'>
+								{item}
+							</li>
+						))}
+					</ul>
+				</div>
+			</SharedSection>
+
+			<Image className='w-screen' src={Divider} alt='divider' />
+
+			<SharedSection
+				header='Policy Advocacy & Industry Engagement'
+				image={policyImg}
+				altText='Winter Collection'
+				imageLeft={true}>
+				<div className='max-w-full md:max-w-[90%]'>
+					<ul className='list-disc pl-5 my-7 text-start mt-6 font-normal text-base md:text-lg'>
+						{[
+							'The Fashion Future Program actively advocates for policy reforms and initiatives that enhance infrastructure, promote intellectual property rights, and improve access to finance and markets.',
+							'By engaging with government bodies, industry leaders, and stakeholders, we champion the needs of MSMEs and foster collaborations that drive innovation, inclusivity, and sustainability. Our goal is to shape a policy framework that empowers fashion entrepreneurs and positions the Nigerian fashion industry for global competitiveness.',
+						].map((item, index) => (
+							<li key={index} className='mb-2'>
+								{item}
+							</li>
+						))}
+					</ul>
+				</div>
+			</SharedSection>
+
+			<Image className='w-screen' src={Divider} alt='divider' />
+
+			<div className="h-screen bg-[url('/IMG_5626-min.jpg')] bg-fixed bg-cover bg-center"></div>
+
+			<Image className='w-screen' src={Divider} alt='divider' />
+
+			<SharedSection
+				header='Job Placement Program'
+				image={contactImage}
+				altText='Winter Collection'
+				imageLeft={false}>
+				<div className='max-w-full md:max-w-[90%]'>
+					<ul className='list-disc pl-5 my-7 text-start mt-6 font-normal text-base md:text-lg'>
+						{[
+							'Our job placement services are designed to connect our graduates with reputable employers in the fashion industry, ensuring they step into rewarding careers that align with their skills and aspirations.',
+							"Through partnerships with leading fashion brands, local businesses, and industry stakeholders, we create pathways for employment in garment making, shoemaking, leatherworks, and more. Whether it's full-time positions, internships, or freelance opportunities, FFP is committed to helping our participants achieve professional success and contribute meaningfully to the fashion ecosystem.",
+						].map((item, index) => (
+							<li key={index} className='mb-2'>
+								{item}
+							</li>
+						))}
+					</ul>
+				</div>
+			</SharedSection>
 
 			<Image className='w-screen' src={Divider} alt='divider' />
 
 			<div>
 				<ImageBackground
 					Imageclass='filter brightness-50 '
-					imageSrc={contactImage}
+					imageSrc={jobImg}
 					alt='A beautiful landscape background'
-					className='md:h-screen h-screen'>
-					<div className='text-white text-center px-4 py-8 '>
-						<h1 className='text-3xl font-medium mb-3 md:text-5xl lg:text-5xl'>
+					className='md:h-[85vh]'>
+					<div className='text-white text-center px-4 py-8'>
+						<h2 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full md:max-w-[90%]'>
 							Why It Matters
-						</h1>
-						<p className='mb-10 text-xl font-normal'>
+						</h2>
+						<p className='mb-10 text-base md:text-lg font-normal'>
 							Transforming Lives, Driving Growth.
 						</p>
-						<div className='text-xl font-normal  my-10 md:text-xl md:max-w-[30rem] md:mx-auto'>
+						<p className='font-normal  my-10 text-base md:text-lg md:max-w-[30rem] md:mx-auto'>
 							Explore our comprehensive programs designed to empower aspiring
 							fashion professionals with the skills, resources, and mentorship
 							needed to thrive in the industry.
-						</div>
+						</p>
 						<div className='flex justify-center'>
 							<Button
 								className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'

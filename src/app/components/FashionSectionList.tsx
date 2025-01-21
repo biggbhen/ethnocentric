@@ -10,10 +10,6 @@ interface FashionSectionProps {
 	image2?:  StaticImageData;
 	altText: string;
 	imageLeft?: boolean;
-	primaryButtonText: string;
-	primaryButtonAction: () => void;
-	secondaryButtonText: string;
-	secondaryButtonAction: () => void;
 	des1?: string,
 
 }
@@ -25,101 +21,72 @@ const FashionSectionList: React.FC<FashionSectionProps> = ({
 	image,
 	altText,
 	imageLeft = false,
-	primaryButtonText,
-	primaryButtonAction,
-	secondaryButtonText,
-	secondaryButtonAction,
 	des1,
 	image2,
 }) => {
 	return (
-		<div className='grid p-1 py-5 md:py-0 md:p-0 grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-0  text-center h-full bg-white'>
+		<div className='flex lg:flex-row flex-col py-5 gap-y-6 text-center h-full lg:h-[85vh] bg-white border border-[red]'>
 			{/* Image Section */}
 			{imageLeft && (
-				<div className='flex justify-center items-center p-4 md:p-0'>
+				<div className='flex justify-center items-center p-0 relative'>
 					<Image
 						src={image}
 						alt={altText}
-						layout='responsive'
-						className='md:min-h-[650px] max-h-[650px]'
-						objectFit='contain'
-          
+						fill
+						className='w-full h-full object-cover'
 					/>
 				</div>
 			)}
 
 			{/* Content Section */}
-			<div className='flex flex-col justify-center bg-white px-6 md:px-10 md:ms-[2rem] xl:ms-[3rem] text-dark-gray'>
+			<div className='flex flex-col gap-4 justify-center items-center bg-white p-6 md:p-10'>
 				<div className='flex justify-between items-center'>
-				<div className='font-medium text-start text-xl sm:text-2xl md:text-4xl xl:text-5xl max-w-full md:max-w-[80%] xl:max-w-[100%] pt-4 md:py-4'>
-					 {header}
+					<h2 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full md:max-w-[90%] text-[#1A1A1A]'>
+						{header}
+					</h2>
+					<div>
+						{image2 && (
+							<div className='relative w-24 h-24'>
+								<Image
+									src={image2}
+									alt={altText}
+									fill
+									className='object-contain'
+								/>
+							</div>
+						)}
+					</div>
 				</div>
 
-				<div>
-				{image2 && (
-    <div className="relative w-24 h-24">
-      <Image
-        src={image2}
-        alt={altText}
-        fill 
-        className="object-contain"
-      />
-    </div>
-  )}
-				</div>
-				</div>
-
-				
 				{subHeader && (
 					<div className='text-base sm:text-lg md:text-base text-start max-w-full md:max-w-[80%] xl:max-w-[75%]  md:mb-5'>
 						{subHeader}
 					</div>
 				)}
 				{des1 && (
-					<div className='font-normal text-start text-sm sm:text-lg md:text-lg xl:text-2xl max-w-full md:max-w-[90%] xl:max-w-[85%] mt-4'>
+					<div className='text-start font-medium text-base md:text-lg '>
 						{des1}
 					</div>
 				)}
-				<div className='font-normal text-start text-sm sm:text-lg md:text-lg xl:text-2xl max-w-full md:max-w-[90%] xl:max-w-[85%]'>
-					<ul className='list-disc pl-5 my-7'>
+				<div className='max-w-full md:max-w-[90%]'>
+					<ul className='list-disc pl-5 my-7 text-start mt-6 font-normal text-base md:text-lg'>
 						{description.map((item, index) => (
 							<li key={index} className='mb-2'>
 								{item}
 							</li>
 						))}
 					</ul>
-					<div className='text-start mt-6'>
-						<div className='flex flex-col md:flex-row gap-y-3 md:gap-y-0 gap-x-5'>
-							{/* Secondary Button */}
-							<Button
-								className='text-sm sm:text-base'
-								variant='secondary'
-								onClick={secondaryButtonAction}>
-								{secondaryButtonText}
-							</Button>
-
-							{/* Primary Button */}
-							<Button
-								className='text-sm sm:text-base'
-								variant='primary'
-								onClick={primaryButtonAction}>
-								{primaryButtonText}
-							</Button>
-						</div>
-					</div>
 				</div>
 			</div>
 
 			{/* Image Section (if imageLeft is false) */}
 			{!imageLeft && (
-				<div className='flex justify-center items-center p-4 md:p-0'>
+				<div className='flex justify-center items-center p-0 relative'>
 					<Image
 						src={image}
 						alt={altText}
-						layout='responsive'
-						width={600}
-						height={400}
-						objectFit='contain'
+						fill
+						className='w-full h-full object-cover'
 					/>
 				</div>
 			)}
