@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter, Manrope, Ubuntu } from 'next/font/google';
 import './globals.css';
-import Header from '@/app/components/appLayout/Header';
-import Footer from '@/app/components/appLayout/Footer';
+import Header from '@/components/appLayout/Header';
+import Footer from '@/components/appLayout/Footer';
 
 
 
