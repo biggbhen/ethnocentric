@@ -18,7 +18,7 @@ const index = () => {
 				imageSrc={Cluster1}
 				Imageclass='filter brightness-50'
 				alt='A beautiful landscape background'
-				className='h-[85vh]'>
+				className='h-[90vh] lg:h-screen'>
 				<div className='text-white text-center px-4 py-8 md:max-w-[50rem]'>
 					<h1 className='text-3xl font-medium mb-4 md:text-4xl lg:text-5xl '>
 						Transforming Aba into Africa’s Creative Powerhouse
