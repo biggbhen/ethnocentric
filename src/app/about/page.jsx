@@ -1,22 +1,22 @@
 "use client"
 import React from 'react'
-import Ourvision from '../../assets/ourvision.png'
-import Domore from '../../assets/domore.png';
-import Whoarewe from '../../assets/whoarewe.png';
-import approach from '../../assets/ourapproach.png';
-import contact from '../../assets/contactImage.jpg';
-import masterMain from '../../assets/masterPicture.png';
-import masterIcon from '../../assets/MasterCard.png';
+import Ourvision from '@/assets/ourvision.png'
+import Domore from '@/assets/domore.png';
+import Whoarewe from '@/assets/whoarewe.png';
+import approach from '@/assets/ourapproach.png';
+import contact from '@/assets/contactImage.jpg';
+import masterMain from '@/assets/masterPicture.png';
+import masterIcon from '@/assets/MasterCard.png';
 import Image from 'next/image';
-import Button from '../components/ui/Button';
-import Divider from '../../assets/divider.svg'
-import ImageBackground from '../components/ImageBackground';
+import Divider from '@/assets/divider.svg'
 import { IoMailOutline } from 'react-icons/io5';
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { PiTwitterLogo } from 'react-icons/pi';
 import { RiFacebookBoxLine } from 'react-icons/ri';
 import { SlSocialLinkedin } from 'react-icons/sl';
 import SharedSection from '@/components/shared/SharedSection';
+import ImageBackground from '@/components/ImageBackground';
+import Button from '@/components/ui/Button';
 
 const index = () => {
 return (

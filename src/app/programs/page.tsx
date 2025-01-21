@@ -1,21 +1,21 @@
 'use client';
 import React from 'react';
-import Business from '../../assets/business.jpg';
+import Business from '@/assets/business.jpg';
 import Image from 'next/image';
-import Button from '../components/ui/Button';
-import Divider from '../../assets/divider.svg';
-import Divider2 from '../../assets/divider2.svg';
-import heroImage from '../../assets/heroImage.svg';
-import ImageBackground from '../components/ImageBackground';
-import SwiperComponent from '../components/SwiperComponent';
+import Divider from '@/assets/divider.svg';
+import Divider2 from '@/assets/divider2.svg';
+import heroImage from '@/assets/heroImage.svg';
 import image1 from '@/assets/train1.png'
 import image2 from '@/assets/train2.png'
 import image3 from '@/assets/train3.png'
-import Cluster3 from '../../assets/cluster3.png';
-import contactImage from '../../assets/contact.jpg';
-import jobImg from '../../assets/whyItmatters.jpg';
-import policyImg from '../../assets/ffpolicy.jpg';
+import Cluster3 from '@/assets/cluster3.png';
+import contactImage from '@/assets/contact.jpg';
+import jobImg from '@/assets/whyItmatters.jpg';
+import policyImg from '@/assets/ffpolicy.jpg';
 import SharedSection from '@/components/shared/SharedSection';
+import ImageBackground from '@/components/ImageBackground';
+import SwiperComponent from '@/components/SwiperComponent';
+import Button from '@/components/ui/Button';
 
 const index = () => {
 	const slides = [

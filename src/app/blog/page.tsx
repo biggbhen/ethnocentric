@@ -1,19 +1,19 @@
 'use client';
 import React, { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
-import Button from '../components/ui/Button';
 import Divider from '../../assets/divider.svg';
 import heroImage from '../../assets/heroImage.svg';
-import BlogCard from '../components/BlogCard';
 import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/navigation';
-import ImageBackground from '../components/ImageBackground';
-import Sidebar from '../components/Sidebar';
 import BlogPage2 from '@/assets/blogpage2.png';
 import BlogPage6 from '@/assets/blogpage6.png';
 import BlogPage5 from '@/assets/blogpage5.png';
 import BlogPage4 from '@/assets/blogpage4.png';
 import BlogPage3 from '@/assets/blogpage3.png';
+import Button from '@/components/ui/Button';
+import ImageBackground from '@/components/ImageBackground';
+import Sidebar from '@/components/Sidebar';
+import BlogCard from '@/components/BlogCard';
 
 interface Blog {
 	id: number;

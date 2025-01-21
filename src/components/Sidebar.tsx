@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import Side1 from '../../assets/side1.png'
-import Side2 from '../../assets/side2.png';
+import Side1 from '@/assets/side1.png'
+import Side2 from '@/assets/side2.png';
 
 const Sidebar: React.FC = () => {
 	return (

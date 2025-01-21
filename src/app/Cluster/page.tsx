@@ -1,15 +1,15 @@
 'use client';
 import React from 'react';
-import Cluster2 from '../../assets/aba.jpg';
-import approach from '../../assets/ourapproach.png';
-import Cluster4 from '../../assets/cluster4.jpg';
-import Cluster1 from '../../assets/cluster1.jpg';
+import Cluster2 from '@/assets/aba.jpg';
+import approach from '@/assets/ourapproach.png';
+import Cluster4 from '@/assets/cluster4.jpg';
+import Cluster1 from '@/assets/cluster1.jpg';
 import Image from 'next/image';
-import Button from '../components/ui/Button';
-import Divider from '../../assets/divider.svg';
-import Divider2 from '../../assets/divider2.svg';
-import ImageBackground from '../components/ImageBackground';
+import Divider from '@/assets/divider.svg';
+import Divider2 from '@/assets/divider2.svg';
 import SharedSection from '@/components/shared/SharedSection';
+import ImageBackground from '@/components/ImageBackground';
+import Button from '@/components/ui/Button';
 
 const index = () => {
 	return (
@@ -18,7 +18,7 @@ const index = () => {
 				imageSrc={Cluster1}
 				Imageclass='filter brightness-50'
 				alt='A beautiful landscape background'
-				className='h-[85vh] border'>
+				className='h-[85vh]'>
 				<div className='text-white text-center px-4 py-8 md:max-w-[50rem]'>
 					<h1 className='text-3xl font-medium mb-4 md:text-4xl lg:text-5xl '>
 						Transforming Aba into Africa’s Creative Powerhouse

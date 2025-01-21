@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import First from '../../assets/first.png';
-import Divider from '../../assets/divider.svg';
-import Second from '../../assets/second.png';
-import DividerEnd from '../../assets/dividerend.svg';
+import First from '@/assets/first.png';
+import Divider from '@/assets/divider.svg';
+import Second from '@/assets/second.png';
+import DividerEnd from '@/assets/dividerend.svg';
 import Image from 'next/image';
 import Youtube from './Youtube';
 import SwiperComponent from './SwiperComponent';
