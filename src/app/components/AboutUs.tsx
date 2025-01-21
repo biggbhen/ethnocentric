@@ -16,8 +16,8 @@ import image6 from '@/assets/impactlast.jpg'
 import speak from '@/assets/speak.png'
 import Last from './Last';
 import WhatWeDo from './WhatWeDo';
-import SharedSection from './shared/SharedSection';
 import Button from './ui/Button';
+import SharedSection from '@/components/shared/SharedSection';
 
 type Props = {};
 

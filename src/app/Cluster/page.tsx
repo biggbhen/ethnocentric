@@ -9,8 +9,7 @@ import Button from '../components/ui/Button';
 import Divider from '../../assets/divider.svg';
 import Divider2 from '../../assets/divider2.svg';
 import ImageBackground from '../components/ImageBackground';
-import SharedSection from '../components/shared/SharedSection';
-// import SwiperComponent from '../components/SwiperComponent';
+import SharedSection from '@/components/shared/SharedSection';
 
 const index = () => {
 	return (

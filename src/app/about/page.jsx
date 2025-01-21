@@ -16,7 +16,7 @@ import { AiOutlineInstagram } from 'react-icons/ai';
 import { PiTwitterLogo } from 'react-icons/pi';
 import { RiFacebookBoxLine } from 'react-icons/ri';
 import { SlSocialLinkedin } from 'react-icons/sl';
-import SharedSection from '../components/shared/SharedSection';
+import SharedSection from '@/components/shared/SharedSection';
 
 const index = () => {
 return (
@@ -85,7 +85,9 @@ return (
 			header='Our Vision'
 			image={approach}
 			altText='Fashion'
-			imageLeft={true}>
+			imageLeft={true}
+
+		>
 			<p className='text-start mt-6 font-normal text-base md:text-lg'>
 				We envision an inclusive industry where local entrepreneurs are thriving
 				businesses that contribute significantly to local economies, create

@@ -15,8 +15,7 @@ import Cluster3 from '../../assets/cluster3.png';
 import contactImage from '../../assets/contact.jpg';
 import jobImg from '../../assets/whyItmatters.jpg';
 import policyImg from '../../assets/ffpolicy.jpg';
-
-import SharedSection from '../components/shared/SharedSection';
+import SharedSection from '@/components/shared/SharedSection';
 
 const index = () => {
 	const slides = [
