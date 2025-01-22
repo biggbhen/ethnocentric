@@ -42,54 +42,74 @@ const index = () => {
 
 			<Image className='w-screen' src={Divider} alt='divider' />
 
-			<div className="container mx-auto p-4">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:p-10 justify-center">
-    <div className=" lg:px-4 mb-4">
-      <Card imageSrc={Cluster1} title="Mountain Adventure" />
-    </div>
-    <div className=" lg:px-4 mb-4">
-      <Card imageSrc={Cluster1} title="Beach Getaway" />
-    </div>
-    <div className=" lg:px-4 mb-4">
-      <Card imageSrc={Cluster1} title="City Escape" />
-    </div>
-    <div className=" lg:px-4 mb-4">
-      <Card imageSrc={Cluster1} title="Forest Retreat" />
-    </div>
-    <div className=" lg:px-4 mb-4">
-      <Card imageSrc={Cluster1} title="Desert Expedition" />
-    </div>
-    <div className=" lg:px-4 mb-4">
-      <Card imageSrc={Cluster1} title="Island Paradise" />
-    </div>
-  </div>
-</div>
+			<div className='container mx-auto p-4'>
+				<div className='grid grid-cols-1 md:grid-cols-3 gap-4 lg:p-10 justify-center'>
+					<div className=' lg:px-4 mb-4'>
+						<Card imageSrc={Cluster1} title='Mountain Adventure' />
+					</div>
+					<div className=' lg:px-4 mb-4'>
+						<Card imageSrc={Cluster1} title='Beach Getaway' />
+					</div>
+					<div className=' lg:px-4 mb-4'>
+						<Card imageSrc={Cluster1} title='City Escape' />
+					</div>
+					<div className=' lg:px-4 mb-4'>
+						<Card imageSrc={Cluster1} title='Forest Retreat' />
+					</div>
+					<div className=' lg:px-4 mb-4'>
+						<Card imageSrc={Cluster1} title='Desert Expedition' />
+					</div>
+					<div className=' lg:px-4 mb-4'>
+						<Card imageSrc={Cluster1} title='Island Paradise' />
+					</div>
+				</div>
+			</div>
 
-
+			{/* update main */}
 			<Image className='w-screen' src={Divider} alt='divider' />
-			<div className="container mx-auto p-4">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:p-10 justify-center">
-    <div className=" lg:px-4 mb-4">
-	<CardNoImage color='#FFA929' title='2146' des='Youth Participants Trained in Aba' />
-    </div>
-    <div className=" lg:px-4 mb-4">
-	<CardNoImage color='#E86025' title='2000' des='MSMEs being supported with business development services' />
-    </div>
-    <div className=" lg:px-4 mb-4">
-	<CardNoImage color='#FFA929' title='25' des='Fashion Clusters' />
-    </div>
-    <div className=" lg:px-4 mb-4">
-	<CardNoImage color='#E86025' title='426' des='Mastercraft persons sharing knowledge' />
-    </div>
-    <div className=" lg:px-4 mb-4">
-	<CardNoImage color='#FFA929' title='80%' des='Youth female inclusion' />
-    </div>
-    <div className=" lg:px-4 mb-4">
-	<CardNoImage color='#E86025' title='70.5% ' des='Female owned MSMEs' />
-    </div>
-  </div>
-</div>
-		
+			<div className='container mx-auto p-4'>
+				<div className='grid grid-cols-1 md:grid-cols-3 gap-4 lg:p-10 justify-center'>
+					<div className=' lg:px-4 mb-4'>
+						<CardNoImage
+							color='#FFA929'
+							title='2146'
+							des='Youth Participants Trained in Aba'
+						/>
+					</div>
+					<div className=' lg:px-4 mb-4'>
+						<CardNoImage
+							color='#E86025'
+							title='2000'
+							des='MSMEs being supported with business development services'
+						/>
+					</div>
+					<div className=' lg:px-4 mb-4'>
+						<CardNoImage color='#FFA929' title='25' des='Fashion Clusters' />
+					</div>
+					<div className=' lg:px-4 mb-4'>
+						<CardNoImage
+							color='#E86025'
+							title='426'
+							des='Mastercraft persons sharing knowledge'
+						/>
+					</div>
+					<div className=' lg:px-4 mb-4'>
+						<CardNoImage
+							color='#FFA929'
+							title='80%'
+							des='Youth female inclusion'
+						/>
+					</div>
+					<div className=' lg:px-4 mb-4'>
+						<CardNoImage
+							color='#E86025'
+							title='70.5% '
+							des='Female owned MSMEs'
+						/>
+					</div>
+				</div>
+			</div>
+
 			<Image className='w-screen' src={Divider} alt='divider' />
 			<SharedSection
 				header='Why Aba?'
@@ -114,7 +134,6 @@ const index = () => {
 			</SharedSection>
 			<Image className=' w-screen' src={Divider2} alt='divider' />
 
-			
 			{/* <Image className='w-screen' src={Divider} alt='divider' />
 
 			<div className='my-[5rem]'>
