@@ -23,7 +23,7 @@ const Header = () => {
 					</div>
 
 					{/* Desktop Navigation */}
-					<div className='hidden sm:flex gap-x-4 lg:gap-x-7'>
+					<div className='hidden lg:flex gap-x-4 lg:gap-x-7'>
 						{['/', '/about', '/programs', '/Cluster', '/blog'].map(
 							(route, idx) => (
 								<div
@@ -46,14 +46,14 @@ const Header = () => {
 					</div>
 
 					{/* Desktop Buttons */}
-					<div className='hidden sm:flex gap-x-5'>
+					<div className='hidden lg:flex gap-x-5'>
 						<Button variant='secondary'>Support Our Mission</Button>
 						<Button variant='primary'>Join the Program</Button>
 					</div>
 
 					{/* Hamburger Icon for Mobile */}
 					<div
-						className='sm:hidden cursor-pointer'
+						className='lg:hidden cursor-pointer'
 						onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
 						<div className='space-y-1'>
 							<span className='block h-1 w-6 bg-black'></span>
@@ -65,7 +65,7 @@ const Header = () => {
 
 				{/* Mobile Navigation */}
 				{isMobileMenuOpen && (
-					<div className='sm:hidden flex flex-col px-5 space-y-4'>
+					<div className='lg:hidden flex flex-col px-5 space-y-4'>
 						{['/', '/about', '/programs', '/Cluster', '/blog'].map(
 							(route, idx) => (
 								<div
@@ -85,7 +85,7 @@ const Header = () => {
 								</div>
 							)
 						)}
-						<div className='flex flex-col space-y-3'>
+						<div className='flex flex-col  space-y-3 pb-7 md:w-fit'>
 							<Button variant='secondary'>Support Our Mission</Button>
 							<Button variant='primary'>Join the Program</Button>
 						</div>
