@@ -76,7 +76,7 @@ const index = () => {
   </div>
 </div>
 
-
+			{/* update main */}
 			<Image className='w-screen' src={Divider} alt='divider' />
 			<div className="container mx-auto p-4">
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:p-10 lg:pb-0 justify-center">
@@ -135,7 +135,6 @@ const index = () => {
 			</SharedSection>
 			<Image className=' w-screen' src={Divider2} alt='divider' />
 
-			
 			{/* <Image className='w-screen' src={Divider} alt='divider' />
 
 			<div className='my-[5rem]'>
