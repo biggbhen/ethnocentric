@@ -6,6 +6,7 @@ import Cluster4 from '@/assets/cluster4.jpg';
 import Cluster1 from '@/assets/cluster1.jpg';
 import Image from 'next/image';
 import Divider from '@/assets/divider.svg';
+import FFP from '@/assets/FFP.png';
 import Divider2 from '@/assets/divider2.svg';
 import SharedSection from '@/components/shared/SharedSection';
 import ImageBackground from '@/components/ImageBackground';
@@ -45,22 +46,23 @@ const index = () => {
 			<div className="container mx-auto p-4">
   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:p-10 justify-center">
     <div className=" lg:px-4 mb-4">
-      <Card imageSrc={Cluster1} title="Mountain Adventure" />
+      <Card imageSrc={FFP} title="Mountain Adventure" />
     </div>
     <div className=" lg:px-4 mb-4">
-      <Card imageSrc={Cluster1} title="Beach Getaway" />
+      <Card imageSrc={FFP} title="Beach Getaway" />
     </div>
     <div className=" lg:px-4 mb-4">
-      <Card imageSrc={Cluster1} title="City Escape" />
+      <Card imageSrc={FFP} title="City Escape" />
     </div>
-    <div className=" lg:px-4 mb-4">
-      <Card imageSrc={Cluster1} title="Forest Retreat" />
+   
+  
+  </div>
+  <div className='md:flex w-full gap-x-3 justify-center'>
+  <div className="md:px-2 lg:px-4 mb-4 w-full">
+      <Card imageSrc={FFP} title="Forest Retreat" />
     </div>
-    <div className=" lg:px-4 mb-4">
-      <Card imageSrc={Cluster1} title="Desert Expedition" />
-    </div>
-    <div className=" lg:px-4 mb-4">
-      <Card imageSrc={Cluster1} title="Island Paradise" />
+    <div className="md:px-2 lg:px-4 mb-4 w-full">
+      <Card imageSrc={FFP} title="Desert Expedition" />
     </div>
   </div>
 </div>
@@ -68,7 +70,7 @@ const index = () => {
 
 			<Image className='w-screen' src={Divider} alt='divider' />
 			<div className="container mx-auto p-4">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:p-10 justify-center">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:p-10 lg:pb-0 justify-center">
     <div className=" lg:px-4 mb-4">
 	<CardNoImage color='#FFA929' title='2146' des='Youth Participants Trained in Aba' />
     </div>
@@ -89,6 +91,16 @@ const index = () => {
     </div>
   </div>
 </div>
+<div>
+
+</div>
+
+<Button
+							className='text-sm px-6 py-2 mb-5 mx-auto  md:text-base md:px-8 md:py-3'
+							variant='primary'>
+							Support Our Programs
+						</Button>
+      
 		
 			<Image className='w-screen' src={Divider} alt='divider' />
 			<SharedSection
