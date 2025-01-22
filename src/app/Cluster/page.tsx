@@ -43,26 +43,35 @@ const index = () => {
 
 			<Image className='w-screen' src={Divider} alt='divider' />
 
+			<div className='flex flex-col gap-y-1 justify-center items-center bg-white p-6 md:p-10'>
+				<h2 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full md:max-w-[90%] text-[#1A1A1A]'>
+				OUR Goals
+				</h2>
+				<div className='max-w-full md:max-w-[90%]'>The pilot phase of the program is for two years (May 2024- May 2026) in the city of Aba with the following goals</div>
+			</div>
+
 			<div className="container mx-auto p-4">
   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:p-10 justify-center">
     <div className=" lg:px-4 mb-4">
-      <Card imageSrc={FFP} title="Mountain Adventure" />
+      <Card imageSrc={FFP} title="5,000+" des='Youth Participants trained in garment making, shoemaking, and leatherwork.
+' />
     </div>
     <div className=" lg:px-4 mb-4">
-      <Card imageSrc={FFP} title="Beach Getaway" />
+      <Card imageSrc={FFP} title="4,000 " des='MSMEs supported with business development, Access to Market and Finance.
+' />
     </div>
     <div className=" lg:px-4 mb-4">
-      <Card imageSrc={FFP} title="City Escape" />
+      <Card imageSrc={FFP} title="3"  des='Major Clusters in Abia State driving regional economic growth.' />
     </div>
    
   
   </div>
   <div className='md:flex w-full gap-x-3 justify-center'>
   <div className="md:px-2 lg:px-4 mb-4 w-full">
-      <Card imageSrc={FFP} title="Forest Retreat" />
+      <Card imageSrc={FFP} title="1,000+ " des=' Mastercraft Persons empowered to mentor young talents.' />
     </div>
     <div className="md:px-2 lg:px-4 mb-4 w-full">
-      <Card imageSrc={FFP} title="Desert Expedition" />
+      <Card imageSrc={FFP} title="30% " des='Growth in Market Linkages for youth and MSMEs.' />
     </div>
   </div>
 </div>
@@ -70,7 +79,7 @@ const index = () => {
 
 			<Image className='w-screen' src={Divider} alt='divider' />
 			<div className="container mx-auto p-4">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:p-10 lg:pb-0 justify-center">
+			<div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:p-10 lg:pb-0 justify-center">
     <div className=" lg:px-4 mb-4">
 	<CardNoImage color='#FFA929' title='2146' des='Youth Participants Trained in Aba' />
     </div>

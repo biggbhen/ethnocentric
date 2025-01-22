@@ -4,9 +4,10 @@ import Image, { StaticImageData } from 'next/image';
 interface CardProps {
   imageSrc: StaticImageData;
   title: string;
+  des:string
 }
 
-const Card: React.FC<CardProps> = ({ imageSrc, title }) => {
+const Card: React.FC<CardProps> = ({ imageSrc, title,des }) => {
   return (
     <div className="relative h-72 w-full flex items-center bg-[#1A1A1A] justify-center text-center text-white p-4 overflow-hidden rounded-lg shadow-lg">
       {/* Image positioned at the bottom-right corner */}
@@ -21,8 +22,9 @@ const Card: React.FC<CardProps> = ({ imageSrc, title }) => {
         />
       </div>
       
-      <div className="relative z-10">
+      <div className="relative max-w-80 z-10">
         <h3 className="text-2xl font-bold mb-2">{title}</h3>
+        <h3 className="text-xs  font-bold mb-2">{des}</h3>
       </div>
     </div>
   );
