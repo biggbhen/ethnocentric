@@ -24,7 +24,7 @@ const Card: React.FC<CardProps> = ({ imageSrc, title,des }) => {
       
       <div className="relative max-w-80 z-10">
         <h3 className="text-2xl font-bold mb-2">{title}</h3>
-        <h3 className="text-xs  font-bold mb-2">{des}</h3>
+        <p className="text-base  font-bold mb-2">{des}</p>
       </div>
     </div>
   );

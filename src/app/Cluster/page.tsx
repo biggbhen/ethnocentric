@@ -43,74 +43,116 @@ const index = () => {
 
 			<Image className='w-screen' src={Divider} alt='divider' />
 
-			<div className='flex flex-col gap-y-1 justify-center items-center bg-white p-6 md:p-10'>
-				<h2 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full md:max-w-[90%] text-[#1A1A1A]'>
-				OUR Goals
+			<div className='flex flex-col justify-center items-center max-w-[90%] mx-auto'>
+				<h2 className='font-medium py-4 md:py-7 text-2xl md:text-4xl text-[#1A1A1A]'>
+					OUR Goals
 				</h2>
-				<div className='max-w-full md:max-w-[90%]'>The pilot phase of the program is for two years (May 2024- May 2026) in the city of Aba with the following goals</div>
+				<p className='font-normal text-base md:text-lg mx-auto text-center max-w-[40rem]'>
+					The pilot phase of the program is for two years (May 2024- May 2026)
+					in the city of Aba with the following goals
+				</p>
 			</div>
 
-			<div className="container mx-auto p-4">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:p-10 justify-center">
-    <div className=" lg:px-4 mb-4">
-      <Card imageSrc={FFP} title="5,000+" des='Youth Participants trained in garment making, shoemaking, and leatherwork.
-' />
-    </div>
-    <div className=" lg:px-4 mb-4">
-      <Card imageSrc={FFP} title="4,000 " des='MSMEs supported with business development, Access to Market and Finance.
-' />
-    </div>
-    <div className=" lg:px-4 mb-4">
-      <Card imageSrc={FFP} title="3"  des='Major Clusters in Abia State driving regional economic growth.' />
-    </div>
-   
-  
-  </div>
-  <div className='md:flex w-full gap-x-3 justify-center'>
-  <div className="md:px-2 lg:px-4 mb-4 w-full">
-      <Card imageSrc={FFP} title="1,000+ " des=' Mastercraft Persons empowered to mentor young talents.' />
-    </div>
-    <div className="md:px-2 lg:px-4 mb-4 w-full">
-      <Card imageSrc={FFP} title="30% " des='Growth in Market Linkages for youth and MSMEs.' />
-    </div>
-  </div>
-</div>
+			<div className='container my-12 max-w-[90%] mx-auto'>
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center'>
+					<div>
+						<Card
+							imageSrc={FFP}
+							title='5,000+'
+							des='Youth Participants trained in garment making, shoemaking, and leatherwork.'
+						/>
+					</div>
+					<div>
+						<Card
+							imageSrc={FFP}
+							title='4,000 '
+							des='MSMEs supported with business development, Access to Market and Finance.'
+						/>
+					</div>
+					<div>
+						<Card
+							imageSrc={FFP}
+							title='3'
+							des='Major Clusters in Abia State driving regional economic growth.'
+						/>
+					</div>
+					<div>
+						<Card
+							imageSrc={FFP}
+							title='1,000+ '
+							des=' Mastercraft Persons empowered to mentor young talents.'
+						/>
+					</div>
+					<div>
+						<Card
+							imageSrc={FFP}
+							title='30% '
+							des='Growth in Market Linkages for youth and MSMEs.'
+						/>
+					</div>
+				</div>
+			</div>
 
 			{/* update main */}
 			<Image className='w-screen' src={Divider} alt='divider' />
-			<div className="container mx-auto p-4">
-			<div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:p-10 lg:pb-0 justify-center">
-    <div className=" lg:px-4 mb-4">
-	<CardNoImage color='#FFA929' title='2146' des='Youth Participants Trained in Aba' />
-    </div>
-    <div className=" lg:px-4 mb-4">
-	<CardNoImage color='#E86025' title='2000' des='MSMEs being supported with business development services' />
-    </div>
-    <div className=" lg:px-4 mb-4">
-	<CardNoImage color='#FFA929' title='25' des='Fashion Clusters' />
-    </div>
-    <div className=" lg:px-4 mb-4">
-	<CardNoImage color='#E86025' title='426' des='Mastercraft persons sharing knowledge' />
-    </div>
-    <div className=" lg:px-4 mb-4">
-	<CardNoImage color='#FFA929' title='80%' des='Youth female inclusion' />
-    </div>
-    <div className=" lg:px-4 mb-4">
-	<CardNoImage color='#E86025' title='70.5% ' des='Female owned MSMEs' />
-    </div>
-  </div>
-</div>
-<div>
+			<div className='container mx-auto p-4'>
+				<div className='flex flex-col justify-center items-center max-w-[90%] mx-auto'>
+					<h2 className='font-medium py-4 md:py-7 text-2xl md:text-4xl text-[#1A1A1A]'>
+						Numbers So Far
+					</h2>
+					<p className='font-normal text-base md:text-lg mx-auto text-center max-w-[40rem]'>
+						Impact of our activities from August 2024 - December 2024
+					</p>
+				</div>
+				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center max-w-[90%] mx-aut0 my-10'>
+					<div>
+						<CardNoImage
+							color='#FFA929'
+							title='2146'
+							des='Youth Participants Trained in Aba'
+						/>
+					</div>
+					<div>
+						<CardNoImage
+							color='#E86025'
+							title='2000'
+							des='MSMEs being supported with business development services'
+						/>
+					</div>
+					<div>
+						<CardNoImage color='#FFA929' title='25' des='Fashion Clusters' />
+					</div>
+					<div>
+						<CardNoImage
+							color='#E86025'
+							title='426'
+							des='Mastercraft persons sharing knowledge'
+						/>
+					</div>
+					<div>
+						<CardNoImage
+							color='#FFA929'
+							title='80%'
+							des='Youth female inclusion'
+						/>
+					</div>
+					<div>
+						<CardNoImage
+							color='#E86025'
+							title='70.5% '
+							des='Female owned MSMEs'
+						/>
+					</div>
+				</div>
+			</div>
+			<div></div>
 
-</div>
+			<Button
+				className='text-sm px-6 py-2 mx-auto  md:text-base md:px-8 md:py-3 mb-10'
+				variant='primary'>
+				Support Our Programs
+			</Button>
 
-<Button
-							className='text-sm px-6 py-2 mb-5 mx-auto  md:text-base md:px-8 md:py-3'
-							variant='primary'>
-							Support Our Programs
-						</Button>
-      
-		
 			<Image className='w-screen' src={Divider} alt='divider' />
 			<SharedSection
 				header='Why Aba?'
