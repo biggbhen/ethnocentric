@@ -11,9 +11,11 @@ import hero5 from '@/assets/hero5.jpg';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Button from './ui/Button';
+import { useRouter } from 'next/navigation';
 
 
 const HeroSwiper = () => {
+	const router = useRouter()
 	const slides = [
 		{
 			image: hero4,
@@ -47,6 +49,7 @@ const HeroSwiper = () => {
 	];
 
 
+
 	return (
 		<Swiper
 			modules={[Navigation, Autoplay]}
@@ -65,7 +68,11 @@ const HeroSwiper = () => {
 							src={slide.image}
 							alt={`Slide ${index + 1}`}
 							fill
-							style={{ objectFit: 'cover', objectPosition: 'center 35%', zIndex: -1 }}
+							style={{
+								objectFit: 'cover',
+								objectPosition: 'center 35%',
+								zIndex: -1,
+							}}
 						/>
 						<div className='absolute inset-0 bg-black/60 z-10'></div>
 						<div className='text-white text-center relative z-20'>
@@ -74,17 +81,27 @@ const HeroSwiper = () => {
 									<h1 className='text-4xl font-medium text-bright-orange mb-6 md:text-5xl lg:text-6xl md:max-w-[50rem]'>
 										{slide.text}
 									</h1>
-									<h3 className='text-2xl font-medium text-bright-orange mb-6 md:text-2xl lg:text-2xl md:max-w-[50rem]'>{slide.trans}</h3>
+									<h3 className='text-2xl font-medium text-bright-orange mb-6 md:text-2xl lg:text-2xl md:max-w-[50rem]'>
+										{slide.trans}
+									</h3>
 									<p className='text-lg  mb-8 md:text-xl md:max-w-[40rem] md:mx-auto text-white'>
 										{slide.description}
 									</p>
 									<div className='flex justify-center gap-x-3 mx-auto w-full'>
 										<Button
+										onClick={() => router.push('/Cluster')}
 											className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
 											variant='secondary'>
 											Explore Our Impact
 										</Button>
 										<Button
+											onClick={() =>
+												window.open(
+													'https://registration.fashionfutureprogram.org',
+													'_blank',
+													'noopener,noreferrer'
+												)
+											}
 											className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
 											variant='primary'>
 											Join the Program

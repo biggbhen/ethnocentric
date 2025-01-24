@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Button from '../ui/Button';
 import Image from 'next/image';
@@ -9,7 +9,6 @@ import Logo from '@/assets/Logo.png'
 
 const Header = () => {
 	const pathname = usePathname();
-	const router = useRouter();
 	const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (

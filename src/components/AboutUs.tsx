@@ -93,7 +93,16 @@ const AboutUs = (props: Props) => {
 					<Button className='text-sm md:text-base' variant='secondary'>
 						Discover More
 					</Button>
-					<Button className='text-sm md:text-base' variant='primary'>
+					<Button
+						className='text-sm md:text-base'
+						variant='primary'
+						onClick={() =>
+							window.open(
+								'https://registration.fashionfutureprogram.org',
+								'_blank',
+								'noopener,noreferrer'
+							)
+						}>
 						Join The Program
 					</Button>
 				</div>
@@ -148,7 +157,17 @@ const AboutUs = (props: Props) => {
 					<Button className='text-sm md:text-base' variant='secondary'>
 						Discover More
 					</Button>
-					<Button className='text-sm md:text-base' variant='primary'>
+					<Button
+						className='text-sm 
+						md:text-base'
+						variant='primary'
+						onClick={() =>
+							window.open(
+								'https://registration.fashionfutureprogram.org',
+								'_blank',
+								'noopener,noreferrer'
+							)
+						}>
 						Join The Program
 					</Button>
 				</div>
