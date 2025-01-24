@@ -1,7 +1,9 @@
 import Image, { StaticImageData } from 'next/image';
 import Button from './ui/Button';
+import { useRouter } from 'next/navigation';
 
 const WhatWeDo: React.FC = () => {
+	const router = useRouter();
     return (
 			<div className='relative py-24 container md:mx-auto px-5 md:px-0'>
 				<div className='w-full max-w-5xl mx-auto overflow-visible'>
@@ -62,14 +64,16 @@ const WhatWeDo: React.FC = () => {
 
 					{/* Button Section */}
 					<div className='flex justify-center mt-6 gap-x-4'>
-						<Button
+						{/* <Button
 							className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
 							variant='secondary'>
 							Learn More
-						</Button>
+						</Button> */}
 						<Button
 							className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
-							variant='primary'>
+							variant='primary'
+							onClick={() => router.push('/programs')}
+							>
 							Discover Our Programs
 						</Button>
 					</div>

@@ -85,9 +85,7 @@ return (
 			header='Our Vision'
 			image={approach}
 			altText='Fashion'
-			imageLeft={true}
-
-		>
+			imageLeft={true}>
 			<p className='text-start mt-6 font-normal text-base md:text-lg'>
 				We envision an inclusive industry where local entrepreneurs are thriving
 				businesses that contribute significantly to local economies, create
@@ -157,7 +155,16 @@ return (
 			</div>
 
 			<div className='w-max mx-auto my-6'>
-				<Button className='text-sm md:text-base w-[250px]' variant='primary'>
+				<Button
+					className='text-sm md:text-base w-[250px]'
+					variant='primary'
+					onClick={() =>
+						window.open(
+							'https://www.ethnocentrique.com/',
+							'_blank',
+							'noopener,noreferrer'
+						)
+					}>
 					Learn More
 				</Button>
 			</div>
@@ -204,7 +211,14 @@ return (
 					<div className='w-max mx-auto my-6'>
 						<Button
 							className='text-sm md:text-base w-[250px]'
-							variant='primary'>
+							variant='primary'
+							onClick={() =>
+								window.open(
+									'https://mastercardfdn.org/',
+									'_blank',
+									'noopener,noreferrer'
+								)
+							}>
 							Learn More
 						</Button>
 					</div>
