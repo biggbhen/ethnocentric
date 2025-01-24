@@ -104,45 +104,33 @@ const index = () => {
 						Impact of our activities from August 2024 - December 2024
 					</p>
 				</div>
-				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center max-w-[90%] mx-aut0 my-10'>
-					<div>
-						<CardNoImage
-							color='#FFA929'
-							title='2146'
-							des='Youth Participants Trained in Aba'
-						/>
-					</div>
-					<div>
-						<CardNoImage
-							color='#E86025'
-							title='2000'
-							des='MSMEs being supported with business development services'
-						/>
-					</div>
-					<div>
-						<CardNoImage color='#FFA929' title='25' des='Fashion Clusters' />
-					</div>
-					<div>
-						<CardNoImage
-							color='#E86025'
-							title='426'
-							des='Mastercraft persons sharing knowledge'
-						/>
-					</div>
-					<div>
-						<CardNoImage
-							color='#FFA929'
-							title='80%'
-							des='Youth female inclusion'
-						/>
-					</div>
-					<div>
-						<CardNoImage
-							color='#E86025'
-							title='70.5% '
-							des='Female owned MSMEs'
-						/>
-					</div>
+				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center w-[90%] sm:w-[70%] mx-auto my-10'>
+					<CardNoImage
+						color='#FFA929'
+						number={2146}
+						des='Youth Participants Trained in Aba'
+					/>
+					<CardNoImage
+						color='#E86025'
+						number={2000}
+						des='MSMEs being supported with business development services'
+					/>
+					<CardNoImage color='#FFA929' number={25} des='Fashion Clusters' />
+					<CardNoImage
+						color='#E86025'
+						number={426}
+						des='Mastercraft persons sharing knowledge'
+					/>
+					<CardNoImage
+						color='#FFA929'
+						number={80}
+						des='Youth female inclusion'
+					/>
+					<CardNoImage
+						color='#E86025'
+						number={70.5 }
+						des='Female owned MSMEs'
+					/>
 				</div>
 			</div>
 			<div></div>

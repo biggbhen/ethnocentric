@@ -1,23 +1,24 @@
 import React from 'react';
+import Counter from './shared/Counter';
 
 interface CardProps {
-  title: string;
+  number: number;
   des: string;
   color: string;
 }
 
-const CardNoImage: React.FC<CardProps> = ({ title, des, color }) => {
+const CardNoImage: React.FC<CardProps> = ({ number, des, color }) => {
   return (
-    <div className={`text-3xl font-bold w-full flex items-center justify-start text-[${color}]`}>
-      <div>
-        <div>
-          <h3 className="text-2xl font-bold mb-2">{title}</h3>
-          <p className="text-lg">{des}</p>
-        </div>
-
-      </div>
-    </div>
-  );
+		<div
+			className={`text-3xl font-bold w-full flex items-center justify-start text-[${color}]`}>
+			<div>
+				<div>
+					<Counter targetNumber={number} duration={2000} />
+					<p className='text-lg'>{des}</p>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default CardNoImage;

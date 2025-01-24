@@ -120,8 +120,7 @@ put a unique spin on your designs.`,
 				image={Business}
 				altText='Winter Collection'
 				imageLeft={false}
-				imgHide={true}
-			>
+				imgHide={true}>
 				<h3 className='text-start mt-6 font-normal text-base md:text-lg'>
 					Empowering MSMEs to Thrive.
 				</h3>
@@ -148,16 +147,19 @@ put a unique spin on your designs.`,
 				altText='Winter Collection'
 				imageLeft={true}>
 				<div className='max-w-full md:max-w-[90%]'>
-					<ul className='list-disc pl-5 my-7 text-start mt-6 font-normal text-base md:text-lg'>
-						{[
-							'The Fashion Future Program actively advocates for policy reforms and initiatives that enhance infrastructure, promote intellectual property rights, and improve access to finance and markets.',
-							'By engaging with government bodies, industry leaders, and stakeholders, we champion the needs of MSMEs and foster collaborations that drive innovation, inclusivity, and sustainability. Our goal is to shape a policy framework that empowers fashion entrepreneurs and positions the Nigerian fashion industry for global competitiveness.',
-						].map((item, index) => (
-							<li key={index} className='mb-2'>
-								{item}
-							</li>
-						))}
-					</ul>
+					<p className='text-start mt-6 font-normal text-base md:text-lg'>
+						The Fashion Future Program actively advocates for policy reforms and
+						initiatives that enhance infrastructure, promote intellectual
+						property rights, and improve access to finance and markets.
+					</p>
+					<p className='text-start mt-6 font-normal text-base md:text-lg'>
+						By engaging with government bodies, industry leaders, and
+						stakeholders, we champion the needs of MSMEs and foster
+						collaborations that drive innovation, inclusivity, and
+						sustainability. Our goal is to shape a policy framework that
+						empowers fashion entrepreneurs and positions the Nigerian fashion
+						industry for global competitiveness.
+					</p>
 				</div>
 			</SharedSection>
 
@@ -173,16 +175,19 @@ put a unique spin on your designs.`,
 				altText='Winter Collection'
 				imageLeft={false}>
 				<div className='max-w-full md:max-w-[90%]'>
-					<ul className='list-disc pl-5 my-7 text-start mt-6 font-normal text-base md:text-lg'>
-						{[
-							'Our job placement services are designed to connect our graduates with reputable employers in the fashion industry, ensuring they step into rewarding careers that align with their skills and aspirations.',
-							"Through partnerships with leading fashion brands, local businesses, and industry stakeholders, we create pathways for employment in garment making, shoemaking, leatherworks, and more. Whether it's full-time positions, internships, or freelance opportunities, FFP is committed to helping our participants achieve professional success and contribute meaningfully to the fashion ecosystem.",
-						].map((item, index) => (
-							<li key={index} className='mb-2'>
-								{item}
-							</li>
-						))}
-					</ul>
+					<p className='text-start mt-6 font-normal text-base md:text-lg'>
+						Our job placement services are designed to connect our graduates
+						with reputable employers in the fashion industry, ensuring they step
+						into rewarding careers that align with their skills and aspirations.
+					</p>
+					<p className='text-start mt-6 font-normal text-base md:text-lg'>
+						Through partnerships with leading fashion brands, local businesses,
+						and industry stakeholders, we create pathways for employment in
+						garment making, shoemaking, leatherworks, and more. Whether it&apos;s
+						full-time positions, internships, or freelance opportunities, FFP is
+						committed to helping our participants achieve professional success
+						and contribute meaningfully to the fashion ecosystem.
+					</p>
 				</div>
 			</SharedSection>
 
