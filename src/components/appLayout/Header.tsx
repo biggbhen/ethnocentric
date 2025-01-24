@@ -1,13 +1,15 @@
 'use client';
 import React, { useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Button from '../ui/Button';
 import Image from 'next/image';
 import Logo from '@/assets/Logo.png'
 
+
 const Header = () => {
 	const pathname = usePathname();
+	const router = useRouter();
 	const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
@@ -15,11 +17,7 @@ const Header = () => {
 			<div className='bg-white text-black shadow-md fixed top-0 left-0 right-0 z-50'>
 				<div className='flex justify-between items-center px-5 py-4'>
 					<div>
-						<Image
-							className='lg:w-[12rem] w-[7rem] md:w-[10rem]'
-							src={Logo}
-							alt='logo'
-						/>
+						<Image className='w-[10rem]' src={Logo} alt='logo' />
 					</div>
 
 					{/* Desktop Navigation */}
@@ -47,8 +45,30 @@ const Header = () => {
 
 					{/* Desktop Buttons */}
 					<div className='hidden lg:flex gap-x-5'>
-						<Button variant='secondary'>Support Our Mission</Button>
-						<Button variant='primary'>Join the Program</Button>
+						<Button
+							variant='secondary'
+							className='text-base'
+							onClick={() =>
+								window.open(
+									'https://forms.office.com/r/iaG8KK9mec',
+									'_blank',
+									'noopener,noreferrer'
+								)
+							}>
+							Support Our Mission
+						</Button>
+						<Button
+							variant='primary'
+							className='text-base'
+							onClick={() =>
+								window.open(
+									'https://registration.fashionfutureprogram.org',
+									'_blank',
+									'noopener,noreferrer'
+								)
+							}>
+							Join the Program
+						</Button>
 					</div>
 
 					{/* Hamburger Icon for Mobile */}
