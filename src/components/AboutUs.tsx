@@ -133,7 +133,7 @@ const AboutUs = (props: Props) => {
 			<Image src={Divider} className='w-screen' alt='divider' />
 
 			<SharedSection
-				header='Empowering the Future of Fashion'
+				header='Your Future Awaits — At No Cost to You'
 				image={Second}
 				altText='Fashion'
 				imageLeft={true}>

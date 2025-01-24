@@ -5,7 +5,7 @@ const Counter = ({ targetNumber = 1000, duration = 2000 }) => {
 
 	useEffect(() => {
 		let start = targetNumber / 2;
-		const increment = targetNumber / (duration / 16.67); // Approx. 60fps
+		const increment = targetNumber / (duration / 16.67);
 
 		const animateCounter = () => {
 			start += increment;
@@ -13,10 +13,9 @@ const Counter = ({ targetNumber = 1000, duration = 2000 }) => {
 				setCount(Math.ceil(start));
 				requestAnimationFrame(animateCounter);
 			} else {
-				setCount(targetNumber); // Ensure final number is exact
+				setCount(targetNumber);
 			}
 		};
-
 		animateCounter();
 	}, [targetNumber, duration]);
 
