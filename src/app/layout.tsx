@@ -36,7 +36,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<link rel='icon' href='/favicon.ico' sizes='any' />
+			<head>
+				<link rel='icon' href='/favicon.ico' sizes='any' />
+			</head>
 			<body className={`${ubuntu.variable} ${manrope.variable}`}>
 				<Header />
 				{children}
