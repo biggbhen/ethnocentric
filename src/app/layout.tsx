@@ -24,7 +24,8 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
 	title: 'Fashion Future Program',
 	icons: {
-		icon: '/favicon.ico', 
+		icon: '/favicon.ico',
+		shortcut: '/favicon.ico',
 	},
 };
 
@@ -35,6 +36,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
+			<link rel='icon' href='/favicon.ico' sizes='any' />
 			<body className={`${ubuntu.variable} ${manrope.variable}`}>
 				<Header />
 				{children}

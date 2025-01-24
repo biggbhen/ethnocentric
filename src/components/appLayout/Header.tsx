@@ -73,6 +73,7 @@ const Header = () => {
 
 					{/* Hamburger Icon for Mobile */}
 					<div
+					
 						className='lg:hidden cursor-pointer'
 						onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
 						<div className='space-y-1'>
