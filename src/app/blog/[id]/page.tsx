@@ -6,7 +6,6 @@ import {
 } from '@/sanity/lib/queries';
 import type { SanityDocument } from 'next-sanity';
 import Image from 'next/image';
-// import { Post } from '@/components/Post'; // Assuming you have a Post component
 
 export async function generateStaticParams() {
 	const paths = await sanityFetch<{ params: { id: string } }[]>({
@@ -40,8 +39,6 @@ async function getPost(id: string): Promise<SanityDocument> {
 }
 
 const Page = async ({ params }: { params: { id: string } }) => {
-
-
 	try {
 		const post = await getPost(params.id);
 		return (
@@ -52,7 +49,8 @@ const Page = async ({ params }: { params: { id: string } }) => {
 						alt={post.title}
 						width={800}
 						height={400}
-						className='mb-6 rounded-lg shadow-md'
+						className='rounded-lg shadow-md'
+						style={{ height: '400px', width: '800px', objectFit: 'cover' }}
 					/>
 				)}
 				<div className='md:p-5 my-4'>
@@ -63,7 +61,6 @@ const Page = async ({ params }: { params: { id: string } }) => {
 						{post.description}
 					</p>
 				</div>
-				{/* <Post blogpost={post} /> */}
 			</div>
 		);
 	} catch (error) {
