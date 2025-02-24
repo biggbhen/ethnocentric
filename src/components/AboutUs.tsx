@@ -174,7 +174,7 @@ const AboutUs = (props: Props) => {
 			</SharedSection>
 
 			<Image className='w-screen' src={Divider} alt='divider' />
-			<Youtube url='https://youtu.be/41kQc083s6c?si=xd1wJPpFlrMvL14i' />
+			<Youtube url='https://www.youtube.com/watch?v=JotFlM1yic0' />
 
 			<Image className='w-screen' src={DividerEnd} alt='divider' />
 		</>

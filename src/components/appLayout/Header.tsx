@@ -15,9 +15,9 @@ const Header = () => {
 		<>
 			<div className='bg-white text-black shadow-md fixed top-0 left-0 right-0 z-40'>
 				<div className='flex justify-between items-center px-5 py-4'>
-					<div>
+					<Link href={'/'} className='cursor-pointer'>
 						<Image className='w-[10rem]' src={Logo} alt='logo' />
-					</div>
+					</Link>
 
 					{/* Desktop Navigation */}
 					<div className='hidden lg:flex gap-x-4 lg:gap-x-7'>
