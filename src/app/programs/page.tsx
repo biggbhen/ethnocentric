@@ -24,8 +24,8 @@ const index = () => {
 			altText: 'Image 1 description',
 			title: 'Garment Making',
 			description: `Learn the art of designing, cutting, and constructing
-high-quality garments from industry experts whilst
-using quality materials.`,
+							high-quality garments from industry experts whilst
+							using quality materials.`,
 			extraText: 'Register'
 		},
 		{
@@ -33,24 +33,17 @@ using quality materials.`,
 			altText: 'Image 1 description',
 
 			title: 'Footwear Crafting',
-			description: `Master the process of creating stylish and durable
-footwear, blending traditional techniques with
-modern trends.`,
+			description: `Master the process of creating stylish and durable footwear, blending traditional techniques with modern trends.`,
 			extraText: 'Register'
 		},
 		{
 			image: image3,
 			altText: 'Image 1 description',
-
 			title: 'Leatherworks',
-			description: `Hone your skills in  crafting leather goods with
-precision and attention to detail. Learn how to
-put a unique spin on your designs.`,
+			description: `Hone your skills in  crafting leather goods with precision and attention to detail. Learn how to put a unique spin on your designs.`,
 			extraText: 'Register'
 
 		},
-
-
 	];
 	return (
 		<>
@@ -59,7 +52,7 @@ put a unique spin on your designs.`,
 				alt='A beautiful landscape background'
 				className='md:h-screen h-[100vh]'>
 				<div className='text-white text-center px-4 py-8'>
-					<h1 className='text-4xl font-medium text-bright-orange mb-6 md:text-6xl lg:text-7xl'>
+					<h1 className='text-bright-orange text-3xl font-medium mb-4 md:text-4xl lg:text-5xl'>
 						Where Skills Meet Opportunity
 					</h1>
 					<p className='text-lg text-dark-gray mb-8 md:text-xl md:max-w-[40rem] md:mx-auto'>
@@ -70,16 +63,21 @@ put a unique spin on your designs.`,
 					<div className='flex justify-center'>
 						<Button
 							className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
-							variant='primary'>
+							variant='primary'
+							onClick={() =>
+								window.open(
+									'https://registration.fashionfutureprogram.org',
+									'_blank',
+									'noopener,noreferrer'
+								)
+							}>
 							Join the Program
 						</Button>
 					</div>
 				</div>
 			</ImageBackground>
-
 			<Image className='w-screen' src={Divider} alt='divider' />
-
-			<div className=''>
+			<div>
 				<h2 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full mx-auto md:max-w-[90%] text-center text-[#1A1A1A]'>
 					Training Programs
 				</h2>
@@ -114,7 +112,6 @@ put a unique spin on your designs.`,
 				</div>
 			</SharedSection>
 			<Image className='w-screen' src={Divider2} alt='divider' />
-
 			<SharedSection
 				header='MSME Cluster and Business Development'
 				image={Business}
@@ -138,9 +135,7 @@ put a unique spin on your designs.`,
 					</ul>
 				</div>
 			</SharedSection>
-
 			<Image className='w-screen' src={Divider} alt='divider' />
-
 			<SharedSection
 				header='Policy Advocacy & Industry Engagement'
 				image={policyImg}
@@ -162,13 +157,9 @@ put a unique spin on your designs.`,
 					</p>
 				</div>
 			</SharedSection>
-
 			<Image className='w-screen' src={Divider} alt='divider' />
-
 			<div className="h-screen bg-[url('/IMG_5626-min.jpg')] bg-fixed bg-cover bg-center"></div>
-
 			<Image className='w-screen' src={Divider} alt='divider' />
-
 			<SharedSection
 				header='Job Placement Program'
 				image={contactImage}
@@ -183,16 +174,15 @@ put a unique spin on your designs.`,
 					<p className='text-start mt-6 font-normal text-base md:text-lg'>
 						Through partnerships with leading fashion brands, local businesses,
 						and industry stakeholders, we create pathways for employment in
-						garment making, shoemaking, leatherworks, and more. Whether it&apos;s
-						full-time positions, internships, or freelance opportunities, FFP is
-						committed to helping our participants achieve professional success
-						and contribute meaningfully to the fashion ecosystem.
+						garment making, shoemaking, leatherworks, and more. Whether
+						it&apos;s full-time positions, internships, or freelance
+						opportunities, FFP is committed to helping our participants achieve
+						professional success and contribute meaningfully to the fashion
+						ecosystem.
 					</p>
 				</div>
 			</SharedSection>
-
 			<Image className='w-screen' src={Divider} alt='divider' />
-
 			<div>
 				<ImageBackground
 					Imageclass='filter brightness-50 '
@@ -214,7 +204,14 @@ put a unique spin on your designs.`,
 						<div className='flex justify-center'>
 							<Button
 								className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
-								variant='primary'>
+								variant='primary'
+								onClick={() =>
+									window.open(
+										'https://registration.fashionfutureprogram.org',
+										'_blank',
+										'noopener,noreferrer'
+									)
+								}>
 								Join the Program
 							</Button>
 						</div>

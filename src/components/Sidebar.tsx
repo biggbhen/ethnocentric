@@ -6,17 +6,16 @@ import Side2 from '@/assets/side2.png';
 const Sidebar: React.FC = () => {
 	return (
 		<>
-		
-			<div className='h-screen w-screen md:w-80 md:mt-7 mt-3 bg-[white] text-dark-gray  flex flex-col'>
-			<div className=''>
-				<input
-					type='text'
-					name=''
-					placeholder='Search'
-					className='w-full mb-2 bg-[white] border border-[#E0E0E0] p-3'
-					id=''
-				/>
-			</div>
+			<div className='mt-3 bg-[white] text-dark-gray flex flex-col'>
+				<div className=''>
+					<input
+						type='text'
+						name=''
+						placeholder='Search'
+						className='w-full mb-2 bg-[white] border border-[#E0E0E0] p-3'
+						id=''
+					/>
+				</div>
 
 				{/* Menu */}
 				<nav className='flex-grow'>
@@ -67,7 +66,7 @@ const Sidebar: React.FC = () => {
 						</li>
 					</ul>
 
-					<ul className='flex flex-col mt-4 space-y-2'>
+					{/* <ul className='flex flex-col mt-4 space-y-2'>
 						<li className='border bg-[#FAFAFA] border-[#E0E0E0] w-full flex items-stretch'>
 							<div className='bg-[#FFA929] w-1'></div> 
 							<a href='#' className='flex items-center p-6 rounded-md w-full'>
@@ -102,11 +101,11 @@ const Sidebar: React.FC = () => {
 								</div>
 							</div>
 						</li>
-					</ul>
+					</ul> */}
 
-					<ul className='flex flex-col mt-4 space-y-2'>
+					{/* <ul className='flex flex-col mt-4 space-y-2'>
 						<li className='border bg-[#FAFAFA] border-[#E0E0E0] w-full flex items-stretch'>
-							<div className='bg-[#FFA929] w-1'></div> {/* Red vertical bar */}
+							<div className='bg-[#FFA929] w-1'></div> 
 							<a href='#' className='flex items-center p-6 rounded-md w-full'>
 								<span className='material-icons-outlined font-normal'>
 									TAGS
@@ -137,7 +136,7 @@ const Sidebar: React.FC = () => {
 								</div>
 							</div>
 						</li>
-					</ul>
+					</ul> */}
 				</nav>
 			</div>
 		</>

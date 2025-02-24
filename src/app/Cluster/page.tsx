@@ -23,10 +23,10 @@ const index = () => {
 				alt='A beautiful landscape background'
 				className='h-[90vh] lg:h-screen'>
 				<div className='text-white text-center px-4 py-8 md:max-w-[50rem]'>
-					<h1 className='text-3xl font-medium mb-4 md:text-4xl lg:text-5xl '>
+					<h1 className='text-3xl font-medium mb-4 md:text-4xl lg:text-5xl'>
 						Transforming Aba into Africa’s Creative Powerhouse
 					</h1>
-					<p className='text-lg mb-8 md:text-xl  md:mx-auto'>
+					<p className='text-lg mb-8 md:text-xl md:mx-auto'>
 						Explore our comprehensive programs designed to empower aspiring
 						fashion professionals with the skills, resources, and mentorship
 						needed to thrive in the industry.
@@ -34,7 +34,14 @@ const index = () => {
 					<div className='flex justify-center'>
 						<Button
 							className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
-							variant='primary'>
+							variant='primary'
+							onClick={() =>
+								window.open(
+									'https://registration.fashionfutureprogram.org',
+									'_blank',
+									'noopener,noreferrer'
+								)
+							}>
 							Join the Program
 						</Button>
 					</div>
@@ -126,18 +133,20 @@ const index = () => {
 						number={80}
 						des='Youth female inclusion'
 					/>
-					<CardNoImage
-						color='#E86025'
-						number={70.5 }
-						des='Female owned MSMEs'
-					/>
+					<CardNoImage color='#E86025' number={70.5} des='Female owned MSMEs' />
 				</div>
 			</div>
-			<div></div>
 
 			<Button
 				className='text-sm px-6 py-2 mx-auto  md:text-base md:px-8 md:py-3 mb-10'
-				variant='primary'>
+				variant='primary'
+				onClick={() =>
+					window.open(
+						'https://forms.office.com/r/iaG8KK9mec',
+						'_blank',
+						'noopener,noreferrer'
+					)
+				}>
 				Support Our Programs
 			</Button>
 
@@ -148,7 +157,7 @@ const index = () => {
 				altText='Winter Collection'
 				imageLeft={false}>
 				<h3 className='text-start mt-6 font-normal text-base md:text-lg'>
-					Empowering MSMEs to Thrive.
+					Building a sustainable local economy.
 				</h3>
 				<div className='max-w-full md:max-w-[90%]'>
 					<ul className='list-disc pl-5 my-7 text-start mt-6 font-normal text-base md:text-lg'>
@@ -224,7 +233,14 @@ const index = () => {
 						<div className='flex justify-center'>
 							<Button
 								className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
-								variant='primary'>
+								variant='primary'
+								onClick={() =>
+									window.open(
+										'https://registration.fashionfutureprogram.org',
+										'_blank',
+										'noopener,noreferrer'
+									)
+								}>
 								Join the Program
 							</Button>
 						</div>

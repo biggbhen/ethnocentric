@@ -101,4 +101,8 @@ h6 {
 	cursor: not-allowed;
 	pointer-events: none;
   }
+
+  .bxybgW{
+	z-index: 50 !important;
+  }
   

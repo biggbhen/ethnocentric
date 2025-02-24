@@ -90,9 +90,9 @@ const AboutUs = (props: Props) => {
 					today’s market placethereby strengthening Local communities.
 				</p>
 				<div className='flex flex-col md:flex-row gap-y-3 lg:gap-y-0 gap-x-5 mt-6'>
-					<Button className='text-sm md:text-base' variant='secondary'>
+					{/* <Button className='text-sm md:text-base' variant='secondary'>
 						Discover More
-					</Button>
+					</Button> */}
 					<Button
 						className='text-sm md:text-base'
 						variant='primary'
@@ -154,9 +154,9 @@ const AboutUs = (props: Props) => {
 					fashion industry.
 				</p>
 				<div className='flex flex-col md:flex-row gap-y-3 lg:gap-y-0 gap-x-5 mt-6'>
-					<Button className='text-sm md:text-base' variant='secondary'>
+					{/* <Button className='text-sm md:text-base' variant='secondary'>
 						Discover More
-					</Button>
+					</Button> */}
 					<Button
 						className='text-sm 
 						md:text-base'
