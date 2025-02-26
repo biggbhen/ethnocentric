@@ -93,4 +93,6 @@ const PostContent = async ({ id }: { id: string }) => {
 		console.error('Error fetching post:', error);
 		return <h1 className='text-2xl font-semibold'>Error loading post</h1>;
 	}
-};
+};	
+
+// blog/[id]/page.tsx
