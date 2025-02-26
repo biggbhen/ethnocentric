@@ -2,17 +2,14 @@ import { sanityFetch } from '@/sanity/lib/fetch';
 import {
 	postByIdQuery,
 	postBySlugQuery,
-	postPathsQuery,
 } from '@/sanity/lib/queries';
 import type { SanityDocument } from 'next-sanity';
 import Image from 'next/image';
+import React from 'react';
 
-export async function generateStaticParams() {
-	const paths = await sanityFetch<{ params: { id: string } }[]>({
-		query: postPathsQuery,
-	});
-	return paths;
-}
+type Props = {
+	params: Promise<{ id: string }>;
+};
 
 async function getPost(id: string): Promise<SanityDocument> {
 	const cleanId = id.replace('drafts.', '');
@@ -38,11 +35,40 @@ async function getPost(id: string): Promise<SanityDocument> {
 	}
 }
 
-const Page = async ({ params }: { params: { id: string } }) => {
-	try {
-		const post = await getPost(params.id);
-		return (
+const Page = async({ params }: Props) => {
+	// const fetchPost = async () => {
+	// 	try {
+	// 		const { id } = await params;
+	// 		return await getPost(id);
+	// 	} catch (error) {
+	// 		console.error('Error fetching post:', error);
+	// 		return null;
+	// 	}
+	// };
+	const { id } = await params;
+	return (
+		<div className='flex flex-col items-center container mx-auto max-w-5xl px-6'>
 			<div className='mt-[7rem] flex flex-col items-center container mx-auto max-w-5xl px-6'>
+				<React.Suspense fallback={<p>Loading...</p>}>
+					<PostContent id={id} />
+				</React.Suspense>
+			</div>
+		</div>
+	);
+};
+
+export default Page;
+
+const PostContent = async ({ id }: { id: string }) => {
+	try {
+		const post = await getPost(id);
+
+		if (!post) {
+			return <h1 className='text-2xl font-semibold'>Post not found</h1>;
+		}
+
+		return (
+			<>
 				{post.mainImage && (
 					<Image
 						src={post.mainImage.asset.url || '/placeholder.svg'}
@@ -61,15 +87,10 @@ const Page = async ({ params }: { params: { id: string } }) => {
 						{post.description}
 					</p>
 				</div>
-			</div>
+			</>
 		);
 	} catch (error) {
-		return (
-			<div className='mt-[7rem] flex flex-col items-center container mx-auto max-w-5xl px-6'>
-				<h1 className='text-2xl font-semibold'>Post not found</h1>
-			</div>
-		);
+		console.error('Error fetching post:', error);
+		return <h1 className='text-2xl font-semibold'>Error loading post</h1>;
 	}
 };
-
-export default Page;
