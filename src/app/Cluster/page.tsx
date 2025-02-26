@@ -132,8 +132,9 @@ const index = () => {
 						color='#FFA929'
 						number={80}
 						des='Youth female inclusion'
+						percent
 					/>
-					<CardNoImage color='#E86025' number={70.5} des='Female owned MSMEs' />
+					<CardNoImage color='#E86025' percent number={70.5} des='Female owned MSMEs' />
 				</div>
 			</div>
 
