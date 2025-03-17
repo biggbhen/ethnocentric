@@ -23,7 +23,7 @@ const index = () => {
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1 }}
 			>
-				
+
 				<ImageBackground
 					imageSrc={Cluster1}
 					Imageclass='filter brightness-50'

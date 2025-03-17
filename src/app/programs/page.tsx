@@ -59,28 +59,28 @@ const index = () => {
 					alt='A beautiful landscape background'
 					className='md:h-screen h-[100vh]'>
 					<div className='text-white text-center px-4 py-8'>
-							<motion.h1
-													initial={{ scale: 0.9 }}
-													animate={{ scale: 1 }}
-													transition={{ duration: 0.5, delay: 0.5 }}
-						className='text-bright-orange text-3xl font-medium mb-4 md:text-4xl lg:text-5xl'>
+						<motion.h1
+							initial={{ scale: 0.9 }}
+							animate={{ scale: 1 }}
+							transition={{ duration: 0.5, delay: 0.5 }}
+							className='text-bright-orange text-3xl font-medium mb-4 md:text-4xl lg:text-5xl'>
 							Where Skills Meet Opportunity
 						</motion.h1>
 						<motion.p
-												initial={{ opacity: 0 }}
-												animate={{ opacity: 1 }}
-												transition={{ duration: 1, delay: 0.7 }}
-						
-						className='text-lg text-dark-gray mb-8 md:text-xl md:max-w-[40rem] md:mx-auto'>
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{ duration: 1, delay: 0.7 }}
+
+							className='text-lg text-dark-gray mb-8 md:text-xl md:max-w-[40rem] md:mx-auto'>
 							Explore our comprehensive programs designed to empower aspiring
 							fashion professionals with the skills, resources, and mentorship
 							needed to thrive in the industry.
 						</motion.p>
-							<motion.div
-													initial={{ scale: 0.8, opacity: 0 }}
-													animate={{ scale: 1, opacity: 1 }}
-													transition={{ duration: 0.5, delay: 1 }}
-						className='flex justify-center'>
+						<motion.div
+							initial={{ scale: 0.8, opacity: 0 }}
+							animate={{ scale: 1, opacity: 1 }}
+							transition={{ duration: 0.5, delay: 1 }}
+							className='flex justify-center'>
 							<Button
 								className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
 								variant='primary'
@@ -102,21 +102,21 @@ const index = () => {
 			<Image className='w-screen' src={Divider} alt='divider' />
 			<div>
 				<motion.h2
-				 	
-									initial={{ opacity: 0, y: 50 }}
-									whileInView={{ opacity: 1, y: 0 }}
-									transition={{ duration: 0.6, ease: "easeOut" }}
-									viewport={{ once: true, amount: 0.2 }}
-				className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full mx-auto md:max-w-[90%] text-center text-[#1A1A1A]'>
+
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, ease: "easeOut" }}
+					viewport={{ once: true, amount: 0.2 }}
+					className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full mx-auto md:max-w-[90%] text-center text-[#1A1A1A]'>
 					Training Programs
 				</motion.h2>
-				
-					<motion.p
-										initial={{ opacity: 0, y: 50 }}
-										whileInView={{ opacity: 1, y: 0 }}
-										transition={{ duration: 0.6, ease: "easeOut" }}
-										viewport={{ once: true, amount: 0.2 }}
-				 className='font-medium text-center text-base md:text-lg w-[]90% max-w-[40rem] mx-auto'>
+
+				<motion.p
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, ease: "easeOut" }}
+					viewport={{ once: true, amount: 0.2 }}
+					className='font-medium text-center text-base md:text-lg w-[]90% max-w-[40rem] mx-auto'>
 					Hands-on learning that bridges creativity and craftsmanship while
 					transforming lives and driving growth. Addressing industry shortages
 					with comprehensive training.
@@ -132,7 +132,15 @@ const index = () => {
 				<h3 className='text-start mt-6 font-normal text-base md:text-lg'>
 					Learning from Masters of the Craft.
 				</h3>
-				<div className='max-w-full md:max-w-[90%]'>
+
+				<motion.div
+
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, ease: "easeOut" }}
+					viewport={{ once: true, amount: 0.2 }}
+
+					className='max-w-full md:max-w-[90%]'>
 					<ul className='list-disc pl-5 my-7 text-start mt-6 font-normal text-base md:text-lg'>
 						{[
 							'Participants gain practical experience under the guidance of skilled artisans in specialized clusters.',
@@ -144,7 +152,7 @@ const index = () => {
 							</li>
 						))}
 					</ul>
-				</div>
+				</motion.div>
 			</SharedSection>
 			<Image className='w-screen' src={Divider2} alt='divider' />
 			<SharedSection
@@ -156,7 +164,14 @@ const index = () => {
 				<h3 className='text-start mt-6 font-normal text-base md:text-lg'>
 					Empowering MSMEs to Thrive.
 				</h3>
-				<div className='max-w-full md:max-w-[90%]'>
+				<motion.div
+
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, ease: "easeOut" }}
+					viewport={{ once: true, amount: 0.2 }}
+
+					className='max-w-full md:max-w-[90%]'>
 					<ul className='list-disc pl-5 my-7 text-start mt-6 font-normal text-base md:text-lg'>
 						{[
 							'Tailored support for 4,000 MSMEs to improve productivity and sustainability.',
@@ -168,7 +183,7 @@ const index = () => {
 							</li>
 						))}
 					</ul>
-				</div>
+				</motion.div>
 			</SharedSection>
 			<Image className='w-screen' src={Divider} alt='divider' />
 			<SharedSection
@@ -176,7 +191,13 @@ const index = () => {
 				image={policyImg}
 				altText='Winter Collection'
 				imageLeft={true}>
-				<div className='max-w-full md:max-w-[90%]'>
+				<motion.div
+
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, ease: "easeOut" }}
+					viewport={{ once: true, amount: 0.2 }}
+					className='max-w-full md:max-w-[90%]'>
 					<p className='text-start mt-6 font-normal text-base md:text-lg'>
 						The Fashion Future Program actively advocates for policy reforms and
 						initiatives that enhance infrastructure, promote intellectual
@@ -190,7 +211,7 @@ const index = () => {
 						empowers fashion entrepreneurs and positions the Nigerian fashion
 						industry for global competitiveness.
 					</p>
-				</div>
+				</motion.div>
 			</SharedSection>
 			<Image className='w-screen' src={Divider} alt='divider' />
 			<div className="h-screen bg-[url('/IMG_5626-min.jpg')] bg-fixed bg-cover bg-center"></div>
@@ -200,7 +221,14 @@ const index = () => {
 				image={contactImage}
 				altText='Winter Collection'
 				imageLeft={false}>
-				<div className='max-w-full md:max-w-[90%]'>
+				<motion.div
+
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, ease: "easeOut" }}
+					viewport={{ once: true, amount: 0.2 }}
+
+					className='max-w-full md:max-w-[90%]'>
 					<p className='text-start mt-6 font-normal text-base md:text-lg'>
 						Our job placement services are designed to connect our graduates
 						with reputable employers in the fashion industry, ensuring they step
@@ -215,7 +243,7 @@ const index = () => {
 						professional success and contribute meaningfully to the fashion
 						ecosystem.
 					</p>
-				</div>
+				</motion.div>
 			</SharedSection>
 			<Image className='w-screen' src={Divider} alt='divider' />
 			<div>
@@ -225,18 +253,38 @@ const index = () => {
 					alt='A beautiful landscape background'
 					className='md:h-[85vh]'>
 					<div className='text-white text-center px-4 py-8'>
-						<h2 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full md:max-w-[90%]'>
+						<motion.h2
+
+							initial={{ opacity: 0, y: 50 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.6, ease: "easeOut" }}
+							viewport={{ once: true, amount: 0.2 }} className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full md:max-w-[90%]'>
 							Why It Matters
-						</h2>
-						<p className='mb-10 text-base md:text-lg font-normal'>
+						</motion.h2>
+						<motion.p
+
+							initial={{ opacity: 0, y: 50 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.6, ease: "easeOut" }}
+							viewport={{ once: true, amount: 0.2 }} className='mb-10 text-base md:text-lg font-normal'>
 							Transforming Lives, Driving Growth.
-						</p>
-						<p className='font-normal  my-10 text-base md:text-lg md:max-w-[30rem] md:mx-auto'>
+						</motion.p>
+						<motion.p
+
+							initial={{ opacity: 0, y: 50 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.6, ease: "easeOut" }}
+							viewport={{ once: true, amount: 0.2 }} className='font-normal  my-10 text-base md:text-lg md:max-w-[30rem] md:mx-auto'>
 							Explore our comprehensive programs designed to empower aspiring
 							fashion professionals with the skills, resources, and mentorship
 							needed to thrive in the industry.
-						</p>
-						<div className='flex justify-center'>
+						</motion.p>
+						<motion.div
+
+							initial={{ opacity: 0, y: 50 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.6, ease: "easeOut" }}
+							viewport={{ once: true, amount: 0.2 }} className='flex justify-center'>
 							<Button
 								className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
 								variant='primary'
@@ -249,7 +297,7 @@ const index = () => {
 								}>
 								Join the Program
 							</Button>
-						</div>
+						</motion.div>
 					</div>
 				</ImageBackground>
 			</div>
