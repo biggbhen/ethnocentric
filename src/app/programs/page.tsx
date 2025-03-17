@@ -16,6 +16,7 @@ import SharedSection from '@/components/shared/SharedSection';
 import ImageBackground from '@/components/ImageBackground';
 import SwiperComponent from '@/components/SwiperComponent';
 import Button from '@/components/ui/Button';
+import { motion } from 'framer-motion';
 
 const index = () => {
 	const slides = [
@@ -47,45 +48,79 @@ const index = () => {
 	];
 	return (
 		<>
-			<ImageBackground
-				imageSrc={heroImage}
-				alt='A beautiful landscape background'
-				className='md:h-screen h-[100vh]'>
-				<div className='text-white text-center px-4 py-8'>
-					<h1 className='text-bright-orange text-3xl font-medium mb-4 md:text-4xl lg:text-5xl'>
-						Where Skills Meet Opportunity
-					</h1>
-					<p className='text-lg text-dark-gray mb-8 md:text-xl md:max-w-[40rem] md:mx-auto'>
-						Explore our comprehensive programs designed to empower aspiring
-						fashion professionals with the skills, resources, and mentorship
-						needed to thrive in the industry.
-					</p>
-					<div className='flex justify-center'>
-						<Button
-							className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
-							variant='primary'
-							onClick={() =>
-								window.open(
-									'https://registration.fashionfutureprogram.org',
-									'_blank',
-									'noopener,noreferrer'
-								)
-							}>
-							Join the Program
-						</Button>
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 1 }}
+			>
+
+				<ImageBackground
+					imageSrc={heroImage}
+					alt='A beautiful landscape background'
+					className='md:h-screen h-[100vh]'>
+					<div className='text-white text-center px-4 py-8'>
+							<motion.h1
+													initial={{ scale: 0.9 }}
+													animate={{ scale: 1 }}
+													transition={{ duration: 0.5, delay: 0.5 }}
+						className='text-bright-orange text-3xl font-medium mb-4 md:text-4xl lg:text-5xl'>
+							Where Skills Meet Opportunity
+						</motion.h1>
+						<motion.p
+												initial={{ opacity: 0 }}
+												animate={{ opacity: 1 }}
+												transition={{ duration: 1, delay: 0.7 }}
+						
+						className='text-lg text-dark-gray mb-8 md:text-xl md:max-w-[40rem] md:mx-auto'>
+							Explore our comprehensive programs designed to empower aspiring
+							fashion professionals with the skills, resources, and mentorship
+							needed to thrive in the industry.
+						</motion.p>
+							<motion.div
+													initial={{ scale: 0.8, opacity: 0 }}
+													animate={{ scale: 1, opacity: 1 }}
+													transition={{ duration: 0.5, delay: 1 }}
+						className='flex justify-center'>
+							<Button
+								className='text-sm px-6 py-2 md:text-base md:px-8 md:py-3'
+								variant='primary'
+								onClick={() =>
+									window.open(
+										'https://registration.fashionfutureprogram.org',
+										'_blank',
+										'noopener,noreferrer'
+									)
+								}>
+								Join the Program
+							</Button>
+						</motion.div>
 					</div>
-				</div>
-			</ImageBackground>
+				</ImageBackground>
+
+			</motion.div>
+
 			<Image className='w-screen' src={Divider} alt='divider' />
 			<div>
-				<h2 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full mx-auto md:max-w-[90%] text-center text-[#1A1A1A]'>
+				<motion.h2
+				 	
+									initial={{ opacity: 0, y: 50 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									transition={{ duration: 0.6, ease: "easeOut" }}
+									viewport={{ once: true, amount: 0.2 }}
+				className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full mx-auto md:max-w-[90%] text-center text-[#1A1A1A]'>
 					Training Programs
-				</h2>
-				<p className='font-medium text-center text-base md:text-lg w-[]90% max-w-[40rem] mx-auto'>
+				</motion.h2>
+				
+					<motion.p
+										initial={{ opacity: 0, y: 50 }}
+										whileInView={{ opacity: 1, y: 0 }}
+										transition={{ duration: 0.6, ease: "easeOut" }}
+										viewport={{ once: true, amount: 0.2 }}
+				 className='font-medium text-center text-base md:text-lg w-[]90% max-w-[40rem] mx-auto'>
 					Hands-on learning that bridges creativity and craftsmanship while
 					transforming lives and driving growth. Addressing industry shortages
 					with comprehensive training.
-				</p>
+				</motion.p>
 				<SwiperComponent slides={slides} />
 			</div>
 			<Image className='w-screen' src={Divider} alt='divider' />

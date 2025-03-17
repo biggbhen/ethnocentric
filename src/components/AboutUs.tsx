@@ -18,6 +18,7 @@ import Last from './Last';
 import WhatWeDo from './WhatWeDo';
 import Button from './ui/Button';
 import SharedSection from '@/components/shared/SharedSection';
+import { motion } from 'framer-motion';
 
 type Props = {};
 
@@ -80,7 +81,14 @@ const AboutUs = (props: Props) => {
 				image={First}
 				altText='Fashion'
 				imageLeft={false}>
-				<p className='text-start mt-6 font-normal text-base md:text-lg'>
+								<motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    viewport={{ once: true, amount: 0.2 }} >
+
+<p
+				 className='text-start mt-6 font-normal text-base md:text-lg'>
 					The Fashion Future Program is a is an initiative by Ethnocentrique
 					Limited in Partnership with the Mastercard Foundation, equipping
 					aspiring artisans and entrepreneurs with the skills, tools, and
@@ -106,6 +114,8 @@ const AboutUs = (props: Props) => {
 						Join The Program
 					</Button>
 				</div>
+	</motion.div>
+				
 			</SharedSection>
 
 			<Image src={Divider} className='w-screen relative' alt='divider' />
@@ -127,8 +137,16 @@ const AboutUs = (props: Props) => {
 				subHeader1='Young Creatives (Ages 18-35):'
 			/>
 			<Image src={Divider} className='w-screen' alt='divider' />
-			<div className='my-[5rem]'>
-				<h1 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full md:max-w-[90%] text-[#1A1A1A] text-center mx-auto'>
+			<div 
+			
+			className='my-[5rem]'>
+				 <motion.div
+				   initial={{ opacity: 0, y: 50 }}
+				   whileInView={{ opacity: 1, y: 0 }}
+				   transition={{ duration: 0.6, ease: "easeOut" }}
+				   viewport={{ once: true, amount: 0.2 }} >
+				 
+<h1 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full md:max-w-[90%] text-[#1A1A1A] text-center mx-auto'>
 					Our Impact, Your Future
 				</h1>
 				<p className='text-center font-normal text-base md:text-lg max-w-[90%] md:max-w-[40rem] mx-auto mt-6'>
@@ -136,6 +154,8 @@ const AboutUs = (props: Props) => {
 					industry into a hub of creativity and opportunity.
 				</p>
 
+				 </motion.div>
+				
 				<SwiperComponent slides={slides} />
 			</div>
 
@@ -146,6 +166,12 @@ const AboutUs = (props: Props) => {
 				image={Second}
 				altText='Fashion'
 				imageLeft={true}>
+						 <motion.div
+				   initial={{ opacity: 0, y: 50 }}
+				   whileInView={{ opacity: 1, y: 0 }}
+				   transition={{ duration: 0.6, ease: "easeOut" }}
+				   viewport={{ once: true, amount: 0.2 }} >
+					
 				<p className='text-start mt-6 font-normal text-base md:text-lg'>
 					At the Fashion Future Program, we believe creativity should never be
 					constrained by financial barriers. That’s why our training,
@@ -171,6 +197,7 @@ const AboutUs = (props: Props) => {
 						Join The Program
 					</Button>
 				</div>
+				</motion.div>
 			</SharedSection>
 
 			<Image className='w-screen' src={Divider} alt='divider' />
