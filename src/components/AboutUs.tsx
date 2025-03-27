@@ -81,41 +81,41 @@ const AboutUs = (props: Props) => {
 				image={First}
 				altText='Fashion'
 				imageLeft={false}>
-								<motion.div
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6, ease: "easeOut" }}
-    viewport={{ once: true, amount: 0.2 }} >
+				<motion.div
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, ease: "easeOut" }}
+					viewport={{ once: true, amount: 0.2 }} >
 
-<p
-				 className='text-start mt-6 font-normal text-base md:text-lg'>
-					The Fashion Future Program is a is an initiative by Ethnocentrique
-					Limited in Partnership with the Mastercard Foundation, equipping
-					aspiring artisans and entrepreneurs with the skills, tools, and
-					resources they need to thrive in the ever-evolving fashion industry.
-					From hands-on training to business development support, we’re shaping
-					a new generation of fashion leaders andMSMEs equipped to succeed in
-					today’s market placethereby strengthening Local communities.
-				</p>
-				<div className='flex flex-col md:flex-row gap-y-3 lg:gap-y-0 gap-x-5 mt-6'>
-					{/* <Button className='text-sm md:text-base' variant='secondary'>
+					<p
+						className='text-start mt-6 font-normal text-base md:text-lg'>
+						The Fashion Future Program is an initiative by Ethnocentrique
+						Limited in Partnership with the Mastercard Foundation, equipping
+						aspiring artisans and entrepreneurs with the skills, tools, and
+						resources they need to thrive in the ever-evolving fashion industry.
+						From hands-on training to business development support, we’re shaping
+						a new generation of fashion leaders and MSMEs equipped to succeed in
+						today’s market place thereby strengthening Local communities.
+					</p>
+					<div className='flex flex-col md:flex-row gap-y-3 lg:gap-y-0 gap-x-5 mt-6'>
+						{/* <Button className='text-sm md:text-base' variant='secondary'>
 						Discover More
 					</Button> */}
-					<Button
-						className='text-sm md:text-base'
-						variant='primary'
-						onClick={() =>
-							window.open(
-								'https://registration.fashionfutureprogram.org',
-								'_blank',
-								'noopener,noreferrer'
-							)
-						}>
-						Join The Program
-					</Button>
-				</div>
-	</motion.div>
-				
+						<Button
+							className='text-sm md:text-base'
+							variant='primary'
+							onClick={() =>
+								window.open(
+									'https://registration.fashionfutureprogram.org',
+									'_blank',
+									'noopener,noreferrer'
+								)
+							}>
+							Join The Program
+						</Button>
+					</div>
+				</motion.div>
+
 			</SharedSection>
 
 			<Image src={Divider} className='w-screen relative' alt='divider' />
@@ -137,25 +137,25 @@ const AboutUs = (props: Props) => {
 				subHeader1='Young Creatives (Ages 18-35):'
 			/>
 			<Image src={Divider} className='w-screen' alt='divider' />
-			<div 
-			
-			className='my-[5rem]'>
-				 <motion.div
-				   initial={{ opacity: 0, y: 50 }}
-				   whileInView={{ opacity: 1, y: 0 }}
-				   transition={{ duration: 0.6, ease: "easeOut" }}
-				   viewport={{ once: true, amount: 0.2 }} >
-				 
-<h1 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full md:max-w-[90%] text-[#1A1A1A] text-center mx-auto'>
-					Our Impact, Your Future
-				</h1>
-				<p className='text-center font-normal text-base md:text-lg max-w-[90%] md:max-w-[40rem] mx-auto mt-6'>
-					Driving skills, innovation, and empowerment to transform the fashion
-					industry into a hub of creativity and opportunity.
-				</p>
+			<div
 
-				 </motion.div>
-				
+				className='my-[5rem]'>
+				<motion.div
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, ease: "easeOut" }}
+					viewport={{ once: true, amount: 0.2 }} >
+
+					<h1 className='font-medium py-4 md:py-7 text-2xl md:text-4xl max-w-full md:max-w-[90%] text-[#1A1A1A] text-center mx-auto'>
+						Our Impact, Your Future
+					</h1>
+					<p className='text-center font-normal text-base md:text-lg max-w-[90%] md:max-w-[40rem] mx-auto mt-6'>
+						Driving skills, innovation, and empowerment to transform the fashion
+						industry into a hub of creativity and opportunity.
+					</p>
+
+				</motion.div>
+
 				<SwiperComponent slides={slides} />
 			</div>
 
@@ -166,37 +166,37 @@ const AboutUs = (props: Props) => {
 				image={Second}
 				altText='Fashion'
 				imageLeft={true}>
-						 <motion.div
-				   initial={{ opacity: 0, y: 50 }}
-				   whileInView={{ opacity: 1, y: 0 }}
-				   transition={{ duration: 0.6, ease: "easeOut" }}
-				   viewport={{ once: true, amount: 0.2 }} >
-					
-				<p className='text-start mt-6 font-normal text-base md:text-lg'>
-					At the Fashion Future Program, we believe creativity should never be
-					constrained by financial barriers. That’s why our training,
-					mentorship, and resources are entirely free. We’re here to help you
-					turn your passion into a profession, empowering you to thrive in the
-					fashion industry.
-				</p>
-				<div className='flex flex-col md:flex-row gap-y-3 lg:gap-y-0 gap-x-5 mt-6'>
-					{/* <Button className='text-sm md:text-base' variant='secondary'>
+				<motion.div
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, ease: "easeOut" }}
+					viewport={{ once: true, amount: 0.2 }} >
+
+					<p className='text-start mt-6 font-normal text-base md:text-lg'>
+						At the Fashion Future Program, we believe creativity should never be
+						constrained by financial barriers. That’s why our training,
+						mentorship, and resources are entirely free. We’re here to help you
+						turn your passion into a profession, empowering you to thrive in the
+						fashion industry.
+					</p>
+					<div className='flex flex-col md:flex-row gap-y-3 lg:gap-y-0 gap-x-5 mt-6'>
+						{/* <Button className='text-sm md:text-base' variant='secondary'>
 						Discover More
 					</Button> */}
-					<Button
-						className='text-sm 
+						<Button
+							className='text-sm 
 						md:text-base'
-						variant='primary'
-						onClick={() =>
-							window.open(
-								'https://registration.fashionfutureprogram.org',
-								'_blank',
-								'noopener,noreferrer'
-							)
-						}>
-						Join The Program
-					</Button>
-				</div>
+							variant='primary'
+							onClick={() =>
+								window.open(
+									'https://registration.fashionfutureprogram.org',
+									'_blank',
+									'noopener,noreferrer'
+								)
+							}>
+							Join The Program
+						</Button>
+					</div>
 				</motion.div>
 			</SharedSection>
 
