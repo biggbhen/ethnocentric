@@ -30,9 +30,9 @@ const Index = () => {
 		FetchPosts();
 	}, []);
 
-	const itemsPerPage = 1;
+	const itemsPerPage = 8;
 
-	const paginatedBlogs = blogPosts.slice(
+	const paginatedBlogs = blogPosts.reverse().slice(
 		currentPage * itemsPerPage,
 		(currentPage + 1) * itemsPerPage
 	);
@@ -79,14 +79,16 @@ const Index = () => {
 			<Image className='w-screen' src={Divider} alt='divider' />
 			<div className=' container max-w-[90%] mx-auto pt-12 pb-8'>
 				<div className='flex  flex-col-reverse lg:flex-row lg:justify-around gap-8'>
-					<Sidebar />
+					{/* <Sidebar /> */}
 					<div>
-						{paginatedBlogs.map((blog) => (
-							<BlogCard
-								key={blog?._id}
-								item={blog}
-							/>
-						))}
+						<div className='grid md:grid-cols-4 gap-8 sm:grid-cols-1 '>
+							{paginatedBlogs.map((blog) => (
+								<BlogCard
+									key={blog?._id}
+									item={blog}
+								/>
+							))}
+						</div>
 						<div className='flex justify-center'>
 							<ReactPaginate
 								previousLabel={'Previous'}

@@ -138,7 +138,6 @@ const AboutUs = (props: Props) => {
 			/>
 			<Image src={Divider} className='w-screen' alt='divider' />
 			<div
-
 				className='my-[5rem]'>
 				<motion.div
 					initial={{ opacity: 0, y: 50 }}

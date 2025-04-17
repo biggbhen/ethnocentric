@@ -4,8 +4,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Button from '../ui/Button';
 import Image from 'next/image';
-import Logo from '@/assets/Logo.png'
-
+import Logo from '@/assets/Logo.png';
 
 const Header = () => {
 	const pathname = usePathname();
@@ -13,7 +12,7 @@ const Header = () => {
 
 	return (
 		<>
-			<div className='bg-white text-black shadow-md fixed top-0 left-0 right-0 z-40'>
+			<div className='bg-white text-black shadow-md fixed top-0 left-0 right-0 z-40 h-[85px]'>
 				<div className='flex justify-between items-center px-5 py-4'>
 					<Link href={'/'} className='cursor-pointer'>
 						<Image className='w-[10rem]' src={Logo} alt='logo' />
@@ -72,7 +71,6 @@ const Header = () => {
 
 					{/* Hamburger Icon for Mobile */}
 					<div
-					
 						className='lg:hidden cursor-pointer'
 						onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
 						<div className='space-y-1'>
@@ -85,7 +83,7 @@ const Header = () => {
 
 				{/* Mobile Navigation */}
 				{isMobileMenuOpen && (
-					<div className='lg:hidden flex flex-col px-5 space-y-4'>
+					<div className='lg:hidden flex flex-col px-5 space-y-4 bg-white shadow-md'>
 						{['/', '/about', '/programs', '/Cluster', '/blog'].map(
 							(route, idx) => (
 								<div
@@ -96,11 +94,11 @@ const Header = () => {
 											: 'hover:text-[#E86025]'
 									}`}>
 									<Link href={route}>
-										{route === '/'
-											? 'Home'
-											: route
-													.substring(1)
-													.replace(/^\w/, (c) => c.toUpperCase())}
+										{
+											route === '/'
+												? 'Home'
+												: route.substring(1).replace(/^\w/, (c) => c.toUpperCase())
+										}
 									</Link>
 								</div>
 							)

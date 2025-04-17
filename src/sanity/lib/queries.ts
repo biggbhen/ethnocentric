@@ -1,6 +1,6 @@
 import { groq } from 'next-sanity';
 
-export const postsQuery = groq`*[_type == "post"] {
+export const postsQuery = groq`*[_type == "post"] | order(_createdAt desc) {
   _id,
   _createdAt,
   title,

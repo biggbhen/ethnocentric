@@ -36,15 +36,6 @@ async function getPost(id: string): Promise<SanityDocument> {
 }
 
 const Page = async({ params }: Props) => {
-	// const fetchPost = async () => {
-	// 	try {
-	// 		const { id } = await params;
-	// 		return await getPost(id);
-	// 	} catch (error) {
-	// 		console.error('Error fetching post:', error);
-	// 		return null;
-	// 	}
-	// };
 	const { id } = await params;
 	return (
 		<div className='flex flex-col items-center container mx-auto max-w-5xl px-6'>

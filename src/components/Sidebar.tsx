@@ -1,12 +1,9 @@
 import React from 'react';
-import Image from 'next/image';
-import Side1 from '@/assets/side1.png'
-import Side2 from '@/assets/side2.png';
 
 const Sidebar: React.FC = () => {
 	return (
 		<>
-			<div className='mt-3 bg-[white] text-dark-gray flex flex-col'>
+			<div className='mt-3 bg-[white] text-dark-gray flex flex-col border border-[red] h-max'>
 				<div className=''>
 					<input
 						type='text'
@@ -20,15 +17,6 @@ const Sidebar: React.FC = () => {
 				{/* Menu */}
 				<nav className='flex-grow'>
 					<ul className='flex flex-col  space-y-2'>
-						<li className='border bg-[#FAFAFA] border-[#E0E0E0] w-full flex items-stretch'>
-							<div className='bg-[#FFA929] w-1'></div>
-							<a href='#' className='flex items-center p-6 rounded-md w-full'>
-								<span className='material-icons-outlined font-normal'>
-									CATEGORIES
-								</span>
-							</a>
-						</li>
-
 						<li className='border bg-[#FAFAFA]  border-[#E0E0E0] w-full'>
 							<a href='#' className='flex items-center p-4 rounded-md'>
 								<span className='material-icons-outlined font-normal '>
