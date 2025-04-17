@@ -6,7 +6,7 @@ import heroImage from '../../assets/heroImage.svg';
 import ReactPaginate from 'react-paginate';
 import Button from '@/components/ui/Button';
 import ImageBackground from '@/components/ImageBackground';
-import Sidebar from '@/components/Sidebar';
+// import Sidebar from '@/components/Sidebar';
 import BlogCard from '@/components/BlogCard';
 import { SanityDocument } from 'next-sanity';
 import { postsQuery } from '@/sanity/lib/queries';
@@ -32,7 +32,7 @@ const Index = () => {
 
 	const itemsPerPage = 8;
 
-	const paginatedBlogs = blogPosts.reverse().slice(
+	const paginatedBlogs = blogPosts.slice(
 		currentPage * itemsPerPage,
 		(currentPage + 1) * itemsPerPage
 	);

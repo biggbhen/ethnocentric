@@ -38,11 +38,17 @@ async function getPost(id: string): Promise<SanityDocument> {
 
 const Page = async({ params }: Props) => {
 	const { id } = await params;
+
+	
 	return (
 		<div className='flex flex-col items-center container mx-auto max-w-6xl mt-[85px]'>
 			<div className='mt-6 flex flex-col items-center container px-6'>
 				<React.Suspense fallback={<p>Loading...</p>}>
 					<PostContent id={id} />
+					{/* <div className='min-h-[100px] w-full mb-8'>
+						<h3 className='mb-8 font-semibold text-lg leading-tight'>Continue reading</h3>
+						<div className="border border-[red] min-h-[100px]"></div>
+					</div> */}
 				</React.Suspense>
 			</div>
 		</div>
@@ -62,14 +68,15 @@ const PostContent = async ({ id }: { id: string }) => {
 		return (
 			<>
 				{post.mainImage && (
-					<Image
-						src={post.mainImage.asset.url || '/placeholder.svg'}
-						alt={post.title}
-						width={800}
-						height={400}
-						className='rounded-lg shadow-md'
-						style={{ height: '400px', width: '800px', objectFit: 'cover' }}
-					/>
+					<div className='w-full flex justify-center rounded-lg relative'>
+						<Image
+							src={post.mainImage.asset.url || '/placeholder.svg'}
+							alt={post.title}
+							width={800}
+							height={400}
+							className='rounded-lg shadow-md w-[800px] h-[400px] object-cover'
+						/>
+					</div>
 				)}
 				<div className='md:p-5 my-4'>
 					<h1 className='text-center mb-4 font-semibold text-3xl md:text-2xl leading-tight'>
