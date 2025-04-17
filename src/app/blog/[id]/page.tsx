@@ -6,6 +6,7 @@ import {
 import type { SanityDocument } from 'next-sanity';
 import Image from 'next/image';
 import React from 'react';
+import { PortableText } from '@portabletext/react';
 
 type Props = {
 	params: Promise<{ id: string }>;
@@ -38,8 +39,8 @@ async function getPost(id: string): Promise<SanityDocument> {
 const Page = async({ params }: Props) => {
 	const { id } = await params;
 	return (
-		<div className='flex flex-col items-center container mx-auto max-w-5xl px-6'>
-			<div className='mt-[7rem] flex flex-col items-center container mx-auto max-w-5xl px-6'>
+		<div className='flex flex-col items-center container mx-auto max-w-6xl mt-[85px]'>
+			<div className='mt-6 flex flex-col items-center container px-6'>
 				<React.Suspense fallback={<p>Loading...</p>}>
 					<PostContent id={id} />
 				</React.Suspense>
@@ -71,12 +72,10 @@ const PostContent = async ({ id }: { id: string }) => {
 					/>
 				)}
 				<div className='md:p-5 my-4'>
-					<h1 className='text-center mb-2 font-semibold text-3xl md:text-4xl leading-tight'>
+					<h1 className='text-center mb-4 font-semibold text-3xl md:text-2xl leading-tight'>
 						{post.title}
 					</h1>
-					<p className='text-start max-w-4xl text-base md:text-md lg:text-lg'>
-						{post.description}
-					</p>
+					<PortableText value={post.body} />
 				</div>
 			</>
 		);

@@ -48,7 +48,7 @@ export const postQuery = groq`*[_type == "post" && _id == $id][0]{
   body,
   "imageURL": mainImage.asset->url,
   "authorName": author->name,
-  "description": body[0].children[0].text
+  description
 }`;
 
 	export const postByIdQuery = groq`*[_type == "post" && _id == $id][0] {
@@ -67,7 +67,7 @@ export const postQuery = groq`*[_type == "post" && _id == $id][0]{
   body,
   "imageURL": mainImage.asset->url,
   "authorName": author->name,
-  "description": body[0].children[0].text
+  description
 }`;
 
 export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)][]{
